@@ -1,0 +1,170 @@
+/* Layout 2 blank CSS */
+
+
+/* Fonts and such */
+body{
+font-family: 'Work+Sans', sans-serif;
+}
+
+h1, h2, h3{
+font-family: 'Roboto', sans-serif;
+}
+
+.navbar > div > ul > .nav-item > .nav-link{
+font-family: 'Roboto', sans-serif;
+}
+
+
+/*  Nav Bar CSS  */
+
+.navbar > div > ul > .nav-item:hover{
+border-bottom:2px solid #878787;
+}
+
+.navbar > div > .navbar-brand{
+margin-top:5px;
+margin-bottom:3px;
+}
+
+.navbar > div > ul > .nav-item > .nav-link:hover{
+color:#878787;
+}
+
+
+.navbar > div > ul > .nav-item, .navbar > div{
+padding-top:2px;
+border-bottom:2px solid white;
+background-color: white;
+
+}
+
+/*  About Me CSS  */
+
+
+#about-me{
+height:600px;
+width:100%;
+margin-bottom:50px;
+}
+
+.intro-box{
+background-color: white;
+border-radius:10px;
+height:100px;
+width:75%;
+}
+
+.intro-p{
+margin-left:30px;
+margin-right:30px;
+margin-top:5px;
+margin-bottom:5px;
+}
+
+.summary-card{
+position:relative;
+top:150px;
+width:65%;
+height:200px;
+margin-bottom:50px;
+}
+
+.sum-col{
+width:25%;
+}
+
+.sum-list{
+list-style-type:none;
+}
+
+/*  Project showcase CSS  */
+
+
+#grid-id{
+padding:30px;
+}
+
+.grid-title{
+margin-bottom:0px;
+}
+
+
+#grid-id > .card-deck > .card{
+max-width: 24rem;
+height:15rem;
+border:none;
+background-color:rgba(255,255,255,0.00);
+}
+
+#grid-id > .card-deck > .card > i{
+font-size: 10rem;
+opacity:0.25;
+}
+
+.card-mt{
+margin-top:71.5px;
+}
+
+a, .card-img-overlay{
+color:black;
+}
+
+.card-img-top{
+height:15rem;
+z-index:-1;
+}
+
+#grid-id > .card-deck > .card:hover{
+background-color: rgba(245,245,245,0.85);
+color: black;
+text-decoration:none;
+}
+
+#grid-id > .card-deck > .card > .card-link:hover{
+background-color: rgba(20,20,190,0.85);
+color: white;
+}
+
+/*  Top button CSS  */
+
+
+.top-bttn > a > .btn{
+font-size:50px;
+background-color: rgba(255,255,255,.75);
+
+}
+.top-bttn{
+left:50px;
+bottom:50px;
+position:fixed;
+
+} 
+#top-button > a > .btn:hover{
+opacity:0.35;
+}
+
+.temporary{
+margin-bottom:0px;
+}
+
+/* Contact Me CSS */
+
+.contact{
+width:100%;
+z-index:-1;
+margin-bottom:0px;
+height:100px;
+}
+
+.contact-title{
+
+}
+
+#contact-me > .social-row   .btn{
+font-size:24px;
+}
+
+#contact-me > .social-row   .btn:hover{
+color:#878787;
+}
+
