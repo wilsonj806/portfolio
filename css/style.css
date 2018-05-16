@@ -152,6 +152,16 @@ list-style-type:decimal;
 }
 
 
+#project-highlights > .row > .right-text > h2 > .btn{
+background-color: black;
+color:white;
+font-size:0.75rem;
+}
+
+#project-highlights > .row > .right-text > h2 > .btn:hover{
+background-color: #878787;
+}
+
 #project-highlights > .row > .right-text{
 max-width:40%;
 margin-right:5%;
@@ -166,10 +176,6 @@ margin-left:32%;
 margin-top:24px;
 }
 
-#project-highlights > .row > .col > div > span > a:hover{
-color:pink;
-text-decoration:none;
-}
 
 .heading-spacing{
 margin-top:30px;
