@@ -1,0 +1,345 @@
+<!-- 
+Portfolio Layout Blank
+Version: 0.75
+Last Updated: 05/15/2018
+Requirements: 
+	1. Can access all of the content by scrolling (COMPLETED)
+	2. Can click different buttons that take the user to various social media sites (COMPLETED)
+	3. Can go to different sections via a nav bar (COMPLETED)
+	4. Can see thumbnails of the different projects done (PARTIALLY COMPLETED)
+	Note that CodePen.io overrides the Window.open() function, so if you want to open windows using jQuery, you will need to target invisible anchor elements like this one: <a target='_blank'>.
+Secondary Requirements:
+	1. Needs a go to top of page button (COMPLETED)
+	2. Make the Nav Bar using Bootstrap (COMPLETED)
+	3. Make Nav bar collapsible (SUPER DUPER SECONDARY REQUIREMENT)
+	4. Add Night Mode (EVEN MORE SUPER DUPER SECONDARY)
+-->
+<!--
+TEMPORARY NOTES
+1. If you have 2 elements that need to be centered vertically and horizontally, it's better to use ".d-flex .justify-content-center" on both elements and then calculate a margin-top value for the parent container
+2. If you're modifying a Bootstrap class, use combinators to try callout the class in the most specific way possible
+3. For ".shadow" to appear on a background color other than white, opacity needs to be less than 1
+4. Positioning things via "margin-x or margin-y" and {position:relative} largely accomplishes the same thing but the result depends on what you're trying to accomplish and the screen size of of the user
+5. Links to secondary pages need to know where the directory is for the html file, see the following <a href="./test.html">hello</a>
+6. Can't add comments to the CSS section the usual way
+
+To do:
+1. Figure out a proper color scheme/ layout for the project grid
+2. Figure out a general color scheme for the entire portfolio
+3. ~Add contact info/ form/ etc~ (TASK COMPLETE)
+4. Make sure things aren't positioned via "margin-top" and stuff
+5. Size stuff for mobile [IMPORTANT]
+6. Long term: make a vector icon type thing for a logo
+7. Change the card link to a button that's in the footer of the card
+8. Add more fluff to the intro about me bits
+9. Select typeface for the entire thing [IMPORTANT]
+-->
+<html>
+<title>Wilson Jiang Software Developer</title>
+<head>
+<!-- Scripts and other libraries here -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!--for Bootstrap 4.1-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> <!-- For Font Awesome Icons -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- For jQuery -->
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:300|Roboto" rel="stylesheet"> <!-- For Google Fonts: Raleway and Roboto -->
+<!-- jQuery scripts-->
+<script>
+$(document).ready(function(){
+
+	
+});
+</script>
+<!-- CSS below -->
+<style>
+/* Fonts and such */
+body{
+font-family: 'Work+Sans', sans-serif;
+}
+
+h1, h2, h3{
+font-family: 'Roboto', sans-serif;
+}
+
+.navbar > div > ul > .nav-item > .nav-link{
+font-family: 'Roboto', sans-serif;
+}
+
+
+/*  Nav Bar CSS  */
+
+.navbar > div > ul > .nav-item:hover{
+border-bottom:2px solid #878787;
+}
+
+.navbar > div > .navbar-brand{
+margin-top:5px;
+margin-bottom:3px;
+}
+
+.navbar > div > ul > .nav-item > .nav-link:hover{
+color:#878787;
+}
+
+
+.navbar > div > ul > .nav-item, .navbar > div{
+padding-top:2px;
+border-bottom:2px solid white;
+background-color: white;
+
+}
+
+/*  About Me CSS  */
+
+
+#about-me{
+height:600px;
+width:100%;
+margin-bottom:50px;
+}
+
+.intro-box{
+background-color: white;
+border-radius:10px;
+height:100px;
+width:75%;
+}
+
+.intro-p{
+margin-left:30px;
+margin-right:30px;
+margin-top:5px;
+margin-bottom:5px;
+}
+
+.summary-card{
+position:relative;
+top:150px;
+width:65%;
+height:200px;
+margin-bottom:50px;
+}
+
+.sum-col{
+width:25%;
+}
+
+.sum-list{
+list-style-type:none;
+}
+
+/*  Project showcase CSS  */
+
+
+#grid-id{
+padding:30px;
+}
+
+.grid-title{
+margin-bottom:0px;
+}
+
+
+#grid-id > .card-deck > .card{
+max-width: 24rem;
+height:15rem;
+border:none;
+background-color:rgba(255,255,255,0.00);
+}
+
+#grid-id > .card-deck > .card > i{
+font-size: 10rem;
+opacity:0.25;
+}
+
+.card-mt{
+margin-top:71.5px;
+}
+
+a, .card-img-overlay{
+color:black;
+}
+
+.card-img-top{
+height:15rem;
+z-index:-1;
+}
+
+#grid-id > .card-deck > .card:hover{
+background-color: rgba(245,245,245,0.85);
+color: black;
+text-decoration:none;
+}
+
+#grid-id > .card-deck > .card > .card-link:hover{
+background-color: rgba(20,20,190,0.85);
+color: white;
+}
+
+/*  Top button CSS  */
+
+
+.top-bttn > a > .btn{
+font-size:50px;
+background-color: rgba(255,255,255,.75);
+
+}
+.top-bttn{
+left:50px;
+bottom:50px;
+position:fixed;
+
+} 
+#top-button > a > .btn:hover{
+opacity:0.35;
+}
+
+.temporary{
+margin-bottom:0px;
+}
+
+/* Contact Me CSS */
+
+.contact{
+width:100%;
+z-index:-1;
+margin-bottom:0px;
+height:100px;
+}
+
+.contact-title{
+
+}
+
+#contact-me > .social-row   .btn{
+font-size:24px;
+}
+
+#contact-me > .social-row   .btn:hover{
+color:#878787;
+}
+
+
+</style>
+</head>
+
+<body>
+<!-- Nav Bar section -->
+<!-- Fix the link color and the color when you hover over it -->
+<nav class="navbar navbar-expand-md" id="home">
+<div class="navbar-collapse" id="navbarSupportedcontent"> 
+	<h2 class="navbar-brand">WJ</h2>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item "><a class="nav-link" href="#about-me">About Me</a></li>
+      <li class="nav-item "><a class="nav-link" href="#project-showcase">Project Showcase</a></li>
+      <li class="nav-item"><a class="nav-link" href="#project-highlights">Project Highlights</a></li>
+	  <li class="nav-item active"><a class="nav-link" href="#contact-me">Contact Me</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- About me section -->
+<div class="shadow-sm" id="about-me">
+
+<div class="intro-box mx-auto my-auto">	
+	<h1 class="d-flex  justify-content-center">Wilson Jiang</h1>	
+	<h2 class="d-flex  justify-content-center">Software Developer</h2>
+
+	<p class="intro-p d-flex  justify-content-center">
+	Hello there! I’m a mechanical engineer and am currently training myself to become a software developer via Free Code Camp.
+	</p>
+	<p class="intro-p d-flex justify-content-center">
+	Currently I’m learning the skills necessary to become a front end developer, but eventually I want to learn back end development and concentrate on UX design.
+	</p>
+	
+</div>
+
+<div class="summary-card card mx-auto shadow-sm">
+	<div class="row">
+		<div class="sum-col col">
+			<ul class="sum-list">Developer Tools Used
+				<li class="">Bootstrap</li>
+				<li class="">jQuery</li>
+			</ul>
+		</div>
+		<div class="sum-col col">
+			<ul class="sum-list">Languages Known
+				<li class="">CSS</li>
+				<li class="">HTML</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<!-- Project grid section -->
+<div id="project-showcase"> 
+<h1 class="grid-title d-flex  justify-content-center">
+Some Projects I've Done
+</h1>
+<div id="grid-id">
+<div class="card-deck mb-2 d-flex justify-content-center">
+	<div class="card shadow-sm">
+		<img class="card-img-top" src=".\tribute-page-thumbnail.png"></img>
+		<div class="card-img-overlay">
+			<h3 class="card-mt d-flex  justify-content-center">Tribute Page</h3>
+			<a class="card-link d-flex justify-content-center btn btn-primary" href="https://codepen.io/wilsonj806/full/RQXaxE/"><i class="fab fa-codepen" style="margin-right:4px; margin-top:3px"></i> CodePen Link</a>
+		</div>
+	</div>
+	
+	<div class="card shadow-sm">
+		<i class="fas fa-cogs mx-auto my-auto"></i>
+		<h3 class="card-img-overlay d-flex  justify-content-center">Content coming soon!</h3>
+	</div>
+	
+	<div class="card shadow-sm">
+		<i class="fas fa-cogs mx-auto my-auto"></i>
+		<h3 class="card-img-overlay d-flex  justify-content-center">Content coming soon!</h3>
+	</div>
+</div>
+
+<div class="card-deck mb-2 d-flex justify-content-center">
+	<div class="card shadow-sm">
+		<i class="fas fa-cogs mx-auto my-auto"></i>
+		<h3 class="card-img-overlay d-flex  justify-content-center">Content coming soon!</h3>
+	</div>
+	
+	<div class="card shadow-sm">
+		<i class="fas fa-cogs mx-auto my-auto"></i>
+		<h3 class="card-img-overlay d-flex  justify-content-center">Content coming soon!</h3>
+	</div>
+	
+	<div class="card shadow-sm">
+		<i class="fas fa-cogs mx-auto my-auto"></i>
+		<h3 class="card-img-overlay d-flex  justify-content-center">Content coming soon!</h3>
+	</div>
+</div>	
+
+
+
+</div>
+</div>
+
+<!-- Latest project section-->
+<div class= "shadow-sm" id="project-highlights"> 
+	<h1 class="d-flex justify-content-center">Project Highlights</h1>
+	<p class="temporary d-flex  justify-content-center">wasd</p>
+</div>
+<!-- Contact info section-->
+<div class= "contact" id="contact-me" >
+	<h1 class="contact-title d-flex  justify-content-center">Contact Info</h1>
+	<div class="social-row d-flex justify-content-center">
+		<a class="github btn" href="https://github.com/wilsonj806"><i class="fab fa-github"></i></a>
+		<a class="freecodecamp btn" href="https://www.freecodecamp.org/wilsonj806"><i class="fab fa-free-code-camp"></i></a>
+		<a class="email btn" href="mailto:wilsonj806@gmail.com"><i class="fas fa-envelope"></i></a>
+	</div>
+</div>
+
+
+<!-- Contact Info section -->
+<div id="top-button" class="top-bttn">
+	<a href="#home"> <button type="button" class="btn"><span><i class="fas fa-angle-up"></i></span></button></a>
+</div>
+
+</body>
+</html>
