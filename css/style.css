@@ -189,20 +189,26 @@ opacity:0.35;
 
 /* Project Highlights CSS */
 
+.project-heading{
+border-bottom:1px solid #878787;
+}
 
 .highlight-list{
 list-style-type:decimal;
 }
 
 
-#project-highlights > .row > .right-text > h2 > .btn{
+#project-highlights > .row > .right-text > .btn{
 background-color: black;
 color:white;
 font-size:0.75rem;
+box-shadow:1px 1px #878787;
+width:100%;
 }
 
-#project-highlights > .row > .right-text > h2 > .btn:hover{
-background-color: #878787;
+#project-highlights > .row > .right-text > .btn:hover{
+color:white;
+background-color: #5A5A5A;
 }
 
 #project-highlights > .row > .right-text{
