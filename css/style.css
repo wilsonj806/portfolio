@@ -79,51 +79,75 @@ list-style-type:none;
 
 /*  Project showcase CSS  */
 
+#project-showcase{
+width:100%;
+}
+.showcase-p{
+width: 35%;
+
+}
 
 #grid-id{
 padding:30px;
 }
 
-.grid-title{
-margin-bottom:0px;
+.showcase-heading{
+margin:50px;
 }
+
+.card-filled{
+border:none;
+}
+
 
 
 #grid-id > .card-deck > .card{
 max-width: 24rem;
 height:15rem;
-border:none;
+/* border:none; */
 background-color:rgba(255,255,255,0.00);
 }
 
+
+
 #grid-id > .card-deck > .card > i{
 font-size: 10rem;
-opacity:0.25;
+filter: blur(3px) opacity(0.25);
 }
 
-.card-mt{
+.card-head-ct{
 margin-top:71.5px;
+color: black;
+background-color:transparent;
 }
 
-a, .card-img-overlay{
-color:black;
+.card-head{
+height:2rem;
+padding-top:6rem;
 }
 
-.card-img-top{
+#grid-id > .card-deck > .card > .card-img-overlay > .btn{
+background-color:black;
+color:white;
+
+}
+
+#grid-id > .card-deck > .card > .card-img-top{
+filter:blur(2px) opacity(50%);
 height:15rem;
 z-index:-1;
 }
 
-#grid-id > .card-deck > .card:hover{
-background-color: rgba(245,245,245,0.85);
-color: black;
-text-decoration:none;
-}
 
-#grid-id > .card-deck > .card > .card-link:hover{
-background-color: rgba(20,20,190,0.85);
+#grid-id > .card-deck > .card > .card-img-overlay > .btn:hover{
+background-color: #878787;
 color: white;
 }
+
+#grid-id > .card-deck > .card:hover{
+background-color:rgba(255,255,255,0.50);
+}
+
 
 /*  Top button CSS  */
 
