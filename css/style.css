@@ -17,8 +17,15 @@ font-family: 'Roboto', sans-serif;
 
 /*  Nav Bar CSS  */
 
-.navbar > div > ul > .nav-item:hover{
-border-bottom:2px solid #878787;
+nav{
+background-color: transparent;
+}
+
+
+.navbar > div{
+padding-top:2px;
+background-color: transparent;
+
 }
 
 .navbar > div > .navbar-brand{
@@ -26,17 +33,25 @@ margin-top:5px;
 margin-bottom:3px;
 }
 
+.navbar > div > ul > .nav-item > .nav-link{
+color:black;
+}
+
+.navbar > div > ul > .nav-item{
+margin-top:2px;
+height:40px;
+}
+
+.navbar > div > ul > .nav-item:hover{
+border-bottom:2px solid #878787;
+margin-top:2px;
+height:40px;
+}
+
 .navbar > div > ul > .nav-item > .nav-link:hover{
 color:#878787;
 }
 
-
-.navbar > div > ul > .nav-item, .navbar > div{
-padding-top:2px;
-border-bottom:2px solid white;
-background-color: white;
-
-}
 
 /*  About Me CSS  */
 
