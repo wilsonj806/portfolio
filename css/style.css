@@ -39,7 +39,13 @@ color:black;
 
 .navbar > div > ul > .nav-item{
 margin-top:2px;
-height:40px;
+height:42px;
+}
+
+.navbar > div > ul > .nav-item:hover{
+border-bottom:2px solid #878787;
+margin-top:2px;
+height:42px;
 }
 
 .navbar > div > ul > .nav-item:hover{
@@ -258,14 +264,19 @@ height:100px;
 }
 
 .contact-title{
+margin:30px;
+}
 
+.contact-p{
+width:75%;
+color:inherit;
 }
 
 #contact-me > .social-row   .btn{
 font-size:24px;
+color:black;
 }
 
 #contact-me > .social-row   .btn:hover{
 color:#878787;
 }
-
