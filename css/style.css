@@ -119,13 +119,15 @@ margin:30px 20px 10px 20px;
 
 /*  Project showcase CSS  */
 
+
 #project-showcase{
 width:100%;
+/*box-shadow: 0 -.125rem .25rem rgba(0,0,0,.075); */
 }
 .showcase-p{
 width: 35%;
 
-}
+}   
 
 #grid-id{
 padding:30px;
@@ -189,25 +191,6 @@ background-color:rgba(255,255,255,0.50);
 }
 
 
-/*  Top button CSS  */
-
-
-.top-bttn > a > .btn{
-font-size:50px;
-background-color: rgba(255,255,255,.75);
-
-}
-.top-bttn{
-left:50px;
-bottom:50px;
-position:fixed;
-
-} 
-#top-button > a > .btn:hover{
-opacity:0.35;
-}
-
-
 /* Project Highlights CSS */
 
 .project-heading{
@@ -255,7 +238,6 @@ margin-left:30px;
 }
 
 /* Contact Me CSS */
-
 .contact{
 width:100%;
 z-index:-1;
@@ -264,8 +246,20 @@ height:100px;
 }
 
 .contact-title{
-margin:30px;
+margin:20px;
 }
+
+.con-card{
+height:7rem;
+width:50%;
+margin-bottom:20px;
+padding-top: 18px;
+}
+
+.cc-att{
+font-size: .75rem;
+}
+
 
 .contact-p{
 width:75%;
@@ -280,3 +274,23 @@ color:black;
 #contact-me > .social-row   .btn:hover{
 color:#878787;
 }
+
+
+/*  Top button CSS  */
+
+
+.top-bttn > a > .btn{
+font-size:50px;
+background-color: rgba(255,255,255,.75);
+
+}
+.top-bttn{
+left:50px;
+bottom:50px;
+position:fixed;
+
+} 
+#top-button > a > .btn:hover{
+opacity:0.35;
+}
+
