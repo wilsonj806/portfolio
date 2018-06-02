@@ -1,7 +1,7 @@
 <!-- 
 Portfolio Layout Blank
-Version: 0.75
-Last Updated: 05/15/2018
+Version: 0.95
+Last Updated: 06/02/2018
 Requirements: 
 	1. Can access all of the content by scrolling (COMPLETED)
 	2. Can click different buttons that take the user to various social media sites (COMPLETED)
@@ -11,38 +11,33 @@ Requirements:
 Secondary Requirements:
 	1. Needs a go to top of page button (COMPLETED)
 	2. Make the Nav Bar using Bootstrap (COMPLETED)
-	3. Make Nav bar collapsible (SUPER DUPER SECONDARY REQUIREMENT)
-	4. Add Night Mode (EVEN MORE SUPER DUPER SECONDARY)
+	3. Make sure relative links are changed when deploying to CodePen
 -->
 <!--
-TEMPORARY NOTES
-1. If you have 2 elements that need to be centered vertically and horizontally, it's better to use ".d-flex .justify-content-center" on both elements and then calculate a margin-top value for the parent container
-2. If you're modifying a Bootstrap class, use combinators to try callout the class in the most specific way possible
-3. For ".shadow" to appear on a background color other than white, opacity needs to be less than 1
-4. Positioning things via "margin-x or margin-y" and {position:relative} largely accomplishes the same thing but the result depends on what you're trying to accomplish and the screen size of of the user
-5. Links to secondary pages need to know where the directory is for the html file, see the following <a href="./test.html">hello</a>
-6. Can't add comments to the CSS section the usual way
-
 To do:
-1. Figure out a proper color scheme/ layout for the project grid
-2. Figure out a general color scheme for the entire portfolio
+1. Figure out a proper color scheme/ layout for the project grid (COMPLETED)
+2. Figure out a general color scheme for the entire portfolio (COMPLETED)
 3. ~Add contact info/ form/ etc~ (TASK COMPLETE)
-4. Make sure things aren't positioned via "margin-top" and stuff
-5. Size stuff for mobile [IMPORTANT]
-6. Long term: make a vector icon type thing for a logo
-7. Change the card link to a button that's in the footer of the card
-8. Add more fluff to the intro about me bits
-9. Select typeface for the entire thing [IMPORTANT]
+4. Size stuff for mobile [IMPORTANT]
+5. Long term: make a vector icon type thing for a logo
+6. ~Change the card link to a button that's in the footer of the card ~ (COMPLETED SOLVED IN A DIFFERENT WAY)
+7. Add more fluff to the intro about me bits (COMPLETED)
+8. Select typeface for the entire thing [IMPORTANT]
+9. Look into making the portfolio Mobile first and CSS grid
+10. Change font color CSS so that it uses "color:inherit;" when applicable
+11. Use "?raw=true" to direct embed github pictures
 -->
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <title>Wilson Jiang Software Developer</title>
 <head>
 <!-- Scripts and other libraries here -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!--for Bootstrap 4.1-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> <!-- For Font Awesome Icons -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- For jQuery -->
-<link href="https://fonts.googleapis.com/css?family=Work+Sans:300|Roboto" rel="stylesheet"> <!-- For Google Fonts: Raleway and Roboto -->
-<link href="./css/style.css" rel="stylesheet" type="text/css">	
+<link href="https://fonts.googleapis.com/css?family=Work+Sans|Roboto:500" rel="stylesheet"> <!-- For Google Fonts: Raleway and Roboto -->
+<link href="./css/style.css" rel="stylesheet" type="text/css">	<!-- Link to CSS -->
 <!-- jQuery scripts-->
 <script>
 $(document).ready(function(){
@@ -50,8 +45,10 @@ $(document).ready(function(){
 	
 });
 </script>
+<!-- CSS below -->
 
 <style>
+
 </style>
 </head>
 
@@ -59,159 +56,228 @@ $(document).ready(function(){
 <!-- Nav Bar section -->
 <!-- Fix the link color and the color when you hover over it -->
 <nav class="navbar navbar-expand-md" id="home">
-<div class="navbar-collapse" id="navbarSupportedcontent"> 
-	<h2 class="navbar-brand">WJ</h2>
+<div class="navbar-collapse collapse" id="navbarSupportedcontent"> 
+	<h3 class="navbar-brand">WJ</h3>
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item "><a class="nav-link" href="#about-me">About Me</a></li>
+      <li class="nav-item active"><a class="nav-link" href="#about-me">About Me</a></li>
       <li class="nav-item "><a class="nav-link" href="#project-showcase">Project Showcase</a></li>
       <li class="nav-item"><a class="nav-link" href="#project-highlights">Project Highlights</a></li>
-	  <li class="nav-item active"><a class="nav-link" href="#contact-me">Contact Me</a></li>
+	  <li class="nav-item "><a class="nav-link" href="#contact-me">Contact Me</a></li>
     </ul>
   </div>
 </nav>
 
+<main>
+
 <!-- About me section -->
 
-<div class="shadow-sm" id="about-me">
-<img src="./img/profile-pic.png" class=" mx-auto rounded-circle" alt="Profile picture"></img>
+<article class=" " id="about-me">
 <div class="intro-box mx-auto">	
-	<h1 class="d-flex  justify-content-center">Wilson Jiang</h1>	
-	<h3 class="d-flex  justify-content-center">Software Developer</h3>
-
-	<p class="intro-p d-flex text-center mx-auto">
+	<img src="./img/profile-pic.png" class=" mx-auto rounded-circle" alt="Profile picture"></img>    
+    <h1 class="d-flex  justify-content-center section-heading">Wilson Jiang</h1>	
+	<h3 class="d-flex  justify-content-center my-2">Software Developer</h3>
+	<p class="intro-p d-flex text-center mx-auto my-3">
 	Hello there! I’m a mechanical engineer and am currently training myself to become a software developer via Free Code Camp. Currently I’m learning the skills necessary to become a front end developer, but eventually I want to learn back end development and concentrate on UX design. Other than that, I do dance on the side and every once and a while photography.
 	</p>
 	
 </div>
 
-<div class="summary-card card mx-auto shadow-sm">
+<div class="summary-card card mx-auto ">
+
 	<div class="row">
 		<div class="sum-col col">
-			<i class="fas fa-toolbox d-flex justify-content-center sum-icon"></i>
+            <i class="fas fa-toolbox d-flex justify-content-center sum-icon"></i>
 			<h5 class="text-center sum-heading">Dev Tools Used</h5>
-            		<p class="text-center">
-            		Bootstrap, Github, jQuery
-           		</p>
+            <p class="text-center"> 
+            Bootstrap, Github, jQuery
+            </p>
 		</div>
-		<div class="sum-col col">
-            		<i class="fas fa-file-code d-flex justify-content-center sum-icon"></i>
+		<div class="sum-col col container-fluid">
+            <i class="fas fa-file-code d-flex justify-content-center sum-icon"></i>
 			<h5 class="text-center sum-heading">Languages Used</h5>
-            		<p class="text-center">
-            		HTML, CSS
-            		</p>
+            <p class="text-center">
+            HTML, CSS
+            </p>
 		</div>
-        	<div class="sum-col col">
-            		<i class="fas fa-edit d-flex justify-content-center sum-icon"></i>
+        <div class="sum-col col">
+            <i class="fas fa-edit d-flex justify-content-center sum-icon"></i>
 			<h5 class="text-center sum-heading">Things To Learn</h5>
-            		<p class="text-center">
-            		Javascript, Sass, Git, Ajax
-            	</p>
+            <p class="text-center">
+            Javascript, Sass, Git, Ajax, Node, React
+            </p>
 		</div>
 	</div>
+    <div class="divleft intro-inset"></div>
+    <div class="divright intro-inset"></div>
 </div>
 
-</div>
+</article>
 
 <!-- Project grid section -->
 
 <div id="project-showcase"> 
-<h1 class="showcase-heading d-flex  justify-content-center">
+<div class="back-card mx-auto">
+<div class="fore-card">
+<h2 class="showcase-heading d-flex  justify-content-center">
 Some Projects I've Done
-</h1>
+</h2>
     
 <p class="showcase-p text-center mx-auto">
-    Here are some of my side projects that I've worked on. They feature the use of a variety of tools and skills and something about a great amount of pride and effort put into them. Of course that's not the end of the projects that I'll be putting out in the future, so stay tuned.
+    Here are some of my side projects that I've done. Feel free to <a href="mailto:wilsonj806@gmail.com" alt="contact">contact me</a> if you want to collaborate on a project!
 </p>
     
-<div id="grid-id">
+<div class="mx-auto" id="grid-id">
 <div class="card-deck my-4 d-flex justify-content-center">
 	<div class="card shadow-sm card-filled">
 		<img class="card-img-top" src=".\img\tribute-thumb.png"></img>
 		<div class="card-img-overlay">
-			<h3 class="card-head-ct d-flex  justify-content-center">Tribute Page<sub style="font-size: 8px">[1]</sub></h3>
-			<a class="card-link d-flex justify-content-center btn" href="https://codepen.io/wilsonj806/full/RQXaxE/"><i class="fab fa-codepen my-auto"></i> CodePen Link</a>
+			<h4 class="card-head-ct d-flex  justify-content-center">Tribute Page<sub style="font-size: 8px">[1]</sub></h4>
+			<a class="card-link d-flex justify-content-center btn" href="https://codepen.io/wilsonj806/full/RQXaxE/"  target="_blank"><i class="fab fa-codepen my-auto"></i> CodePen Link</a>
 		</div>
 	</div>
 	
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h3 class="card-img-overlay text-center card-head">Content coming soon!</h3>
+		<h4 class="card-img-overlay text-center card-head">Content coming soon!</h4>
 	</div>
 	
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h3 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h3>
+		<h4 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h4>
 	</div>
 </div>
 
 <div class="card-deck mb-4 d-flex justify-content-center">
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h3 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h3>
+		<h4 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h4>
 	</div>
 	
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h3 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h3>
+		<h4 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h4>
 	</div>
 	
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h3 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h3>
+		<h4 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h4>
 	</div>
 </div>	
-<sub class="cc-att"><a href="https://www.flickr.com/photos/a-weidinger/22432907487/in/photostream/">"Ai Wei Wei"</a> used for the Tribute Page card - by Alfred Weidinger - <a href="https://creativecommons.org/licenses/by/2.0/">CC BY</a> and cropped from original size</sub> <!-- put this in the bottom of the page -->
 
 
+
+</div>
+</div>
 </div>
 </div>
 
 <!-- Latest project section-->
-<div class= "" id="project-highlights"> 
-	<h1 class="d-flex justify-content-center heading-spacing">Project Highlights</h1>
-	
-	<div class="row">
-		<div class="col">
-			<img class="highlight-img" src="https://i.imgur.com/hpncMfw.jpg" alt="Portfolio thumbnail"></img>
+
+
+<article class= "" id="project-highlights"> 
+<div class="hlight-card mx-auto">
+	<h2 class="heading-spacing text-center mx-auto">Project Highlights</h2>
+    
+    
+	<section class="row project1">
+    
+		<div class="col mx-5">
+			<img class="hlight-img img-responsive" src="./img/tribute-page-thumbnail.png" alt="Portfolio thumbnail"></img>
+            <div class="hlight-xtra mx-auto">
+                <h4 class="d-flex justify-content-center hlightxtra-head">Site Layout Notes</h4>
+                <ul class="hlightxtra-list mx-auto">
+                <li class="hlightxtra-item">The page uses a 2 column layout based on a Wikipedia article</li>
+                <li class="hlightxtra-item">The page also features an image grid with some works of the artist</li>
+                <li class="hlightxtra-item">The purpose was to minimize the amount of scrolling required to view the page's content</li>
+                </ul>
+            </div>
 		</div>
-	
-		<div class="col right-text">
-		<h2 class="project-heading">Personal Portfolio</h2>
-		<p>The portfolio project is my second serious project as an aspiring web developer and the requirements were provided by Free Code Camp. The Free Code Camp requirements were pretty simple and they were as follows:
+		
+		<div class="col project-txt-card mx5">
+		<h3 class="project-heading d-flex justify-content-center">Tribute Page</h3>
+        
+		<p class="hlight-p">
+        The tribute page project was my first serious project as an aspiring web developer and the requirements were provided by Free Code Camp. The Free Code Camp requirements were pretty simple and they were as follows:
 		</P>
 			
-		<ul class="highlight-list">
+		<ul class="hlight-list">
+		<li>User can view a tribute page with an image and text..</li>
+		<li>User can click on a link that will take me to an external website with further information on the topic.</li>
+		</ul>
+		
+		<p class="hlight-p">
+        The project requirements might have been simple, but I did a bit extra in terms of the general layout and use of Bootstrap utilities.
+		</p>
+        <p class="cc-att">[1]<a href="https://www.flickr.com/photos/a-weidinger/22432907487/in/photostream/" target="_blank">"Ai Wei Wei"</a> used for the Tribute Page card - by Alfred Weidinger - <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY</a> and cropped from original size</p> 
+		<a class="btn" href="https://codepen.io/wilsonj806/full/RQXaxE/" target="_blank"><i class="fab fa-codepen my-auto"></i> CodePen Link</a> 
+		</div>
+	</section>
+    
+    <div class="highlight-inset mx-auto"></div>
+    
+    <section class="row project2">
+    
+		<div class="col project-txt-card mx-5">
+		<h3 class="project-heading d-flex justify-content-center my-3">Personal Portfolio</h3>
+		<p class="hlight-p">The portfolio project is my second serious project as an aspiring web developer and the requirements were provided by Free Code Camp. The Free Code Camp requirements were pretty simple and they were as follows:
+		</P>
+			
+		<ul class="hlight-list ">
 		<li>User can access all of the site’s content by scrolling.</li>
 		<li>User can click different buttons that lead them to various social media sites.</li>
 		<li>User can go to different sections of the site via a navigation bar.</li>
 		<li>User can see thumbnails of the various projects I’ve done.</li>
 		</ul>
 		
-		<p>I also had my own goals with the project as I felt that I was able to accomplish much more than the above requirements. Those were pretty simple and included things like using and learning as much Bootstrap utilities as possible or making the portfolio extensible in the future. In addition, I started using GitHub to manage the code and version control for the project.
+		<p class="hlight-p">
+        For this project, I wanted to get more elaborate with it. I decided to learn and explore the options I had in terms of the design of the layout and color palette.
 		</p>
-		<a class="btn" href="https://github.com/wilsonj806/portfolio-mk1"><i class="fab fa-github"></i> Live Repo</a>
+		<a class="btn" href="https://github.com/wilsonj806/portfolio-mk1"  target="_blank"><i class="fab fa-github"></i> Live Repo</a> 
 		</div>
-	</div>
+        
+		<div class="col mx-5">
+			<img class="hlight-img img-responsive" src="./img/portfolio-thumb.png" alt="Portfolio thumbnail"></img>
+            <div class="hlight-xtra">
+                <h4 class="d-flex justify-content-center hlightxtra-head">Color Palette</h4>
+                <div class="card-column d-flex justify-content-center">
+                    <div class="card" style="background-color: #B99A7C"></div>
+                    <div class="card" style="background-color: #7E2C2E"></div>
+                    <div class="card" style="background-color: #FFFAE7"></div>
+                    <div class="card" style="background-color: #F1EACF"></div>
+                    <div class="card" style="background-color: #1E1D1B"></div>
+                    <div class="card" style="background-color: #585350"></div>
+                    <div class="card" style="background-color: #A30004"></div>
+                    <div class="card" style="background-color: #928E82"></div>
+                    <div class="card" style="background-color: #FFFFFF"></div>
+                    
+                </div>
+            </div>
+		</div>
+	</section>
 </div>
+</article>
 
 <!-- Contact info section-->
 
-<div class= "contact" id="contact-me">
-	<h1 class="contact-title d-flex  justify-content-center">Connect With Me</h1>
-   <div class="con-card mx-auto">
-   <p class="contact-p text-center mx-auto">
-    I'm always open to collaborating! There's an email button below along with some other links to my social media and works, so feel free to check those out as well.
-    </p>
-    <p class="cc-att d-flex justify-content-center my-1">[1]<a href="https://www.flickr.com/photos/a-weidinger/22432907487/in/photostream/" target="_blank">"Ai Wei Wei"</a> used for the Tribute Page card - by Alfred Weidinger - <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY</a> and cropped from original size</p> 
-    </div>
-	<div class="social-row d-flex justify-content-center">
-		<a class="github btn" href="https://github.com/wilsonj806"><i class="fab fa-github"></i></a>
-		<a class="freecodecamp btn" href="https://www.freecodecamp.org/wilsonj806"><i class="fab fa-free-code-camp"></i></a>
-		<a class="medium btn" href="https://medium.com/@wilsonjiang"><i class="fab fa-medium"></i></a>
-		<a class="email btn" href="mailto:wilsonj806@gmail.com"><i class="fas fa-envelope"></i></a>
-	</div>
-</div>
+</main>
 
+<footer class= "contact" id="contact-me">
+<h2 class="contact-title d-flex  justify-content-center py-2 mx-auto">Contact Me</h2>
+
+    
+	<div class="social-row d-flex justify-content-center">
+		<a class="github btn my-auto" href="https://github.com/wilsonj806" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+		<a class="freecodecamp btn my-auto" href="https://www.freecodecamp.org/wilsonj806" target="_blank"><i class="fab fa-free-code-camp fa-fw"></i></a>
+		<a class="medium btn my-auto" href="https://medium.com/@wilsonjiang" target="_blank"><i class="fab fa-medium fa-fw"></i></a>
+		<a class="email btn my-auto" href="mailto:wilsonj806@gmail.com" target="_blank"><i class="fas fa-envelope fa-fw"></i></a>
+        <a class="500px btn my-auto" href="https://500px.com/wilsonj806/galleries/a-short-collection" target="_blank"><i class="fab fa-500px fa-fw"></i></a>
+	</div>
+</footer>
+
+<!-- Top button 
+<div id="top-button" class="top-bttn">
+	<a href="#home"> <button type="button" class="btn"><span><i class="fas fa-angle-up"></i></span></button></a>
+</div>
 -->
 </body>
 </html>
