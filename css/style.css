@@ -2,7 +2,7 @@
 
 /* CSS Breakpoints */
 
-@media screen and (min-width: 750px){
+@media screen and (max-width: 750px){
 
 body{
 font-size:14px;
