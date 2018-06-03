@@ -1,32 +1,21 @@
 <!-- 
 Portfolio Layout Blank
 Version: 0.95
-Last Updated: 06/02/2018
+Last Updated: 06/03/2018
 Requirements: 
 	1. Can access all of the content by scrolling (COMPLETED)
 	2. Can click different buttons that take the user to various social media sites (COMPLETED)
 	3. Can go to different sections via a nav bar (COMPLETED)
-	4. Can see thumbnails of the different projects done (PARTIALLY COMPLETED)
+	4. Can see thumbnails of the different projects done (COMPLETED)
 	Note that CodePen.io overrides the Window.open() function, so if you want to open windows using jQuery, you will need to target invisible anchor elements like this one: <a target='_blank'>.
 Secondary Requirements:
 	1. Needs a go to top of page button (COMPLETED)
 	2. Make the Nav Bar using Bootstrap (COMPLETED)
-	3. Make sure relative links are changed when deploying to CodePen
+	3. Make Nav bar collapsible (SECONDARY REQUIREMENT)
+	4. Add Night Mode (SECONDARY REQUIREMENT)
+	5. Make sure relative links are changed when deploying to CodePen
 -->
-<!--
-To do:
-1. Figure out a proper color scheme/ layout for the project grid (COMPLETED)
-2. Figure out a general color scheme for the entire portfolio (COMPLETED)
-3. ~Add contact info/ form/ etc~ (TASK COMPLETE)
-4. Size stuff for mobile [IMPORTANT]
-5. Long term: make a vector icon type thing for a logo
-6. ~Change the card link to a button that's in the footer of the card ~ (COMPLETED SOLVED IN A DIFFERENT WAY)
-7. Add more fluff to the intro about me bits (COMPLETED)
-8. Select typeface for the entire thing [IMPORTANT]
-9. Look into making the portfolio Mobile first and CSS grid
-10. Change font color CSS so that it uses "color:inherit;" when applicable
-11. Use "?raw=true" to direct embed github pictures
--->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,7 +62,7 @@ $(document).ready(function(){
 <!-- About me section -->
 
 <article class=" " id="about-me">
-<div class="intro-box mx-auto">	
+<div class="intro-box">	
 	<img src="./img/profile-pic.png" class=" mx-auto rounded-circle" alt="Profile picture"></img>    
     <h1 class="d-flex  justify-content-center section-heading">Wilson Jiang</h1>	
 	<h3 class="d-flex  justify-content-center my-2">Software Developer</h3>
@@ -144,24 +133,24 @@ Some Projects I've Done
 	
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h4 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h4>
+		<h4 class="card-img-overlay d-flex text-center justify-content-center card-head">Content coming soon!</h4>
 	</div>
 </div>
 
 <div class="card-deck mb-4 d-flex justify-content-center">
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h4 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h4>
+		<h4 class="card-img-overlay d-flex text-center justify-content-center card-head">Content coming soon!</h4>
 	</div>
 	
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h4 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h4>
+		<h4 class="card-img-overlay d-flex text-center justify-content-center card-head">Content coming soon!</h4>
 	</div>
 	
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h4 class="card-img-overlay d-flex  justify-content-center card-head">Content coming soon!</h4>
+		<h4 class="card-img-overlay d-flex text-center justify-content-center card-head">Content coming soon!</h4>
 	</div>
 </div>	
 
@@ -182,7 +171,7 @@ Some Projects I've Done
     
 	<section class="row project1">
     
-		<div class="col mx-5">
+		<div class="col mx-5 pjtxtra-card">
 			<img class="hlight-img img-responsive" src="./img/tribute-page-thumbnail.png" alt="Portfolio thumbnail"></img>
             <div class="hlight-xtra mx-auto">
                 <h4 class="d-flex justify-content-center hlightxtra-head">Site Layout Notes</h4>
@@ -216,7 +205,7 @@ Some Projects I've Done
     
     <div class="highlight-inset mx-auto"></div>
     
-    <section class="row project2">
+    <section class="row project2"> 
     
 		<div class="col project-txt-card mx-5">
 		<h3 class="project-heading d-flex justify-content-center my-3">Personal Portfolio</h3>
