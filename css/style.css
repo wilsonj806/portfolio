@@ -1,64 +1,5 @@
 /* Portfolio Mk1 CSS  */
 
-/* CSS Breakpoints */
-
-@media screen and (max-width: 600px) and (min-width: 00px){
-
-body{
-font-size:14px;
-}
-
-nav{
-
-}
-
-/* About Me */
-
-.intro-box{
-margin-top:0px;
-}
-
-.intro-box{
-min-width:100%;
-}
-
-.summary-card{
-min-width:95%;
-height:200px;
-top:-320px;
-}
-
-.sum-icon{
-font-size:30px;  
-margin:20px;
-}
-
-
-/* Project Showcase/ Grid */
-
-.back-card{
-width:95%;
-top:-15px;
-left:-15px;
-}
-.fore-card{
-top:20px;
-left:20px;
-}
-
-/* Project Highlights */
-
-.hlight-card{
-min-width:95%;
-height:auto;
-}
-.project-txt-card{
-min-width:85%;
-}
-
-}
-
-
 
 /* Fonts and such */
 body{
@@ -85,6 +26,7 @@ nav{
 background-color: #B99A7C;
 height:48px;
 box-shadow: 0 .125rem .25rem rgba(0,0,0,.15);
+width:100%;
 }
 
 
@@ -158,6 +100,8 @@ background-color: #F1EACF;
 border-radius:3px;
 height:1000px;
 width:60%;
+margin-right: 20%;
+margin-left: 20%;
 margin-top:125px;
 padding:5px;
 box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
@@ -419,6 +363,11 @@ margin:0;
 width:40%;
 
 }
+
+.pjtxtra-card{
+margin-bottom:20px;
+}
+
 .hlightxtra-head{
 padding:20px 10px 5px 10px;
 }
@@ -570,3 +519,127 @@ position:fixed;
 opacity:0.35;
 }
  */
+ 
+ /* CSS Breakpoints */
+
+
+@media screen and (max-width: 768px) and (min-width:0px){
+
+html{
+width:100%;
+}
+
+body{
+font-size:14px;
+width:100%;
+}
+
+nav{
+width:100%;
+}
+
+/* About Me */
+
+.intro-box{
+margin-top:0px;
+min-width:100%;
+margin-left:0px;
+margin-right:0px;
+}
+
+.summary-card{
+width:95%;
+height:200px;
+top:-320px;
+}
+
+.sum-icon{
+font-size:30px;  
+margin:20px;
+}
+
+
+/* Project Showcase/ Grid */
+
+#project-showcase{
+height:800px;
+}
+
+#grid-id{
+height:400px;
+}
+
+
+.back-card{
+width:95%;
+top:-15px;
+left:-15px;
+height:650px;
+}
+.fore-card{
+top:20px;
+left:20px;
+height:650px;
+}
+
+#grid-id > .card-deck > .card{
+max-width: 16rem;
+height:10rem;
+}
+
+#grid-id > .card-deck > .card > .card-img-top{
+height:10rem;
+}
+
+#grid-id > .card-deck > .card > i{
+font-size:7rem;
+}
+
+.card-head-ct{
+margin-top: 35.75px;
+}
+
+.card-head{
+padding-top:3rem;
+}
+
+/* Project Highlights */
+
+#project-highlights{
+height:2900px;
+}
+
+.hlight-card{
+min-width:100%;
+height:2850px;
+}
+.project-txt-card{
+min-width:85%;
+height:475px;
+margin-right:auto;
+margin-left:auto;
+}
+
+.hlight-img{
+margin-right:auto;
+margin-left:auto;
+}
+
+.hlight-xtra{
+margin-right:auto;
+margin-left:auto;
+}
+
+.hlight-img{
+margin-right:16%;
+margin-left:16%;
+}
+
+.project2{
+
+}
+
+
+}
+
+
