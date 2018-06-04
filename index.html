@@ -1,26 +1,26 @@
 <!-- 
 Portfolio Layout Blank
 Version: 0.95
-Last Updated: 06/03/2018
+Last Updated: 06/04/2018
 Requirements: 
 	1. Can access all of the content by scrolling (COMPLETED)
 	2. Can click different buttons that take the user to various social media sites (COMPLETED)
 	3. Can go to different sections via a nav bar (COMPLETED)
-	4. Can see thumbnails of the different projects done (COMPLETED)
+	4. Can see thumbnails of the different projects done (PARTIALLY COMPLETED)
 	Note that CodePen.io overrides the Window.open() function, so if you want to open windows using jQuery, you will need to target invisible anchor elements like this one: <a target='_blank'>.
 Secondary Requirements:
 	1. Needs a go to top of page button (COMPLETED)
 	2. Make the Nav Bar using Bootstrap (COMPLETED)
 	3. Make Nav bar collapsible (SECONDARY REQUIREMENT)
 	4. Add Night Mode (SECONDARY REQUIREMENT)
-	5. Make sure relative links are changed when deploying to CodePen
+	5. Make sure relative links are changed when deploying to CodePen (COMPLETED)
 -->
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Wilson Jiang Software Developer</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Scripts and other libraries here -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!--for Bootstrap 4.1-->
@@ -46,7 +46,7 @@ $(document).ready(function(){
 <!-- Nav Bar section -->
 <!-- Fix the link color and the color when you hover over it -->
 <nav class="navbar navbar-expand-md" id="home">
-<div class="navbar-collapse collapse" id="navbarSupportedcontent"> 
+<div class="navbar-collapse" id="navbarSupportedcontent"> 
 	<h3 class="navbar-brand">WJ</h3>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active"><a class="nav-link" href="#about-me">About Me</a></li>
@@ -63,7 +63,7 @@ $(document).ready(function(){
 
 <article class=" " id="about-me">
 <div class="intro-box">	
-	<img src="./img/profile-pic.png" class=" mx-auto rounded-circle" alt="Profile picture"></img>    
+	<img src="./img/profile-pic.png" class=" mx-auto rounded-circle about-img" alt="Profile picture"></img>    
     <h1 class="d-flex  justify-content-center section-heading">Wilson Jiang</h1>	
 	<h3 class="d-flex  justify-content-center my-2">Software Developer</h3>
 	<p class="intro-p d-flex text-center mx-auto my-3">
@@ -81,6 +81,7 @@ $(document).ready(function(){
             <p class="text-center"> 
             Bootstrap, Github, jQuery
             </p>
+            <hr class="sec-indiv">
 		</div>
 		<div class="sum-col col container-fluid">
             <i class="fas fa-file-code d-flex justify-content-center sum-icon"></i>
@@ -88,6 +89,7 @@ $(document).ready(function(){
             <p class="text-center">
             HTML, CSS
             </p>
+            <hr>
 		</div>
         <div class="sum-col col">
             <i class="fas fa-edit d-flex justify-content-center sum-icon"></i>
@@ -95,6 +97,7 @@ $(document).ready(function(){
             <p class="text-center">
             Javascript, Sass, Git, Ajax, Node, React
             </p>
+            
 		</div>
 	</div>
     <div class="divleft intro-inset"></div>
@@ -108,7 +111,7 @@ $(document).ready(function(){
 <div id="project-showcase"> 
 <div class="back-card mx-auto">
 <div class="fore-card">
-<h2 class="showcase-heading d-flex  justify-content-center">
+<h2 class="showcase-heading d-flex  justify-content-center text-center">
 Some Projects I've Done
 </h2>
     
@@ -117,9 +120,9 @@ Some Projects I've Done
 </p>
     
 <div class="mx-auto" id="grid-id">
-<div class="card-deck my-4 d-flex justify-content-center">
+<div class="card-deck my-4 d-flex justify-content-center deck1">
 	<div class="card shadow-sm card-filled">
-		<img class="card-img-top" src=".\img\tribute-thumb.png"></img>
+		<img class="card-img-top" src=".\img\tribute-grid-thumb.png"></img>
 		<div class="card-img-overlay">
 			<h4 class="card-head-ct d-flex  justify-content-center">Tribute Page<sub style="font-size: 8px">[1]</sub></h4>
 			<a class="card-link d-flex justify-content-center btn" href="https://codepen.io/wilsonj806/full/RQXaxE/"  target="_blank"><i class="fab fa-codepen my-auto"></i> CodePen Link</a>
@@ -137,7 +140,7 @@ Some Projects I've Done
 	</div>
 </div>
 
-<div class="card-deck mb-4 d-flex justify-content-center">
+<div class="card-deck mb-4 d-flex justify-content-center deck2">
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
 		<h4 class="card-img-overlay d-flex text-center justify-content-center card-head">Content coming soon!</h4>
@@ -171,9 +174,9 @@ Some Projects I've Done
     
 	<section class="row project1">
     
-		<div class="col mx-5 pjtxtra-card">
-			<img class="hlight-img img-responsive" src="./img/tribute-page-thumbnail.png" alt="Portfolio thumbnail"></img>
-            <div class="hlight-xtra mx-auto">
+		<div class="col pjtxtra-card">
+			<img class="hlight-img" src="./img/tribute-thumb.png" alt="Portfolio thumbnail"></img>
+            <div class="hlight-xtra">
                 <h4 class="d-flex justify-content-center hlightxtra-head">Site Layout Notes</h4>
                 <ul class="hlightxtra-list mx-auto">
                 <li class="hlightxtra-item">The page uses a 2 column layout based on a Wikipedia article</li>
@@ -207,7 +210,7 @@ Some Projects I've Done
     
     <section class="row project2"> 
     
-		<div class="col project-txt-card mx-5">
+		<div class="col project-txt-card">
 		<h3 class="project-heading d-flex justify-content-center my-3">Personal Portfolio</h3>
 		<p class="hlight-p">The portfolio project is my second serious project as an aspiring web developer and the requirements were provided by Free Code Camp. The Free Code Camp requirements were pretty simple and they were as follows:
 		</P>
@@ -225,8 +228,8 @@ Some Projects I've Done
 		<a class="btn" href="https://github.com/wilsonj806/portfolio-mk1"  target="_blank"><i class="fab fa-github"></i> Live Repo</a> 
 		</div>
         
-		<div class="col mx-5 pjtxtra-card">
-			<img class="hlight-img img-responsive" src="./img/portfolio-thumb.png" alt="Portfolio thumbnail"></img>
+		<div class="col pjtxtra-card">
+			<img class="hlight-img" src="./img/portfolio-thumb.png" alt="Portfolio thumbnail"></img>
             <div class="hlight-xtra">
                 <h4 class="d-flex justify-content-center hlightxtra-head">Color Palette</h4>
                 <div class="card-column d-flex justify-content-center">
