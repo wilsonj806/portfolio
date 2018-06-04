@@ -85,7 +85,7 @@ width:100%;
 height:1200px;
 }
 
-#about-me > .intro-box > img{
+.about-img{
 height:250px;
 width:250px;
 margin-top:75px;
@@ -171,6 +171,10 @@ margin:30px;
 .sum-heading{
 margin:30px 20px 15px 20px;
 }
+    
+.sec-indiv{
+display:none;
+}    
     
 /*  Project showcase CSS  */
 
@@ -414,11 +418,13 @@ border-color:#585350;
 .hlight-img{
 padding:5px;
 width:27rem;
+display:flex;
+justify-content: center;
 height:16.875rem;
 margin-top:12%;
 margin-bottom:10%;
-margin-left:7%;
-margin-right:10%;
+margin-right:auto;
+margin-left:auto;
 border-radius: 3px;
 background-color:white;
 border:2px solid rgba(50, 50, 50, 0.6);
@@ -478,7 +484,6 @@ font-size:30px;
 color:black;
 height:40px;
 width:50px;
-border:none;
 margin-left:0px;
 margin-right:0px;
 padding-left:0px;
@@ -523,7 +528,66 @@ opacity:0.35;
  /* CSS Breakpoints */
 
 
-@media screen and (max-width: 768px) and (min-width:0px){
+@media screen and (max-width:1440px) and (min-width:1280px){
+
+body{
+font-size:16px;
+}
+
+/* About Me */
+
+.intro-box{
+width:85%;
+margin-right:auto;
+margin-left:auto;
+}
+
+.summary-card{
+width:75%;
+}
+
+/* Project Grid */
+
+.back-card{
+width:85%;
+top:-15px;
+left:-15px;
+height:750px;
+}
+.fore-card{
+top:20px;
+left:20px;
+height:750px;
+}
+
+/* Project Highlights */
+
+.hlight-card{
+min-width:85%;
+height:1610px;
+}
+
+.project-txt-card{
+width: 80%;
+}
+
+
+
+
+.hlight-img{
+width:16rem;
+height:10rem;
+margin-right:auto;
+margin-left:auto;
+}
+
+
+
+}
+
+
+
+@media screen and (max-width: 1279px) and (min-width:768px){
 
 html{
 width:100%;
@@ -541,7 +605,7 @@ width:100%;
 /* About Me */
 
 .intro-box{
-margin-top:0px;
+margin-top:0px;    
 min-width:100%;
 margin-left:0px;
 margin-right:0px;
@@ -557,6 +621,8 @@ top:-320px;
 font-size:30px;  
 margin:20px;
 }
+
+
 
 
 /* Project Showcase/ Grid */
@@ -606,12 +672,12 @@ padding-top:3rem;
 /* Project Highlights */
 
 #project-highlights{
-height:2900px;
+height:2680px;
 }
 
 .hlight-card{
 min-width:100%;
-height:2850px;
+height:2610px;
 }
 .project-txt-card{
 min-width:85%;
@@ -620,10 +686,6 @@ margin-right:auto;
 margin-left:auto;
 }
 
-.hlight-img{
-margin-right:auto;
-margin-left:auto;
-}
 
 .hlight-xtra{
 margin-right:auto;
@@ -631,8 +693,9 @@ margin-left:auto;
 }
 
 .hlight-img{
-margin-right:16%;
-margin-left:16%;
+margin-right:auto;
+margin-left:auto;
+padding:10px;
 }
 
 .project2{
@@ -642,4 +705,185 @@ margin-left:16%;
 
 }
 
+@media screen and (max-width: 767px) and (min-width:0px){
+
+html{
+width:100%;
+}
+
+body{
+font-size:12px;
+width:100vw;
+}
+
+h1{
+font-size: 1.9rem; /* Default is 2em*/
+}
+
+h2{
+font-size: 1.425rem; /* Default is 1.5em */
+}
+
+h3{
+font-size: 1.1115rem; /* Default is 1.17em */
+}
+
+h5{
+font-size: 0.95rem;
+font-weight:600;
+}
+
+/* Nav Bar */
+
+nav{
+width:100%;
+height:180px;
+}
+
+.navbar-nav{
+font-size:14px;
+}
+
+.navbar-brand{
+display:none;
+}
+
+/* About Me */
+
+#about-me{
+height:1400px;
+}
+
+.intro-box{
+margin-top:0px;
+min-width:100%;
+margin-left:0px;
+margin-right:0px;
+height:1200px;
+}
+
+.about-img{
+height:150px;
+width:150px;
+}
+
+.summary-card{
+width:95%;
+height:500px;
+top:-550px;
+}
+
+.sum-icon{
+font-size:30px;  
+margin:20px;
+}
+
+.sum-col{
+min-width:100%;
+}
+
+.intro-inset{
+display:none;
+}
+
+.sec-indiv{
+display:block;
+}    
+    
+.intro-p{
+width:90%;
+}    
+    
+
+/* Project Showcase/ Grid */
+
+#project-showcase{
+height:800px;
+}
+
+#grid-id{
+height:550px;
+}
+
+
+.back-card{
+width:95%;
+top:-15px;
+left:-15px;
+height:780px;
+}
+.fore-card{
+top:20px;
+left:20px;
+height:780px;
+}
+
+#grid-id > .card-deck > .card{
+max-width: 16rem;
+height:10rem;
+}
+
+#grid-id > .card-deck > .card > .card-img-top{
+height:10rem;
+}
+
+#grid-id > .card-deck > .card > i{
+font-size:7rem;
+}
+
+.card-head-ct{
+margin-top: 35.75px;
+}
+
+.card-head{
+padding-top:3rem;
+}
+
+.deck2{
+display:none !important; /* not ideal but d-flex uses !important */
+}
+
+/* Project Highlights */
+
+#project-highlights{
+height:2600px;
+}
+
+.hlight-card{
+min-width:100%;
+height:2450px;
+}
+.project-txt-card{
+min-width:95%;
+height:610px;
+margin-right:2.5%;
+margin-left:2.5%;
+}
+
+
+.hlight-xtra{
+
+margin-right:auto;
+margin-left:auto;
+}
+
+.hlight-img{
+height:8.75rem;
+width: 14rem;
+margin-right:auto;
+margin-left:auto;
+padding:5px;
+}
+
+
+.project2{
+
+}
+/* Contact Info */
+
+.contact-title{
+width:75%;
+}
+
+}
 
