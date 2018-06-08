@@ -1,5 +1,9 @@
 # Portfolio Mk1 Read Me
 
+### Link to the page:
+https://wilsonj806.github.io/portfolio-mk1/
+
+
 ### Contributor(s):
 Wilson Jiang
 
@@ -27,4 +31,4 @@ Versioning is done using [SemVer](https://semver.org) after 1.0.0
 
 Thanks to the following people/ organizations:
 - Free Code Camp for the lessons and projects
-- 
+
