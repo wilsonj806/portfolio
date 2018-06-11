@@ -20,6 +20,10 @@ a{
 color:#2B73AA;
 }
 
+.dy-flex{
+display:flex;
+}
+
 
 /*  Nav Bar CSS  */
 nav{
@@ -35,16 +39,16 @@ background-color: transparent;
 
 }
 
-.navbar > div > .navbar-brand{
+.navbar-brand{
 margin-top:5px;
 margin-bottom:3px;
 }
 
-.navbar > div > ul > .nav-item > .nav-link{
+.nav-link{
 color:#464646;
 }
 
-.navbar > div > ul > .nav-item{
+.nav-item{
 margin-top:-2.5px;
 height:38px;
 border-radius:2px;
@@ -53,7 +57,7 @@ border:2px solid rgba(70,70,70,0.0);
 }
 
 
-.navbar > div > ul > .active {
+.active {
 border:1px solid rgba(70,70,70,0.45);
 margin-top:-2.5px;
 height:38px;
@@ -61,18 +65,20 @@ color:#1E1D1B;
 box-shadow: 0 .125rem .15rem rgba(0,0,0,.15);
 border-radius:2px;
 }
+
 .navbar > div > ul > .active >.nav-link{
 color:#1E1D1B;
 }
 
-.navbar > div > ul > .nav-item:hover{
+.nav-item:hover{
 border:1px solid rgba(70,70,70,0.45);
 margin-top:-2.5px;
 height:38px;
 border-radius:2px;
 box-shadow: 0 .125rem .15rem inset rgba(0,0,0,.15);
 }
-.navbar > div > ul > .nav-item > .nav-link:hover{
+
+.nav-link:hover{
 color:#1E1D1B;
 }
 
@@ -80,10 +86,6 @@ color:#1E1D1B;
 
 
 
-#about-me{
-width:100%;
-height:1200px;
-}
 
 .about-img{
 height:250px;
@@ -100,9 +102,7 @@ background-color: #F1EACF;
 border-radius:3px;
 height:1000px;
 width:60%;
-margin-right: 20%;
-margin-left: 20%;
-margin-top:125px;
+margin:12vh 20% 20vh 20%;
 padding:5px;
 box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
 
@@ -124,12 +124,11 @@ width:75%;
 }
 
 .summary-card{
-width:45%;
+width:80%;
 height:250px;
-padding-bottom:100px;
-top:-350px;
-position:relative;
+padding:5vh auto 10vh auto;
 background-color:#FFFAE7;
+margin-top:7vh;
 box-shadow: 0 .125rem 1rem rgba(0,0,0,.5);
 }
 
@@ -180,12 +179,7 @@ display:none;
 
 
     
-#project-showcase{
-width:100%;
-background-color: inherit;
-height:1100px;
-/*box-shadow: 0 -.125rem .25rem rgba(0,0,0,.075); */
-}
+
 
 .showcase-heading{
 padding:30px;
@@ -285,6 +279,16 @@ background-color:rgba(255,250,231,0.70);
 
 /* Project Highlights CSS */
 
+.hlight-card{
+height:1600px;
+background-color:#F1EACF ;
+border-radius: 2px;
+width: 65%;
+box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
+margin-top:10vh;
+margin-bottom:10vh;
+}
+
 .sec-inset{
 width:85%;
 height:1.25px;
@@ -301,21 +305,10 @@ margin-top:80px;
 margin-bottom:80px;
 }   
 
-#project-highlights{
-height:1800px;
-}
-
 .heading-spacing{
 padding-top:30px;
 }
 
-.hlight-card{
-height:1600px;
-background-color:#F1EACF ;
-border-radius: 2px;
-width: 65%;
-box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
-}
 
 .project-heading{
 margin:20px;
@@ -359,11 +352,11 @@ box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
 width:100%;
 }
 
-#project-highlights > .hlight-card > .row{
+.hlight-card > .row{
 margin:0;
 }
 
-#project-highlights > .hlight-card > .row > .col{
+.hlight-card > .row > .col{
 width:40%;
 
 }
@@ -396,19 +389,17 @@ background-color:#FFFAE7;
 box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
 }
 
-#project-highlights > .hlight-card > .project2 > .col > .hlight-xtra > .card-column{
+.hlight-card > .project2 > .col > .hlight-xtra > .card-column{
 height:65px;
-margin-top:32px;
+margin:32px 5vw auto 5vw;
 border:1px solid black;
-margin-right: 15px;
-margin-left: 15px;
 padding:5px;
 background-color:rgba(255,255,255,0.95);
 } 
 
-#project-highlights > .hlight-card > .project2 > .col > .hlight-xtra > .card-column > .card{
-height:50px;
-width:50px;
+.hlight-card > .project2 > .col > .hlight-xtra > .card-column > .card{
+height:5vh;
+width:5vh;
 margin:2px;
 display:inline-block;
 border-radius:0;
@@ -614,7 +605,6 @@ margin-right:0px;
 .summary-card{
 width:95%;
 height:200px;
-top:-320px;
 }
 
 .sum-icon{
@@ -737,7 +727,7 @@ font-weight:600;
 
 nav{
 width:100%;
-height:180px;
+height:28vh;
 }
 
 .navbar-nav{
@@ -750,9 +740,6 @@ display:none;
 
 /* About Me */
 
-#about-me{
-height:1400px;
-}
 
 .intro-box{
 margin-top:0px;
@@ -770,7 +757,6 @@ width:150px;
 .summary-card{
 width:95%;
 height:500px;
-top:-550px;
 }
 
 .sum-icon{
@@ -840,7 +826,7 @@ padding-top:3rem;
 }
 
 .deck2{
-display:none !important; /* not ideal but d-flex uses !important */
+display:none;
 }
 
 /* Project Highlights */
