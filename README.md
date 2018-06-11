@@ -1,5 +1,9 @@
 # Portfolio Mk1 Read Me
 
+### Versioning:
+
+Versioning is done using [SemVer](https://semver.org) after 1.0.0
+
 ### Link to the page:
 https://wilsonj806.github.io/portfolio-mk1/
 
@@ -22,10 +26,6 @@ Most requirements have been met although numerous improvements can be made. Thes
 - Bootstrap
 - Font Awesome Icons
 - Google Fonts
-
-### Versioning:
-
-Versioning is done using [SemVer](https://semver.org) after 1.0.0
 
 ### Acknowledgements:
 
