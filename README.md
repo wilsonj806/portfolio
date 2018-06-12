@@ -7,6 +7,8 @@ Versioning is done using [SemVer](https://semver.org) after 1.0.0
 ### Link to the page:
 https://wilsonj806.github.io/portfolio-mk1/
 
+### Link to the write up:
+https://medium.com/@wilsonjiang/portfolio-mk1-write-up-b7b304ef39f3
 
 ### Contributor(s):
 Wilson Jiang
