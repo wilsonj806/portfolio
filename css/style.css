@@ -24,6 +24,10 @@ color:#2B73AA;
 display:flex;
 }
 
+.mgx-aut{
+margin-right:auto;
+margin-left:auto;
+}
 
 /*  Nav Bar CSS  */
 nav{
@@ -83,8 +87,6 @@ color:#1E1D1B;
 }
 
 /*  About Me CSS  */
-
-
 
 
 .about-img{
@@ -178,9 +180,6 @@ display:none;
 /*  Project showcase CSS  */
 
 
-    
-
-
 .showcase-heading{
 padding:30px;
 }
@@ -191,7 +190,7 @@ z-index:1;
 top:30px;
 left:30px;
 width:auto;
-height:850px;
+height:870px;
 border-radius:2px;
 position:relative;
 background-color: #F1EACF;
@@ -202,7 +201,7 @@ box-shadow: 0 .125rem 1rem rgba(0,0,0,.5);
 top:-25px;
 left:-25px;
 width:75%;
-height:850px;
+height:870px;
 position:relative;
 border-radius:2px;
 background-color:#7E2C2E;
@@ -301,12 +300,12 @@ width:75%;
 height:1px;
 background-color:#1E1D1B;
 filter:opacity(25%);
-margin-top:80px;
-margin-bottom:80px;
+margin-top:7vh;
+margin-bottom:7vh;
 }   
 
 .heading-spacing{
-padding-top:30px;
+padding-top:3vh;
 }
 
 
@@ -335,7 +334,7 @@ padding:40px 20px 30px 20px;
 }
 
 .project-txt-card{
-height:600px;
+height:625px;
 max-width:40%;
 margin-left:5%;
 margin-right:5%;
@@ -386,20 +385,22 @@ font-size: .95rem;
 height:220px;
 border-radius: 2px;
 background-color:#FFFAE7;
+width:85%;
+margin:auto auto auto auto;
 box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
 }
 
 .hlight-card > .project2 > .col > .hlight-xtra > .card-column{
 height:65px;
-margin:32px 5vw auto 5vw;
+margin:32px 1vw auto 1vw;
 border:1px solid black;
 padding:5px;
 background-color:rgba(255,255,255,0.95);
 } 
 
 .hlight-card > .project2 > .col > .hlight-xtra > .card-column > .card{
-height:5vh;
-width:5vh;
+height:50px;
+width:50px;
 margin:2px;
 display:inline-block;
 border-radius:0;
@@ -429,6 +430,10 @@ margin-left:5%;
 margin-right:5%;
 }
 
+.butn{
+margin-top:5px;
+margin-bottom:5px;
+}
 
 .project-txt-card > .btn:hover{
 color:white;
@@ -496,26 +501,8 @@ background-color: #9A7857;
 box-shadow: 0 .125rem .55rem  rgba(0,0,0,.55);
 
 }
-/*  Top button CSS  */
-/*  
 
 
-.top-bttn > a > .btn{
-font-size:50px;
-background-color: rgba(255,255,255,.75);
-
-}
-.top-bttn{
-left:50px;
-bottom:50px;
-position:fixed;
-
-} 
-#top-button > a > .btn:hover{
-opacity:0.35;
-}
- */
- 
  /* CSS Breakpoints */
 
 
@@ -551,6 +538,11 @@ left:20px;
 height:750px;
 }
 
+.mgx-aut{
+margin-right:auto;
+margin-left:auto;
+}
+
 /* Project Highlights */
 
 .hlight-card{
@@ -561,7 +553,6 @@ height:1610px;
 .project-txt-card{
 width: 80%;
 }
-
 
 
 
@@ -617,9 +608,6 @@ margin:20px;
 
 /* Project Showcase/ Grid */
 
-#project-showcase{
-height:800px;
-}
 
 #grid-id{
 height:400px;
@@ -659,23 +647,30 @@ margin-top: 35.75px;
 padding-top:3rem;
 }
 
+.mgx-aut{
+margin-right:auto;
+margin-left:auto;
+}
+
 /* Project Highlights */
 
-#project-highlights{
-height:2680px;
-}
+
 
 .hlight-card{
 min-width:100%;
 height:2610px;
 }
 .project-txt-card{
-min-width:85%;
-height:475px;
+min-width:50%;
+height:57vh;
 margin-right:auto;
 margin-left:auto;
 }
 
+.hlight-card > .project2 > .col > .hlight-xtra > .card-column{
+height:65px;
+margin:32px 15% auto 15%;
+}
 
 .hlight-xtra{
 margin-right:auto;
@@ -688,9 +683,6 @@ margin-left:auto;
 padding:10px;
 }
 
-.project2{
-
-}
 
 
 }
@@ -702,7 +694,7 @@ width:100%;
 }
 
 body{
-font-size:12px;
+font-size:14px;
 width:100vw;
 }
 
@@ -783,9 +775,6 @@ width:90%;
 
 /* Project Showcase/ Grid */
 
-#project-showcase{
-height:800px;
-}
 
 #grid-id{
 height:550px;
@@ -796,12 +785,12 @@ height:550px;
 width:95%;
 top:-15px;
 left:-15px;
-height:780px;
+height:795px;
 }
 .fore-card{
 top:20px;
 left:20px;
-height:780px;
+height:795px;
 }
 
 #grid-id > .card-deck > .card{
@@ -829,26 +818,36 @@ padding-top:3rem;
 display:none;
 }
 
+.mgx-aut{
+margin-right:auto;
+margin-left:auto;
+}
+
 /* Project Highlights */
 
-#project-highlights{
-height:2600px;
-}
+
 
 .hlight-card{
 min-width:100%;
-height:2450px;
+height:2625px;
 }
 .project-txt-card{
 min-width:95%;
-height:610px;
+height:127vh;
 margin-right:2.5%;
 margin-left:2.5%;
 }
 
 
 .hlight-xtra{
+height:50vh;
+width:90%;
+margin-right:auto;
+margin-left:auto;
+}
 
+.hlight-xtra2{
+height:30vh;
 margin-right:auto;
 margin-left:auto;
 }
@@ -859,12 +858,13 @@ width: 14rem;
 margin-right:auto;
 margin-left:auto;
 padding:5px;
+margin:8% auto 10% auto;
 }
 
-
-.project2{
-
+.hlightxtra-head{
+padding:10px 10px 5px 10px;
 }
+
 /* Contact Info */
 
 .contact-title{
