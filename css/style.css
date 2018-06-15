@@ -74,6 +74,7 @@ border-radius:2px;
 color:#1E1D1B;
 }
 
+
 .nav-item:hover{
 border:1px solid rgba(70,70,70,0.45);
 margin-top:-2.5px;
@@ -85,6 +86,7 @@ box-shadow: 0 .125rem .15rem inset rgba(0,0,0,.15);
 .nav-link:hover{
 color:#1E1D1B;
 }
+
 
 /*  About Me CSS  */
 
@@ -276,10 +278,12 @@ box-shadow: 0 .125rem .25rem rgba(0,0,0,.5);
 background-color:rgba(255,250,231,0.70);
 }
 
+
+
 /* Project Highlights CSS */
 
 .hlight-card{
-height:1600px;
+height:175vh;
 background-color:#F1EACF ;
 border-radius: 2px;
 width: 65%;
@@ -304,10 +308,6 @@ margin-top:7vh;
 margin-bottom:7vh;
 }   
 
-.heading-spacing{
-padding-top:3vh;
-}
-
 
 .project-heading{
 margin:20px;
@@ -330,14 +330,15 @@ margin-top:30px;
 margin-bottom:30px;
 width:50%;
 border-bottom: 1px solid rgba(0,0,0,.25); 
-padding:40px 20px 30px 20px; 
+padding:30px 20px 30px 20px; 
 }
 
 .project-txt-card{
-height:625px;
+height:45%;
 max-width:40%;
 margin-left:5%;
 margin-right:5%;
+margin-top:3%;
 border-radius:5px;
 background-color:#FFFAE7;
 box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
@@ -356,11 +357,12 @@ margin:0;
 }
 
 .hlight-card > .row > .col{
-width:40%;
+width:45%;
 
 }
 
 .pjtxtra-card{
+max-width:45%;
 margin-bottom:20px;
 }
 
@@ -382,7 +384,7 @@ font-size: .95rem;
 }
 
 .hlight-xtra{
-height:220px;
+height:250px;
 border-radius: 2px;
 background-color:#FFFAE7;
 width:85%;
@@ -431,8 +433,8 @@ margin-right:5%;
 }
 
 .butn{
-margin-top:5px;
-margin-bottom:5px;
+margin-top:2.5px;
+margin-bottom:12.5px;
 }
 
 .project-txt-card > .btn:hover{
@@ -506,7 +508,7 @@ box-shadow: 0 .125rem .55rem  rgba(0,0,0,.55);
  /* CSS Breakpoints */
 
 
-@media screen and (max-width:1440px) and (min-width:1280px){
+@media screen and (max-width:1440px) and (min-width:1025px){
 
 body{
 font-size:16px;
@@ -569,7 +571,7 @@ margin-left:auto;
 
 
 
-@media screen and (max-width: 1279px) and (min-width:768px){
+@media screen and (max-width: 1024px) and (min-width:600px){
 
 html{
 width:100%;
@@ -658,11 +660,11 @@ margin-left:auto;
 
 .hlight-card{
 min-width:100%;
-height:2610px;
+height:180vh;
 }
 .project-txt-card{
 min-width:50%;
-height:57vh;
+height:95%;
 margin-right:auto;
 margin-left:auto;
 }
@@ -681,13 +683,14 @@ margin-left:auto;
 margin-right:auto;
 margin-left:auto;
 padding:10px;
+height:10rem;
+width: 16rem;
 }
 
 
-
 }
 
-@media screen and (max-width: 767px) and (min-width:0px){
+@media screen and (max-width: 599px) and (min-width:0px){
 
 html{
 width:100%;
@@ -829,25 +832,26 @@ margin-left:auto;
 
 .hlight-card{
 min-width:100%;
-height:2625px;
+height:350vh;
 }
 .project-txt-card{
 min-width:95%;
-height:127vh;
+height:45%;
 margin-right:2.5%;
 margin-left:2.5%;
 }
 
 
 .hlight-xtra{
-height:50vh;
-width:90%;
+height:57%;
+width:95%;
 margin-right:auto;
 margin-left:auto;
 }
 
 .hlight-xtra2{
-height:30vh;
+height:55%;
+width:95%;
 margin-right:auto;
 margin-left:auto;
 }
@@ -863,6 +867,19 @@ margin:8% auto 10% auto;
 
 .hlightxtra-head{
 padding:10px 10px 5px 10px;
+}
+
+.hlight-list{
+list-style-type:decimal;
+margin:15px;
+}
+
+.hlight-p{
+margin:10px;
+}
+
+.pjtxtra-card{
+min-width:95%;
 }
 
 /* Contact Info */
