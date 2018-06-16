@@ -20,6 +20,14 @@ a{
 color:#2B73AA;
 }
 
+.dy-flex{
+display:flex;
+}
+
+.mgx-aut{
+margin-right:auto;
+margin-left:auto;
+}
 
 /*  Nav Bar CSS  */
 nav{
@@ -35,16 +43,16 @@ background-color: transparent;
 
 }
 
-.navbar > div > .navbar-brand{
+.navbar-brand{
 margin-top:5px;
 margin-bottom:3px;
 }
 
-.navbar > div > ul > .nav-item > .nav-link{
+.nav-link{
 color:#464646;
 }
 
-.navbar > div > ul > .nav-item{
+.nav-item{
 margin-top:-2.5px;
 height:38px;
 border-radius:2px;
@@ -53,7 +61,7 @@ border:2px solid rgba(70,70,70,0.0);
 }
 
 
-.navbar > div > ul > .active {
+.active {
 border:1px solid rgba(70,70,70,0.45);
 margin-top:-2.5px;
 height:38px;
@@ -61,29 +69,27 @@ color:#1E1D1B;
 box-shadow: 0 .125rem .15rem rgba(0,0,0,.15);
 border-radius:2px;
 }
+
 .navbar > div > ul > .active >.nav-link{
 color:#1E1D1B;
 }
 
-.navbar > div > ul > .nav-item:hover{
+
+.nav-item:hover{
 border:1px solid rgba(70,70,70,0.45);
 margin-top:-2.5px;
 height:38px;
 border-radius:2px;
 box-shadow: 0 .125rem .15rem inset rgba(0,0,0,.15);
 }
-.navbar > div > ul > .nav-item > .nav-link:hover{
+
+.nav-link:hover{
 color:#1E1D1B;
 }
 
+
 /*  About Me CSS  */
 
-
-
-#about-me{
-width:100%;
-height:1200px;
-}
 
 .about-img{
 height:250px;
@@ -100,9 +106,7 @@ background-color: #F1EACF;
 border-radius:3px;
 height:1000px;
 width:60%;
-margin-right: 20%;
-margin-left: 20%;
-margin-top:125px;
+margin:12vh 20% 20vh 20%;
 padding:5px;
 box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
 
@@ -124,12 +128,11 @@ width:75%;
 }
 
 .summary-card{
-width:45%;
+width:80%;
 height:250px;
-padding-bottom:100px;
-top:-350px;
-position:relative;
+padding:5vh auto 10vh auto;
 background-color:#FFFAE7;
+margin-top:7vh;
 box-shadow: 0 .125rem 1rem rgba(0,0,0,.5);
 }
 
@@ -179,14 +182,6 @@ display:none;
 /*  Project showcase CSS  */
 
 
-    
-#project-showcase{
-width:100%;
-background-color: inherit;
-height:1100px;
-/*box-shadow: 0 -.125rem .25rem rgba(0,0,0,.075); */
-}
-
 .showcase-heading{
 padding:30px;
 }
@@ -197,7 +192,7 @@ z-index:1;
 top:30px;
 left:30px;
 width:auto;
-height:850px;
+height:870px;
 border-radius:2px;
 position:relative;
 background-color: #F1EACF;
@@ -208,7 +203,7 @@ box-shadow: 0 .125rem 1rem rgba(0,0,0,.5);
 top:-25px;
 left:-25px;
 width:75%;
-height:850px;
+height:870px;
 position:relative;
 border-radius:2px;
 background-color:#7E2C2E;
@@ -283,7 +278,19 @@ box-shadow: 0 .125rem .25rem rgba(0,0,0,.5);
 background-color:rgba(255,250,231,0.70);
 }
 
+
+
 /* Project Highlights CSS */
+
+.hlight-card{
+height:175vh;
+background-color:#F1EACF ;
+border-radius: 2px;
+width: 65%;
+box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
+margin-top:10vh;
+margin-bottom:10vh;
+}
 
 .sec-inset{
 width:85%;
@@ -297,25 +304,10 @@ width:75%;
 height:1px;
 background-color:#1E1D1B;
 filter:opacity(25%);
-margin-top:80px;
-margin-bottom:80px;
+margin-top:7vh;
+margin-bottom:7vh;
 }   
 
-#project-highlights{
-height:1800px;
-}
-
-.heading-spacing{
-padding-top:30px;
-}
-
-.hlight-card{
-height:1600px;
-background-color:#F1EACF ;
-border-radius: 2px;
-width: 65%;
-box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
-}
 
 .project-heading{
 margin:20px;
@@ -338,14 +330,15 @@ margin-top:30px;
 margin-bottom:30px;
 width:50%;
 border-bottom: 1px solid rgba(0,0,0,.25); 
-padding:40px 20px 30px 20px; 
+padding:30px 20px 30px 20px; 
 }
 
 .project-txt-card{
-height:600px;
+height:45%;
 max-width:40%;
 margin-left:5%;
 margin-right:5%;
+margin-top:3%;
 border-radius:5px;
 background-color:#FFFAE7;
 box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
@@ -359,16 +352,17 @@ box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
 width:100%;
 }
 
-#project-highlights > .hlight-card > .row{
+.hlight-card > .row{
 margin:0;
 }
 
-#project-highlights > .hlight-card > .row > .col{
-width:40%;
+.hlight-card > .row > .col{
+width:45%;
 
 }
 
 .pjtxtra-card{
+max-width:45%;
 margin-bottom:20px;
 }
 
@@ -390,23 +384,23 @@ font-size: .95rem;
 }
 
 .hlight-xtra{
-height:220px;
+height:250px;
 border-radius: 2px;
 background-color:#FFFAE7;
+width:85%;
+margin:auto auto auto auto;
 box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
 }
 
-#project-highlights > .hlight-card > .project2 > .col > .hlight-xtra > .card-column{
+.hlight-card > .project2 > .col > .hlight-xtra > .card-column{
 height:65px;
-margin-top:32px;
+margin:32px 1vw auto 1vw;
 border:1px solid black;
-margin-right: 15px;
-margin-left: 15px;
 padding:5px;
 background-color:rgba(255,255,255,0.95);
 } 
 
-#project-highlights > .hlight-card > .project2 > .col > .hlight-xtra > .card-column > .card{
+.hlight-card > .project2 > .col > .hlight-xtra > .card-column > .card{
 height:50px;
 width:50px;
 margin:2px;
@@ -432,12 +426,10 @@ box-shadow: 0 .125rem .5rem rgba(0,0,0,.5);
 
 }
 
-.cc-att{
-font-size: .75rem;
-margin-left:5%;
-margin-right:5%;
+.butn{
+margin-top:2.5px;
+margin-bottom:12.5px;
 }
-
 
 .project-txt-card > .btn:hover{
 color:white;
@@ -505,30 +497,12 @@ background-color: #9A7857;
 box-shadow: 0 .125rem .55rem  rgba(0,0,0,.55);
 
 }
-/*  Top button CSS  */
-/*  
 
 
-.top-bttn > a > .btn{
-font-size:50px;
-background-color: rgba(255,255,255,.75);
-
-}
-.top-bttn{
-left:50px;
-bottom:50px;
-position:fixed;
-
-} 
-#top-button > a > .btn:hover{
-opacity:0.35;
-}
- */
- 
  /* CSS Breakpoints */
 
 
-@media screen and (max-width:1440px) and (min-width:1280px){
+@media screen and (max-width:1440px) and (min-width:1025px){
 
 body{
 font-size:16px;
@@ -560,6 +534,11 @@ left:20px;
 height:750px;
 }
 
+.mgx-aut{
+margin-right:auto;
+margin-left:auto;
+}
+
 /* Project Highlights */
 
 .hlight-card{
@@ -570,7 +549,6 @@ height:1610px;
 .project-txt-card{
 width: 80%;
 }
-
 
 
 
@@ -587,7 +565,7 @@ margin-left:auto;
 
 
 
-@media screen and (max-width: 1279px) and (min-width:768px){
+@media screen and (max-width: 1024px) and (min-width:600px){
 
 html{
 width:100%;
@@ -614,7 +592,6 @@ margin-right:0px;
 .summary-card{
 width:95%;
 height:200px;
-top:-320px;
 }
 
 .sum-icon{
@@ -627,9 +604,6 @@ margin:20px;
 
 /* Project Showcase/ Grid */
 
-#project-showcase{
-height:800px;
-}
 
 #grid-id{
 height:400px;
@@ -669,23 +643,30 @@ margin-top: 35.75px;
 padding-top:3rem;
 }
 
-/* Project Highlights */
-
-#project-highlights{
-height:2680px;
-}
-
-.hlight-card{
-min-width:100%;
-height:2610px;
-}
-.project-txt-card{
-min-width:85%;
-height:475px;
+.mgx-aut{
 margin-right:auto;
 margin-left:auto;
 }
 
+/* Project Highlights */
+
+
+
+.hlight-card{
+min-width:100%;
+height:180vh;
+}
+.project-txt-card{
+min-width:50%;
+height:95%;
+margin-right:auto;
+margin-left:auto;
+}
+
+.hlight-card > .project2 > .col > .hlight-xtra > .card-column{
+height:65px;
+margin:32px 15% auto 15%;
+}
 
 .hlight-xtra{
 margin-right:auto;
@@ -696,23 +677,21 @@ margin-left:auto;
 margin-right:auto;
 margin-left:auto;
 padding:10px;
+height:10rem;
+width: 16rem;
 }
 
-.project2{
 
 }
 
-
-}
-
-@media screen and (max-width: 767px) and (min-width:0px){
+@media screen and (max-width: 599px) and (min-width:0px){
 
 html{
 width:100%;
 }
 
 body{
-font-size:12px;
+font-size:14px;
 width:100vw;
 }
 
@@ -737,7 +716,7 @@ font-weight:600;
 
 nav{
 width:100%;
-height:180px;
+height:28vh;
 }
 
 .navbar-nav{
@@ -750,9 +729,6 @@ display:none;
 
 /* About Me */
 
-#about-me{
-height:1400px;
-}
 
 .intro-box{
 margin-top:0px;
@@ -770,7 +746,6 @@ width:150px;
 .summary-card{
 width:95%;
 height:500px;
-top:-550px;
 }
 
 .sum-icon{
@@ -797,9 +772,6 @@ width:90%;
 
 /* Project Showcase/ Grid */
 
-#project-showcase{
-height:800px;
-}
 
 #grid-id{
 height:550px;
@@ -810,12 +782,12 @@ height:550px;
 width:95%;
 top:-15px;
 left:-15px;
-height:780px;
+height:795px;
 }
 .fore-card{
 top:20px;
 left:20px;
-height:780px;
+height:795px;
 }
 
 #grid-id > .card-deck > .card{
@@ -840,29 +812,40 @@ padding-top:3rem;
 }
 
 .deck2{
-display:none !important; /* not ideal but d-flex uses !important */
+display:none;
+}
+
+.mgx-aut{
+margin-right:auto;
+margin-left:auto;
 }
 
 /* Project Highlights */
 
-#project-highlights{
-height:2600px;
-}
+
 
 .hlight-card{
 min-width:100%;
-height:2450px;
+height:350vh;
 }
 .project-txt-card{
 min-width:95%;
-height:610px;
+height:45%;
 margin-right:2.5%;
 margin-left:2.5%;
 }
 
 
 .hlight-xtra{
+height:57%;
+width:95%;
+margin-right:auto;
+margin-left:auto;
+}
 
+.hlight-xtra2{
+height:55%;
+width:95%;
 margin-right:auto;
 margin-left:auto;
 }
@@ -873,12 +856,26 @@ width: 14rem;
 margin-right:auto;
 margin-left:auto;
 padding:5px;
+margin:8% auto 10% auto;
 }
 
-
-.project2{
-
+.hlightxtra-head{
+padding:10px 10px 5px 10px;
 }
+
+.hlight-list{
+list-style-type:decimal;
+margin:15px;
+}
+
+.hlight-p{
+margin:10px;
+}
+
+.pjtxtra-card{
+min-width:95%;
+}
+
 /* Contact Info */
 
 .contact-title{

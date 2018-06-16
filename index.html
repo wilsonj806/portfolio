@@ -1,7 +1,7 @@
 <!-- 
 Portfolio Layout Blank
-Version: 1.0.0
-Last Updated: 06/08/2018
+Version: 1.0.2
+Last Updated: 06/13/2018
 Requirements: 
 	1. Can access all of the content by scrolling (COMPLETED)
 	2. Can click different buttons that take the user to various social media sites (COMPLETED)
@@ -16,6 +16,7 @@ Secondary Requirements:
 	5. Make sure relative links are changed when deploying to CodePen (COMPLETED)
 -->
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +27,7 @@ Secondary Requirements:
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!--for Bootstrap 4.1-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> <!-- For Font Awesome Icons -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- For jQuery -->
-<link href="https://fonts.googleapis.com/css?family=Work+Sans|Roboto:500" rel="stylesheet"> <!-- For Google Fonts: Raleway and Roboto -->
+<link href="https://fonts.googleapis.com/css?family=Work+Sans|Roboto:500" rel="stylesheet"> <!-- For Google Fonts: Work Sans and Roboto -->
 <link href="./css/style.css" rel="stylesheet" type="text/css">	<!-- Link to CSS -->
 <!-- jQuery scripts-->
 <script>
@@ -61,8 +62,8 @@ $(document).ready(function(){
 
 <!-- About me section -->
 
-<article class=" " id="about-me">
-<div class="intro-box">	
+
+<article class="intro-box"  id="about-me">	
 	<img src="./img/profile-pic.png" class=" mx-auto rounded-circle about-img" alt="Profile picture"></img>    
     <h1 class="d-flex  justify-content-center section-heading">Wilson Jiang</h1>	
 	<h3 class="d-flex  justify-content-center my-2">Software Developer</h3>
@@ -70,9 +71,9 @@ $(document).ready(function(){
 	Hello there! I’m a mechanical engineer and am currently training myself to become a software developer via Free Code Camp. Currently I’m learning the skills necessary to become a front end developer, but eventually I want to learn back end development and concentrate on UX design. Other than that, I do dance on the side and every once and a while photography.
 	</p>
 	
-</div>
 
-<div class="summary-card card mx-auto ">
+
+<div class="summary-card card mx-auto">
 
 	<div class="row">
 		<div class="sum-col col">
@@ -89,7 +90,7 @@ $(document).ready(function(){
             <p class="text-center">
             HTML, CSS
             </p>
-            <hr>
+            <hr class="sec-indiv">
 		</div>
         <div class="sum-col col">
             <i class="fas fa-edit d-flex justify-content-center sum-icon"></i>
@@ -108,8 +109,8 @@ $(document).ready(function(){
 
 <!-- Project grid section -->
 
-<div id="project-showcase"> 
-<div class="back-card mx-auto">
+
+<div class="back-card mx-auto" id="project-showcase">
 <div class="fore-card">
 <h2 class="showcase-heading d-flex  justify-content-center text-center">
 Some Projects I've Done
@@ -120,27 +121,27 @@ Some Projects I've Done
 </p>
     
 <div class="mx-auto" id="grid-id">
-<div class="card-deck my-4 d-flex justify-content-center deck1">
-	<div class="card shadow-sm card-filled">
+<div class="card-deck my-4 mgx-aut deck1">
+	<div class="card shadow-sm card-filled ">
 		<img class="card-img-top" src=".\img\tribute-grid-thumb.png"></img>
 		<div class="card-img-overlay">
-			<h4 class="card-head-ct d-flex  justify-content-center">Tribute Page<sub style="font-size: 8px">[1]</sub></h4>
+			<h4 class="card-head-ct d-flex  justify-content-center">Tribute Page</h4>
 			<a class="card-link d-flex justify-content-center btn" href="https://codepen.io/wilsonj806/full/RQXaxE/"  target="_blank"><i class="fab fa-codepen my-auto"></i> CodePen Link</a>
 		</div>
 	</div>
 	
-	<div class="card shadow-sm">
+	<div class="card shadow-sm ">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
 		<h4 class="card-img-overlay text-center card-head">Content coming soon!</h4>
 	</div>
 	
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h4 class="card-img-overlay d-flex text-center justify-content-center card-head">Content coming soon!</h4>
+		<h4 class="card-img-overlay dy-flex text-center justify-content-center card-head">Content coming soon!</h4>
 	</div>
 </div>
 
-<div class="card-deck mb-4 d-flex justify-content-center deck2">
+<div class="card-deck mb-4 mgx-aut deck2">
 	<div class="card shadow-sm">
 		<i class="fas fa-cogs mx-auto my-auto"></i>
 		<h4 class="card-img-overlay d-flex text-center justify-content-center card-head">Content coming soon!</h4>
@@ -162,13 +163,13 @@ Some Projects I've Done
 </div>
 </div>
 </div>
-</div>
+
 
 <!-- Latest project section-->
 
 
-<article class= "" id="project-highlights"> 
-<div class="hlight-card mx-auto">
+
+<article class="hlight-card mx-auto" id="project-highlights">
 	<h2 class="heading-spacing text-center mx-auto">Project Highlights</h2>
     
     
@@ -201,8 +202,7 @@ Some Projects I've Done
 		<p class="hlight-p">
         The project requirements might have been simple, but I did a bit extra in terms of the general layout and use of Bootstrap utilities.
 		</p>
-        <p class="cc-att">[1]<a href="https://www.flickr.com/photos/a-weidinger/22432907487/in/photostream/" target="_blank">"Ai Wei Wei"</a> used for the Tribute Page card - by Alfred Weidinger - <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY</a> and cropped from original size</p> 
-		<a class="btn" href="https://codepen.io/wilsonj806/full/RQXaxE/" target="_blank"><i class="fab fa-codepen my-auto"></i> CodePen Link</a> 
+        	<a class="btn butn" href="https://codepen.io/wilsonj806/full/RQXaxE/" target="_blank"><i class="fab fa-codepen my-auto"></i> CodePen Link</a> 
 		</div>
 	</section>
     
@@ -212,7 +212,7 @@ Some Projects I've Done
     
 		<div class="col project-txt-card">
 		<h3 class="project-heading d-flex justify-content-center my-3">Personal Portfolio</h3>
-		<p class="hlight-p">The portfolio project is my second serious project as an aspiring web developer and the requirements were provided by Free Code Camp. The Free Code Camp requirements were pretty simple and they were as follows:
+		<p class="hlight-p">The portfolio project is my second serious project as an aspiring web developer and the requirements were provided by Free Code Camp. Note that the requirements have since been updated so these are the legacy requirements. The Free Code Camp legacy requirements for the project were as follows:
 		</P>
 			
 		<ul class="hlight-list ">
@@ -225,12 +225,13 @@ Some Projects I've Done
 		<p class="hlight-p">
         For this project, I wanted to get more elaborate with it. I decided to learn and explore the options I had in terms of the design of the layout and color palette.
 		</p>
-		<a class="btn" href="https://github.com/wilsonj806/portfolio-mk1"  target="_blank"><i class="fab fa-github"></i> Live Repo</a> 
+		<a class="btn butn" href="https://medium.com/@wilsonjiang/portfolio-mk1-write-up-b7b304ef39f3"  target="_blank"><i class="fab fa-medium"></i> Write Up </a> 
+		<a class="btn butn" href="https://github.com/wilsonj806/portfolio-mk1"  target="_blank"><i class="fab fa-github"></i> Live Repo</a>
 		</div>
         
 		<div class="col pjtxtra-card">
 			<img class="hlight-img" src="./img/portfolio-thumb.png" alt="Portfolio thumbnail"></img>
-            <div class="hlight-xtra">
+            <div class="hlight-xtra hlight-xtra2">
                 <h4 class="d-flex justify-content-center hlightxtra-head">Color Palette</h4>
                 <div class="card-column d-flex justify-content-center">
                     <div class="card" style="background-color: #B99A7C"></div>
@@ -247,7 +248,6 @@ Some Projects I've Done
             </div>
 		</div>
 	</section>
-</div>
 </article>
 
 <!-- Contact info section-->
@@ -267,10 +267,7 @@ Some Projects I've Done
 	</div>
 </footer>
 
-<!-- Top button 
-<div id="top-button" class="top-bttn">
-	<a href="#home"> <button type="button" class="btn"><span><i class="fas fa-angle-up"></i></span></button></a>
-</div>
--->
+
+
 </body>
 </html>
