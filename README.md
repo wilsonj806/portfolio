@@ -27,6 +27,9 @@ Most requirements have been met although numerous improvements can be made. Thes
 - Font Awesome Icons
 - Google Fonts
 
+### Image Attribution
+- ["Ai Wei Wei"](https://www.flickr.com/photos/a-weidinger/22432907487/in/photostream/) used for the Tribute Page card - by Alfred Weidinger - [CC BY](https://creativecommons.org/licenses/by/2.0/) and cropped from original size 
+
 ### Acknowledgements:
 
 Thanks to the following people/ organizations:
