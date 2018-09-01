@@ -1,0 +1,129 @@
+// SCSS for nav bar components
+
+
+// .nav is a flex container to hold `.nav__list` and the eventual logo
+.nav{
+    @include zeroAll;
+    background-color: $stdGreen;
+    display:flex;
+    justify-content: center;
+    position:fixed;    
+    top:0;
+    font-size:1.25rem;
+    box-shadow: 0rem 0.25rem .30rem .15rem rgba(0,0,0,.25);
+    
+    // Laptop Screen Layout
+    @media #{$laptop},#{$desktop}{
+        flex-flow:column nowrap;
+        justify-content: space-around;
+        height:100vh;
+    }
+}
+
+
+// .nav__list is also a flex  container
+.nav__list{
+    @include zeroAll;
+    list-style: none;
+    width:100vw;
+    height:4rem;
+    display:flex;
+    justify-content: center;
+    @media #{$laptop},#{$desktop}{
+        height:auto;
+        width:23vw;
+        flex-flow:column nowrap;
+    }
+}
+
+.nav__logo{
+    display:none;
+    @media #{$laptop}, #{$desktop}{
+        display:block;
+        max-width:50%;
+        align-self: center;
+    }
+}
+
+
+.nav__item{
+    background-color: $stdGreen;
+    display: inline-block;    
+    width:calc((100% - 6px)/ 4);
+    
+    // Laptop Screen Layout
+    @media #{$laptop},#{$desktop}{
+        width:100%;
+    }
+    &:hover{
+        @include shadowIn;
+        background-color:$liteGreen;
+    }
+    
+}
+.nav__link{    
+    display:flex;
+    color:white;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    height:100%;
+    &:hover{
+        color:rgba(200,200,200,.75);
+    }
+    // Laptop Screen Settings
+    @media #{$laptop},#{$desktop}{
+        @include centerSides;
+        @include samePaddingY(1.25rem);
+        width:60%;
+    }
+
+}
+
+.nav__icon{
+    height:25px;
+    font-size: 25px;
+    text-align:center;
+    padding: 2px 0;
+    
+    // Laptop Screen Settings
+    @media #{$laptop},#{$desktop}{
+        height:2.25rem;
+        font-size: 2.25rem;
+    }
+}
+
+.nav__social-icon{
+    font-size:1.25rem;
+    color:rgba(255,255,255,.8);
+}
+
+.nav__footer{
+    display:none;
+    @media #{$laptop}, #{$desktop}{
+        display:flex;
+        max-width:85%;
+        align-self: center;
+        display: flex;
+        justify-content: space-around;   
+        width:50%; 
+        
+    }
+}
+
+.nav__text{
+    text-align: center;
+}
+
+.nav--border{
+    border-right:1px solid rgba(255,255,255,.75);
+    
+    // Laptop Screen Settings
+    @media #{$laptop},#{$desktop}{
+        border-right:0;
+        border-bottom:1.2px solid rgba(255,255,255,.75);
+    }
+    
+}
+

@@ -1,0 +1,62 @@
+// SCSS for various box model based mixins
+// includes background color/ margins/ padding/ border color etc
+
+// Box Model related mixins
+
+    // Dynamic
+
+@mixin sameMarginY($val){
+    margin-top:$val;
+    margin-bottom:$val;
+}
+
+@mixin samePaddingY($val){
+    padding-top:$val;
+    padding-bottom:$val;
+}
+
+    // Staic mixins
+
+@mixin zeroAll{
+    margin:0;
+    padding:0;
+}
+
+@mixin zeroSides{
+    margin-left:0;
+    margin-right: 0;
+    padding-left:0;
+    padding-right: 0;
+}
+
+@mixin centerSides{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+@mixin sectionSpacing{
+    @include samePaddingY(1rem);
+    margin-bottom:1.5rem;
+}
+
+// Box shadow mixins
+
+// The Box Shadow property isn't really part of the box model but functionally it achieves a similar effect to the border property, just offset from the element.
+
+// Inset box shadow
+
+@mixin shadowIn{
+    box-shadow: 0rem 0.15rem .20rem .1rem rgba(0,0,0,.05) inset;
+}
+
+// Box shadow "close" to the ground
+
+@mixin shadowLow{
+    box-shadow: 0rem 0rem .30rem .2rem rgba(0,0,0,.25);
+}
+
+// Box shadow "mid height" from the ground
+@mixin shadowMid{
+    box-shadow: 0rem 0rem .30rem .1rem rgba(0,0,0,.25);
+}

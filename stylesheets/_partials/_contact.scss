@@ -1,0 +1,70 @@
+// SCSS for the contact section
+
+.contact{
+    @include txtStd;
+    @include sectionSpacing;
+}
+
+.contact__heading{
+    @include headingTxt(2rem,center);
+}
+
+.contact__p{
+    @include centerSides;
+    @include samePaddingY(1.25rem);
+    width:85%;
+    @media #{$laptop},#{$desktop}{
+        width:55%;
+    }
+}
+
+.contact__form{
+    @include centerSides;
+    @include samePaddingY(2rem);
+    @include shadowLow;
+    background-color:white;
+    width:65%;
+    padding-left:1.25rem;
+    padding-right:1.25rem;
+    @media #{$laptop},#{$desktop},#{$tablet}{
+        width:22.5rem;
+        padding-left:2rem;
+        padding-right:0rem;
+    }
+
+}
+
+.contact__label{
+    font-size:1rem;
+}
+
+.contact__input{
+    //@include shadowIn;
+    display:block;
+    height:1.5rem;
+    margin-bottom:.5rem;
+    margin-top:.25rem;
+    width:75%;
+    border:.75px solid $liteBlue;
+    border-radius: 2px;
+}
+
+.contact__textbox{
+    //@include shadowIn;
+    display:block;
+    margin-top:.25rem;
+    margin-bottom:.5rem;
+    height:5rem;
+    min-height:1.5rem;
+    width:75%;
+    max-width:75%;
+    border:.75px solid $liteBlue;
+    border-radius: 2px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.contact__button{
+    @include sameMarginY(1rem);
+    @include buttonStd;
+    display:block;
+}

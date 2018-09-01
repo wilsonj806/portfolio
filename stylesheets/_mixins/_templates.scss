@@ -1,0 +1,33 @@
+// SCSS Mixin templates for the main content
+
+// Media query variables/ mixins
+$tablet: "screen and (min-width:767px) and (max-width:1022px)";
+$laptop: "screen and (min-width:1024px)and (max-width:1440px)";
+$desktop: "screen and (min-width:1441px)";
+
+// Flex variables
+// Probably apply towards making a big ole mixin for flex containers
+/*
+$rowFlow = "flex-flow: row nowrap";
+$colFlow = "flex-flow: column nowrap";
+$
+*/
+
+// Standard mix-in templates
+
+@mixin stdContentSection($width){
+  @include txtStd;
+  @include centerSides;
+  @include shadowLow;
+  @include sectionSpacing;
+  width:$width;
+
+}
+/*
+@mixin flexProp(){
+  @if $display == flex{
+  
+  }
+}
+
+*/

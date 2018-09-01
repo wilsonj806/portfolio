@@ -1,0 +1,45 @@
+// SCSS for buttons
+
+@mixin buttonStd{
+  @include btnShadowMid;
+  height:2rem;
+  width:5rem;
+  color:white;
+  border:1px solid white;
+  border-radius:3px;
+  background-color:$liteOrange;
+  &:active{
+    @include btnShadowLow;
+    background-color:#C66024;
+  }
+}
+
+/*
+@mixin buttonStatic{
+  @include btnShadowMid;
+  height:2rem;
+  width:5rem;
+  color:white;
+  border:1px solid white;
+  border-radius:3px;
+  &:active{
+    @include btnShadowLow;
+    background-color:$secondColor;
+  }
+
+}
+
+
+
+*/
+
+
+
+@mixin btnShadowLow{
+  box-shadow: 0rem 0.125rem .20rem .2rem rgba(0,0,0,.25);
+}
+
+// Box shadow "mid height" from the ground
+@mixin btnShadowMid{
+  box-shadow: 0rem 0.125rem .20rem .1rem rgba(0,0,0,.25);
+}
