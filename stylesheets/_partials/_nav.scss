@@ -97,10 +97,14 @@
 .nav__social-icon{
     font-size:1.25rem;
     color:rgba(255,255,255,.8);
+    &:hover{
+        color: rgba(190, 190, 190, 0.65);
+    }
 }
 
 .nav__footer{
     display:none;
+
     @media #{$laptop}, #{$desktop}{
         display:flex;
         max-width:85%;
