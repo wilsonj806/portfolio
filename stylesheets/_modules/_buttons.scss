@@ -36,10 +36,10 @@
 
 
 @mixin btnShadowLow{
-  box-shadow: 0rem 0.125rem .20rem .2rem rgba(0,0,0,.25);
+  box-shadow: 0rem 0.0625rem .30rem .1rem rgba(0,0,0,.25);
 }
 
 // Box shadow "mid height" from the ground
 @mixin btnShadowMid{
-  box-shadow: 0rem 0.125rem .20rem .1rem rgba(0,0,0,.25);
+  box-shadow: 0rem 0.125rem .30rem .1rem rgba(0,0,0,.25);
 }
