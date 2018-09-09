@@ -9,7 +9,7 @@
     justify-content: center;
     position:fixed;    
     top:0;
-    font-size:1.25rem;
+    font-size:1.1rem;
     box-shadow: 0rem 0.25rem .30rem .15rem rgba(0,0,0,.25);
     
     // Laptop Screen Layout
@@ -22,7 +22,8 @@
 
 
 // .nav__list is also a flex  container
-.nav__list{
+// nav bar width is set here
+.menu--nav{
     @include zeroAll;
     list-style: none;
     width:100vw;
@@ -31,22 +32,23 @@
     justify-content: center;
     @media #{$laptop},#{$desktop}{
         height:auto;
-        width:23vw;
+        width:22vw;
         flex-flow:column nowrap;
     }
 }
 
-.nav__logo{
+.nav__header{
     display:none;
     @media #{$laptop}, #{$desktop}{
-        display:block;
+        //display:flex;
         max-width:50%;
+        justify-content: center;
         align-self: center;
     }
 }
 
 
-.nav__item{
+.menu__item{
     background-color: $stdGreen;
     display: inline-block;    
     width:calc((100% - 6px)/ 4);
@@ -55,13 +57,14 @@
     @media #{$laptop},#{$desktop}{
         width:100%;
     }
-    &:hover{
+    &:hover:not(.menu--disabled){
         @include shadowIn;
         background-color:$liteGreen;
     }
     
+    
 }
-.nav__link{    
+.menu__link{    
     display:flex;
     color:white;
     flex-flow: column nowrap;
@@ -70,8 +73,9 @@
     text-decoration: none;
     height:100%;
     &:hover{
-        color:rgba(200,200,200,.75);
+        color:rgba(227,227,227,.85);
     }
+    
     // Laptop Screen Settings
     @media #{$laptop},#{$desktop}{
         @include centerSides;
@@ -81,7 +85,7 @@
 
 }
 
-.nav__icon{
+.menu__icon{
     height:25px;
     font-size: 25px;
     text-align:center;
@@ -94,15 +98,7 @@
     }
 }
 
-.nav__social-icon{
-    font-size:1.25rem;
-    color:rgba(255,255,255,.8);
-    &:hover{
-        color: rgba(190, 190, 190, 0.65);
-    }
-}
-
-.nav__footer{
+.social-row{
     display:none;
 
     @media #{$laptop}, #{$desktop}{
@@ -116,11 +112,24 @@
     }
 }
 
-.nav__text{
-    text-align: center;
+.social-row__icon{
+    font-size:1.25rem;
+    color:rgba(255,255,255,.8);
+    &:hover{
+        color: rgba(190, 190, 190, 0.65);
+    }
+    @media #{$laptop}{
+        padding-right:7.5px;
+        padding-left: 7.5px;
+    }
 }
 
-.nav--border{
+.menu__text{
+    text-align: center;
+
+}
+
+.menu__link--border{
     border-right:1px solid rgba(255,255,255,.75);
     
     // Laptop Screen Settings
@@ -131,3 +140,6 @@
     
 }
 
+.menu--disabled{
+    color:rgba(200,200,200,.75);
+}

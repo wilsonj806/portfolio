@@ -13,7 +13,7 @@
     }
 }
 
-.works__prim-ctr{
+.works__flex-ctr{
     @include centerSides;
 
     // Laptop Screen Layout
@@ -26,10 +26,10 @@
 }
 
 .works__heading{
-    @include headingTxt(2rem, center);
+    @include headingText(2rem, center);
 }
 
-.works__flex-ctr{
+.works__ctr{
     @include centerSides;
     width:80%;
     @media #{$tablet}{
@@ -48,9 +48,8 @@
 }
 
 .card__heading{
-    @include headingTxt(1.5rem,initial);
+    @include headingText(1.5rem,initial);
     @include samePaddingY(5px);
-
     width:100%;
 
     // Y-margin=0 is actually necessary
@@ -61,14 +60,14 @@
     width:100%;
 }
 
-.card__icon-row{
+.stack-row{
     @include centerSides;
     display:flex;
     justify-content: space-around;
     margin-top:10px;
 }
 
-.card__icon{
+.stack__img{
     max-height: 2rem;
 }
 
@@ -76,7 +75,11 @@
     @include stdParagraph;
 }
 
-.card__links{
+.card__link-row{
     display:flex;
     justify-content: space-around;
+}
+
+.card__link{
+    text-align: center;
 }

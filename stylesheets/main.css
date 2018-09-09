@@ -1,36 +1,5 @@
 /* Portfolio CSS */
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
-/*
-$rowFlow = "flex-flow: row nowrap";
-$colFlow = "flex-flow: column nowrap";
-$
-*/
-/*
-@mixin flexProp(){
-  @if $display == flex{
-  
-  }
-}
-
-*/
-/*
-@mixin buttonStatic{
-  @include btnShadowMid;
-  height:2rem;
-  width:5rem;
-  color:white;
-  border:1px solid white;
-  border-radius:3px;
-  &:active{
-    @include btnShadowLow;
-    background-color:$secondColor;
-  }
-
-}
-
-
-
-*/
 :root {
   background-color: #E8e8e8;
   font-family: "Helvetica", sans-serif;
@@ -61,12 +30,6 @@ a:hover {
   color: #3A6A5E;
 }
 
-.section__div {
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-}
-
 .nav {
   margin: 0;
   padding: 0;
@@ -79,7 +42,7 @@ a:hover {
           justify-content: center;
   position: fixed;
   top: 0;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   -webkit-box-shadow: 0rem 0.25rem 0.3rem 0.15rem rgba(0, 0, 0, 0.25);
           box-shadow: 0rem 0.25rem 0.3rem 0.15rem rgba(0, 0, 0, 0.25);
 }
@@ -96,7 +59,7 @@ a:hover {
   }
 }
 
-.nav__list {
+.menu--nav {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -111,9 +74,9 @@ a:hover {
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px), screen and (min-width: 1441px) {
-  .nav__list {
+  .menu--nav {
     height: auto;
-    width: 23vw;
+    width: 22vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -121,39 +84,41 @@ a:hover {
   }
 }
 
-.nav__logo {
+.nav__header {
   display: none;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px), screen and (min-width: 1441px) {
-  .nav__logo {
-    display: block;
+  .nav__header {
     max-width: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
 }
 
-.nav__item {
+.menu__item {
   background-color: #25806A;
   display: inline-block;
   width: calc((100% - 6px)/ 4);
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px), screen and (min-width: 1441px) {
-  .nav__item {
+  .menu__item {
     width: 100%;
   }
 }
 
-.nav__item:hover {
+.menu__item:hover:not(.menu--disabled) {
   -webkit-box-shadow: 0rem 0.15rem 0.2rem 0.1rem rgba(0, 0, 0, 0.05) inset;
           box-shadow: 0rem 0.15rem 0.2rem 0.1rem rgba(0, 0, 0, 0.05) inset;
   background-color: #509181;
 }
 
-.nav__link {
+.menu__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,12 +136,12 @@ a:hover {
   height: 100%;
 }
 
-.nav__link:hover {
-  color: rgba(200, 200, 200, 0.75);
+.menu__link:hover {
+  color: rgba(227, 227, 227, 0.85);
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px), screen and (min-width: 1441px) {
-  .nav__link {
+  .menu__link {
     margin-left: auto;
     margin-right: auto;
     padding-top: 1.25rem;
@@ -185,7 +150,7 @@ a:hover {
   }
 }
 
-.nav__icon {
+.menu__icon {
   height: 25px;
   font-size: 25px;
   text-align: center;
@@ -193,23 +158,18 @@ a:hover {
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px), screen and (min-width: 1441px) {
-  .nav__icon {
+  .menu__icon {
     height: 2.25rem;
     font-size: 2.25rem;
   }
 }
 
-.nav__social-icon {
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.nav__footer {
+.social-row {
   display: none;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px), screen and (min-width: 1441px) {
-  .nav__footer {
+  .social-row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -223,23 +183,42 @@ a:hover {
   }
 }
 
-.nav__text {
+.social-row__icon {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.social-row__icon:hover {
+  color: rgba(190, 190, 190, 0.65);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .social-row__icon {
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+  }
+}
+
+.menu__text {
   text-align: center;
 }
 
-.nav--border {
+.menu__link--border {
   border-right: 1px solid rgba(255, 255, 255, 0.75);
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px), screen and (min-width: 1441px) {
-  .nav--border {
+  .menu__link--border {
     border-right: 0;
     border-bottom: 1.2px solid rgba(255, 255, 255, 0.75);
   }
 }
 
+.menu--disabled {
+  color: rgba(200, 200, 200, 0.75);
+}
+
 .intro {
-  color: #092851;
   margin-left: auto;
   margin-right: auto;
   -webkit-box-shadow: 0rem 0rem 0.3rem 0.2rem rgba(0, 0, 0, 0.25);
@@ -248,7 +227,9 @@ a:hover {
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
   width: 90%;
+  color: #092851;
   margin-top: 2rem;
+  margin-bottom: 4rem;
   background-color: white;
 }
 
@@ -330,7 +311,6 @@ a:hover {
 
 /* Works needs to be done in CSS grid (might be better as a mixin???) */
 .works {
-  color: #092851;
   margin-left: auto;
   margin-right: auto;
   -webkit-box-shadow: 0rem 0rem 0.3rem 0.2rem rgba(0, 0, 0, 0.25);
@@ -339,6 +319,7 @@ a:hover {
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
   width: 95%;
+  color: #092851;
   background-color: white;
 }
 
@@ -354,13 +335,13 @@ a:hover {
   }
 }
 
-.works__prim-ctr {
+.works__flex-ctr {
   margin-left: auto;
   margin-right: auto;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px), screen and (min-width: 1441px) {
-  .works__prim-ctr {
+  .works__flex-ctr {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -384,20 +365,20 @@ a:hover {
   text-align: center;
 }
 
-.works__flex-ctr {
+.works__ctr {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
 }
 
 @media screen and (min-width: 767px) and (max-width: 1022px) {
-  .works__flex-ctr {
+  .works__ctr {
     max-width: 65%;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px), screen and (min-width: 1441px) {
-  .works__flex-ctr {
+  .works__ctr {
     max-width: 40%;
   }
 }
@@ -427,7 +408,7 @@ a:hover {
   width: 100%;
 }
 
-.card__icon-row {
+.stack-row {
   margin-left: auto;
   margin-right: auto;
   display: -webkit-box;
@@ -438,7 +419,7 @@ a:hover {
   margin-top: 10px;
 }
 
-.card__icon {
+.stack__img {
   max-height: 2rem;
 }
 
@@ -449,7 +430,7 @@ a:hover {
   text-indent: 20px;
 }
 
-.card__links {
+.card__link-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,11 +438,15 @@ a:hover {
       justify-content: space-around;
 }
 
+.card__link {
+  text-align: center;
+}
+
 .contact {
-  color: #092851;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
+  color: #092851;
 }
 
 .contact__heading {
@@ -538,8 +523,8 @@ a:hover {
 .contact__button {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  -webkit-box-shadow: 0rem 0.125rem 0.2rem 0.1rem rgba(0, 0, 0, 0.25);
-          box-shadow: 0rem 0.125rem 0.2rem 0.1rem rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0rem 0.125rem 0.3rem 0.1rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0rem 0.125rem 0.3rem 0.1rem rgba(0, 0, 0, 0.25);
   height: 2rem;
   width: 5rem;
   color: white;
@@ -550,8 +535,12 @@ a:hover {
 }
 
 .contact__button:active {
-  -webkit-box-shadow: 0rem 0.125rem 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
-          box-shadow: 0rem 0.125rem 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0rem 0.0625rem 0.3rem 0.1rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0rem 0.0625rem 0.3rem 0.1rem rgba(0, 0, 0, 0.25);
+  background-color: #C66024;
+}
+
+.contact__button:hover {
   background-color: #C66024;
 }
 /*# sourceMappingURL=main.css.map */

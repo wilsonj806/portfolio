@@ -1,12 +1,12 @@
 // SCSS for the contact section
 
 .contact{
-    @include txtStd;
     @include sectionSpacing;
+    color:$darkBlue;
 }
 
 .contact__heading{
-    @include headingTxt(2rem,center);
+    @include headingText(2rem,center);
 }
 
 .contact__p{
@@ -65,6 +65,6 @@
 
 .contact__button{
     @include sameMarginY(1rem);
-    @include buttonStd;
+    @include stdButton;
     display:block;
 }

@@ -1,37 +1,43 @@
 # Portfolio Read Me
 ## Version 2.0.0
-## Date Last Updated: 08-31-18
+## Date Last Updated: 09-09-18
 
 ## File Structure
 
 ```
 portfolio-mk2
-
-  img
-      badges
-    blackbox_cr.png
-    maze-doc_cr.png
-
-  stylesheets
-    _mixins
-      _box.scss
-      _templates.scss
-      _text.scss
-
-    _modules
-      _colors.scss
-
-    _partials
-      _base.scss
-      _contact.scss
-      _intro.scss
-      _nav.scss
-      _works.scss
-
-    main.scss
-    main.css
-index.html
-readme.md
+  ├─ img
+  │   ├─ badges
+  │   │     ├─ html.png
+  │   │     .
+  │   │     .
+  │   │     ∟─ sass.png
+  │   │
+  │   ├─ blackbox_cr.png
+  │   . 
+  │   . 
+  │   ∟─ maze-doc_cr.png
+  │
+  ├─ stylesheets
+  │   ├─ _mixins
+  │   │     ├─ _box.scss
+  │   │     ∟─ _text.scss
+  │   ├─ _modules
+  │   │     ├─ _buttons.scss
+  │   │     ∟__ _colors.scss
+  │   ├─ _partials
+  │   │     ├─ _base.scss
+  │   │     ├─ _contact.scss
+  │   │     ├─ _intro.scss
+  │   │     ├─ _nav.scss
+  │   │     ∟─ _works.scss
+  │   │
+  │   ├─ main.scss
+  │   ├─ main.css
+  │   ∟─ readme.md
+  │
+  ├─ index.html
+  ∟─ readme.md
 
 ```
 

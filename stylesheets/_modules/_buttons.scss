@@ -1,6 +1,8 @@
 // SCSS for buttons
 
-@mixin buttonStd{
+  // Should make a static version of this mixin at some point
+
+@mixin stdButton{
   @include btnShadowMid;
   height:2rem;
   width:5rem;
@@ -12,28 +14,11 @@
     @include btnShadowLow;
     background-color:#C66024;
   }
-}
 
-/*
-@mixin buttonStatic{
-  @include btnShadowMid;
-  height:2rem;
-  width:5rem;
-  color:white;
-  border:1px solid white;
-  border-radius:3px;
-  &:active{
-    @include btnShadowLow;
-    background-color:$secondColor;
+  &:hover{
+    background-color:#C66024;
   }
-
 }
-
-
-
-*/
-
-
 
 @mixin btnShadowLow{
   box-shadow: 0rem 0.0625rem .30rem .1rem rgba(0,0,0,.25);
