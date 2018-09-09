@@ -11,33 +11,33 @@ portfolio-mk2
   │   │     ├─ html.png
   │   │     .
   │   │     .
-  │   │     ∟─ sass.png
+  │   │     └─ sass.png
   │   │
   │   ├─ blackbox_cr.png
   │   . 
   │   . 
-  │   ∟─ maze-doc_cr.png
+  │   └─ maze-doc_cr.png
   │
   ├─ stylesheets
   │   ├─ _mixins
   │   │     ├─ _box.scss
-  │   │     ∟─ _text.scss
+  │   │     └─ _text.scss
   │   ├─ _modules
   │   │     ├─ _buttons.scss
-  │   │     ∟__ _colors.scss
+  │   │     └─ _colors.scss
   │   ├─ _partials
   │   │     ├─ _base.scss
   │   │     ├─ _contact.scss
   │   │     ├─ _intro.scss
   │   │     ├─ _nav.scss
-  │   │     ∟─ _works.scss
+  │   │     └─ _works.scss
   │   │
   │   ├─ main.scss
   │   ├─ main.css
-  │   ∟─ readme.md
+  │   └─ readme.md
   │
   ├─ index.html
-  ∟─ readme.md
+  └─ readme.md
 
 ```
 
