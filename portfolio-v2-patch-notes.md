@@ -2,8 +2,9 @@
 
 ## Things to check:
  
-  - Is the Sass as DRY as possible with what I know right now
-  - Is all the content properly displayed on mobile, tablets, laptops, and desktops
+  - Is the Sass as DRY as possible with what I know right now?
+  - Is BEM being used properly?
+  - Is all the content properly displayed on mobile, tablets, laptops, and desktops?
   - Is the typography okay?
   - Are the colors okay/ won't clash/ are visible?
   - Can I add onto the site in like 3 months without tearing my hair out?
@@ -26,11 +27,11 @@
   - Sass is used for CSS preprocessing
     - hypothetically makes for DRY-er CSS  
   - BEM naming standard for the vast majority of CSS classes
-  - Other than Sass, no other frameworks (e.g Bootstrap) are used
+    - CSS doesn't have as many unnecessary selector rules/ specificity as a result
+  - No frameworks (e.g Bootstrap) are used
   - Uses tons of CSS Flexbox
   - The vast majority of sizing is done with relative units (*rem, vh, vw, %, etc*)
-  - The vast majority of elements don't have heights set
-  - CSS doesn't have as many selector rules/ specificity
+  - The vast majority of elements aren't statically sized (i.e no defined width and heights)
   - Final CSS size is 1kb bigger than the current one
   - Fonts are imported into the CSS instead
 
@@ -38,7 +39,7 @@
 
   - Add a logo
   - Add a process breakdown page for select projects
-  - Update the Works section with javascript projects as they are made
-  - Update the Resume link in the Nav section with something else more permanent
   - Add tabs to the Works section for secondary content
+  - Create a workflow.html page that outlines my general development process
+  - Update the Works section with JavaScript projects as they are made
   
