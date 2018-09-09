@@ -5,17 +5,11 @@
 
 // Text colors
 
-    // having this mixin is ineffecient, figure out how to reimplement it
-
-@mixin txtStd{
-    color:$darkBlue;
-}
-
 // Text formatting
 
     // mixin is going to take in any value, figure out how to filter for the right values 
 
-@mixin headingTxt($txtSize, $align){
+@mixin headingText($txtSize, $align){
     @include centerSides;
     font: {
         family:"Lato", sans-serif;
