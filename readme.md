@@ -1,6 +1,6 @@
 # Portfolio Read Me
-## Version 2.0.0
-## Date Last Updated: 09-09-18
+### Version 2.0.0
+### Date Last Updated: 09-09-18
 
 ## File Structure
 
