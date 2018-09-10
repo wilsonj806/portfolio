@@ -15,22 +15,22 @@ stylesheets
 │
 ├─ _mixins
 │     ├─ _box.scss
-│     ∟─ _text.scss
+│     └─ _text.scss
 │
 ├─ _modules
 │     ├─ _buttons.scss
-│     ∟__ _colors.scss
+│     └─ _colors.scss
 │
 ├─ _partials
 │     ├─ _base.scss
 │     ├─ _contact.scss
 │     ├─ _intro.scss
 │     ├─ _nav.scss
-│     ∟─ _works.scss
+│     └─ _works.scss
 │
 ├─ main.scss
 ├─ main.css
-∟─ readme.md
+└─ readme.md
 ```
 ## Naming convention
 
@@ -41,10 +41,11 @@ BEM(Block__Element--Modifier) in short is a naming scheme that tries to give you
 As an example, here's the hiearchy for the cards used in the Works section with a little extra that **IS NOT** in the main `index.html` file:
 ```
 .card, .card--danger
-| |-- .card__img, .img--blk-border
-| |-- .card__icon-row
-| | |-- .card__icon
-| |-- .card__p
+  ├─ .card__img, .img--blk-border
+  ├─ .card__icon-row
+  │   └─ .card__icon
+  │
+  └─ .card__p
 ```
 
 So we have `.card` which represents our block
