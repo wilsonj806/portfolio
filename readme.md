@@ -10,7 +10,7 @@ Versioning is done using [Semantic Versioning](https://semver.org/)
 
 ## Current Status
 
-To be checked, standing by for release
+Site is live
 
 ## File Structure
 
