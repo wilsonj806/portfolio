@@ -1,16 +1,5 @@
 # Portfolio Version 2.0.0 Patch Notes
 
-## Things to check:
- 
-  - Is the Sass as DRY as possible with what I know right now?
-  - Is BEM being used properly?
-  - Is all the content properly displayed on mobile, tablets, laptops, and desktops?
-  - Is the typography okay?
-  - Are the colors okay/ won't clash/ are visible?
-  - Can I add onto the site in like 3 months without tearing my hair out?
-  - Are the box-shadows visually consistent?
-  - Are psuedo-states handled properly?
-
 ## Visual Differences:
   
   - New layout
