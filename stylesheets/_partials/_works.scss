@@ -1,0 +1,85 @@
+// SCSS for the Works section
+/* Works needs to be done in CSS grid (might be better as a mixin???) */
+.works{
+    @include stdContentSection(95%);
+    background-color:white;
+
+    // Laptop Screen Layout
+    @media #{$laptop}{
+        width:80%;
+    }
+    @media #{$desktop}{
+        width:75%;
+    }
+}
+
+.works__flex-ctr{
+    @include centerSides;
+
+    // Laptop Screen Layout
+    @media #{$laptop},#{$desktop}{
+        width:100%;
+        display:flex;
+        flex-flow:row nowrap;
+        justify-content: space-between;
+    }
+}
+
+.works__heading{
+    @include headingText(2rem, center);
+}
+
+.works__ctr{
+    @include centerSides;
+    width:80%;
+    @media #{$tablet}{
+        max-width:65%;
+    }
+    @media #{$laptop},#{$desktop}{
+        max-width:40%;
+    }
+}
+
+.card{
+    @include shadowMid;
+    width:100%;
+    margin-bottom:2.5rem;
+    padding-bottom:1rem;
+}
+
+.card__heading{
+    @include headingText(1.5rem,initial);
+    @include samePaddingY(5px);
+    width:100%;
+
+    // Y-margin=0 is actually necessary
+    margin:0 auto;
+}
+
+.card__img{
+    width:100%;
+}
+
+.stack-row{
+    @include centerSides;
+    display:flex;
+    justify-content: space-around;
+    margin-top:10px;
+}
+
+.stack__img{
+    max-height: 2rem;
+}
+
+.card__p{
+    @include stdParagraph;
+}
+
+.card__link-row{
+    display:flex;
+    justify-content: space-around;
+}
+
+.card__link{
+    text-align: center;
+}

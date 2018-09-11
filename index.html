@@ -1,273 +1,226 @@
 <!-- 
-Portfolio Layout Blank
-Version: 1.0.2
-Last Updated: 06/16/2018
-Requirements: 
-	1. Can access all of the content by scrolling (COMPLETED)
-	2. Can click different buttons that take the user to various social media sites (COMPLETED)
-	3. Can go to different sections via a nav bar (COMPLETED)
-	4. Can see thumbnails of the different projects done (PARTIALLY COMPLETED)
-	Note that CodePen.io overrides the Window.open() function, so if you want to open windows using jQuery, you will need to target invisible anchor elements like this one: <a target='_blank'>.
-Secondary Requirements:
-	1. Needs a go to top of page button (COMPLETED)
-	2. Make the Nav Bar using Bootstrap (COMPLETED)
-	3. Make Nav bar collapsible (SECONDARY REQUIREMENT)
-	4. Add Night Mode (SECONDARY REQUIREMENT)
-	5. Make sure relative links are changed when deploying to CodePen (COMPLETED)
+Portfolio
+Version: 2.0.0-beta
+Date Started: 08-24-2018
+Last Updated: 09-09-2018
 -->
 
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Wilson Jiang Software Developer</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Scripts and other libraries here -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!--for Bootstrap 4.1-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> <!-- For Font Awesome Icons -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- For jQuery -->
-<link href="https://fonts.googleapis.com/css?family=Work+Sans|Roboto:500" rel="stylesheet"> <!-- For Google Fonts: Work Sans and Roboto -->
-<link href="./css/style.css" rel="stylesheet" type="text/css">	<!-- Link to CSS -->
-<!-- jQuery scripts-->
-<script>
-$(document).ready(function(){
+<!--suppress XmlInvalidId -->
+<html lang=en>
+  <head>
+    <title>Wilson Jiang, Web Developer</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
+  </head>
 
-	
-});
-</script>
-<!-- CSS below -->
+  <body>
 
-<style>
+  <nav id="nav" class="nav">
+      
+      <header class="nav__header">  
+        <img src="img/logo.png" alt="logo" class="brand__logo">
+      </header>
+      
+      <ul class="menu--nav">
+        <li class="menu__item">
+          <a href="#nav" class="menu__link menu__link--border">
+            <i class="fas fa-home menu__icon"></i><span class="menu__text">Home</span>
+          </a>
+        </li>
 
-</style>
-</head>
+        <li class="menu__item ">
+          <a href="#works" class="menu__link menu__link--border">
+            <i class="fas fa-book-open menu__icon"></i><span class="menu__text">Works</span>
+          </a>
+        </li>
 
-<body>
-<!-- Nav Bar section -->
-<!-- Fix the link color and the color when you hover over it -->
-<nav class="navbar navbar-expand-md" id="home">
-<div class="navbar-collapse" id="navbarSupportedcontent"> 
-	<h3 class="navbar-brand">WJ</h3>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active"><a class="nav-link" href="#about-me">About Me</a></li>
-      <li class="nav-item "><a class="nav-link" href="#project-showcase">Project Showcase</a></li>
-      <li class="nav-item"><a class="nav-link" href="#project-highlights">Project Highlights</a></li>
-	  <li class="nav-item "><a class="nav-link" href="#contact-me">Contact Me</a></li>
-    </ul>
-  </div>
-</nav>
+        <li class="menu__item menu--disabled">
+          <a href="" class="menu__link  menu__link--border " disabled>
+          <i class="fas fa-laptop-code menu__icon menu--disabled"></i><span class="menu__text menu--disabled">Workflow</span>
+          </a>
+        </li>
 
-<main>
+        <li class="menu__item ">
+          <a href="#contact" class="menu__link">
+          <i class="far fa-address-card menu__icon"></i><span class="menu__text">Contact</span>
+          </a>
+        </li>
+      </ul>
 
-<!-- About me section -->
+      <footer class="social-row">
+        <a href="https://codepen.io/wilsonj806/"><i class="fab fa-codepen social-row__icon"></i></a>         
+        <a href="https://github.com/wilsonj806"><i class="fab fa-github-square social-row__icon"></i></a>
+        <a href="https://www.freecodecamp.org/wilsonj806"><i class="fab fa-free-code-camp social-row__icon"></i></a>
+        <a href="https://www.linkedin.com/in/wilsonj806/"><i class="fab fa-linkedin social-row__icon"></i></a>
+        <a href="https://angel.co/wilson-jiang"><i class="fab fa-angellist social-row__icon"></i></a>
+      </footer>
 
+  </nav>
 
-<article class="intro-box"  id="about-me">	
-	<img src="./img/profile-pic.png" class=" mx-auto rounded-circle about-img" alt="Profile picture"></img>    
-    <h1 class="d-flex  justify-content-center section-heading">Wilson Jiang</h1>	
-	<h3 class="d-flex  justify-content-center my-2">Software Developer</h3>
-	<p class="intro-p d-flex text-center mx-auto my-3">
-	Hello there! I’m a mechanical engineer and am currently training myself to become a software developer via Free Code Camp. Currently I’m learning the skills necessary to become a front end developer, but eventually I want to learn back end development and concentrate on UX design. Other than that, I do dance on the side and every once and a while photography.
-	</p>
-	
+  <main>
 
+    <section class="intro" id="intro">
+      <h1 class="intro__heading">Hello There! I'm Wilson!</h1>
+      <h2 class="intro__sub-heading">New York, NY based front-end developer</h2>
 
-<div class="summary-card card mx-auto">
+      
+      <p class="intro__p">
+        I'm a developer that's using HTML, CSS, JavaScript, and Sass to build responsive pages. In terms of training, I got my <a href="https://www.freecodecamp.org/certification/wilsonj806/responsive-web-design">Front End Development Certification</a> from Free Code Camp and have been doing projects to apply those skills.
+      </p>
 
-	<div class="row">
-		<div class="sum-col col">
-            <i class="fas fa-toolbox d-flex justify-content-center sum-icon"></i>
-			<h5 class="text-center sum-heading">Dev Tools Used</h5>
-            <p class="text-center"> 
-            Bootstrap, Github, jQuery
-            </p>
-            <hr class="sec-indiv">
-		</div>
-		<div class="sum-col col container-fluid">
-            <i class="fas fa-file-code d-flex justify-content-center sum-icon"></i>
-			<h5 class="text-center sum-heading">Languages Used</h5>
-            <p class="text-center">
-            HTML, CSS
-            </p>
-            <hr class="sec-indiv">
-		</div>
-        <div class="sum-col col">
-            <i class="fas fa-edit d-flex justify-content-center sum-icon"></i>
-			<h5 class="text-center sum-heading">Things To Learn</h5>
-            <p class="text-center">
-            Javascript, Sass, Git, Ajax, Node, React
-            </p>
-            
-		</div>
-	</div>
-    <div class="divleft intro-inset"></div>
-    <div class="divright intro-inset"></div>
-</div>
+      <p class="intro__p">
+       Right now, I'm working on learning best practices for front-end development(naming conventions, DRY code, and the like). In addition I'm going through the <a href="https://javascript30.com/">JavaScript30 challenges</a> and I'm using <a href="https://codepen.io/wilsonj806/">CodePen</a></a> for rapid prototyping basic features.
+      </p>
 
-</article>
+      <p class="intro__p">
+        Feel free to check out the rest of my portfolio! If you are interested in colalborating on a project, I've included a contact form at the end of the page.
+      </p>
 
-<!-- Project grid section -->
+    </section>
 
 
-<div class="back-card mx-auto" id="project-showcase">
-<div class="fore-card">
-<h2 class="showcase-heading d-flex  justify-content-center text-center">
-Some Projects I've Done
-</h2>
-    
-<p class="showcase-p text-center mx-auto">
-    Here are some of my side projects that I've done. Feel free to <a href="mailto:wilsonj806@gmail.com" alt="contact">contact me</a> if you want to collaborate on a project!
-</p>
-    
-<div class="mx-auto" id="grid-id">
-<div class="card-deck my-4 mgx-aut deck1">
-	<div class="card shadow-sm card-filled ">
-		<img class="card-img-top" src=".\img\tribute-grid-thumb.png"></img>
-		<div class="card-img-overlay">
-			<h4 class="card-head-ct d-flex  justify-content-center">Tribute Page</h4>
-			<a class="card-link d-flex justify-content-center btn" href="https://codepen.io/wilsonj806/full/RQXaxE/"  target="_blank"><i class="fab fa-codepen my-auto"></i> CodePen Link</a>
-		</div>
-	</div>
-	
-	<div class="card shadow-sm ">
-		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h4 class="card-img-overlay text-center card-head">Content coming soon!</h4>
-	</div>
-	
-	<div class="card shadow-sm">
-		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h4 class="card-img-overlay dy-flex text-center justify-content-center card-head">Content coming soon!</h4>
-	</div>
-</div>
+    <section class="works" id="works">
+      <h2 class="works__heading">Projects</h2>
 
-<div class="card-deck mb-4 mgx-aut deck2">
-	<div class="card shadow-sm">
-		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h4 class="card-img-overlay d-flex text-center justify-content-center card-head">Content coming soon!</h4>
-	</div>
-	
-	<div class="card shadow-sm">
-		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h4 class="card-img-overlay d-flex text-center justify-content-center card-head">Content coming soon!</h4>
-	</div>
-	
-	<div class="card shadow-sm">
-		<i class="fas fa-cogs mx-auto my-auto"></i>
-		<h4 class="card-img-overlay d-flex text-center justify-content-center card-head">Content coming soon!</h4>
-	</div>
-</div>	
+      <div class="works__flex-ctr">
 
-
-
-</div>
-</div>
-</div>
-
-
-<!-- Latest project section-->
-
-
-
-<article class="hlight-card mx-auto" id="project-highlights">
-	<h2 class="heading-spacing text-center mx-auto">Project Highlights</h2>
-    
-    
-	<section class="row project1">
-    
-		<div class="col pjtxtra-card">
-			<img class="hlight-img" src="./img/tribute-thumb.png" alt="Portfolio thumbnail"></img>
-            <div class="hlight-xtra">
-                <h4 class="d-flex justify-content-center hlightxtra-head">Site Layout Notes</h4>
-                <ul class="hlightxtra-list mx-auto">
-                <li class="hlightxtra-item">The page uses a 2 column layout based on a Wikipedia article</li>
-                <li class="hlightxtra-item">The page also features an image grid with some works of the artist</li>
-                <li class="hlightxtra-item">The purpose was to minimize the amount of scrolling required to view the page's content</li>
-                </ul>
+          <div class="works__ctr">
+            <h3 class="card__heading">Tech Documentation</h3>
+  
+            <div class="card">
+              <img class="card__img" src="img/projects/maze-doc.png" alt="project image">
+  
+              <span class="stack-row">
+                <img src="img/badges/html5.png" alt="HTML5" class="stack__img">
+                <img src="img/badges/css.png" alt="CSS3" class="stack__img">
+                <img src="img/badges/sass.png" alt="Sass" class="stack__img">
+              </span>
+  
+              <p class="card__p">
+                The Technical Documentation page is a project I did as part of the Free Code Camp front-end curriculum. It features an extensive overview of a class project I did many years ago with supporting code snippets.  
+              </p>
+  
+              <span class="card__link-row">
+                <a class="card__link" href="https://github.com/wilsonj806/maze-robot-documentation" target="_blank">GitHub Repo</a>
+                <a class="card__link" href="https://www.figma.com/file/KrRYLzgiYv2D0HMjukzrt1T7/Tech-Documentation-Page?node-id=23%3A20" target="_blank">Figma Mock-up</a>
+                <a class="card__link" href="https://wilsonj806.github.io/maze-robot-documentation/" target="_blank">Live Site</a>
+              </span>
             </div>
-		</div>
-		
-		<div class="col project-txt-card mx5">
-		<h3 class="project-heading d-flex justify-content-center">Tribute Page</h3>
-        
-		<p class="hlight-p">
-        The tribute page project was my first serious project as an aspiring web developer and the requirements were provided by Free Code Camp. The Free Code Camp requirements were pretty simple and they were as follows:
-		</P>
-			
-		<ul class="hlight-list">
-		<li>User can view a tribute page with an image and text..</li>
-		<li>User can click on a link that will take me to an external website with further information on the topic.</li>
-		</ul>
-		
-		<p class="hlight-p">
-        The project requirements might have been simple, but I did a bit extra in terms of the general layout and use of Bootstrap utilities.
-		</p>
-        	<a class="btn butn" href="https://codepen.io/wilsonj806/full/RQXaxE/" target="_blank"><i class="fab fa-codepen my-auto"></i> CodePen Link</a> 
-		</div>
-	</section>
+  
+          </div>
+  
+          <div class="works__ctr">
+            <h3 class="card__heading">JavaScript30 Project 13</h3>
+  
+            <div class="card">
+              <img class="card__img" src="img/projects/js30-p13.PNG" alt="project image">
+              
+              <span class="stack-row">
+                <img src="img/badges/html5.png" alt="HTML5" class="stack__img">
+                <img src="img/badges/js.png" alt="JavaScript" class="stack__img">
+              </span>
+
+              <p class="card__p">
+                  This Javascript30 project required the use of Javascript to implement a scroll and display images script. The more important part of the project is the notes that I've included in the repository for the project. 
+              </p>
+
+              <span class="card__link-row">
+                <a class="card__link" href="https://github.com/wilsonj806/js30-project13" target="_blank">GitHub Repo</a>                
+                <a class="card__link" href="https://wilsonj806.github.io/js30-project13/" target="_blank">Live Site</a>
+              </span>
+            </div>
+  
+          </div>
+  
+        </div>
+
+      <div class="works__flex-ctr">
+
+            <div class="works__ctr">
+              <h3 class="card__heading">JavaScript30 Project 10</h3>
     
-    <div class="highlight-inset mx-auto"></div>
+              <div class="card">
+                <img class="card__img" src="img/projects/js30-p10.png" alt="project image">
+
+                <span class="stack-row">
+                  <img src="img/badges/html5.png" alt="HTML5" class="stack__img">
+                  <img src="img/badges/js.png" alt="Javascript" class="stack__img">
+                </span>
+
+                <p class="card__p">
+                    This Javascript30 project required using Javascript to implement a shift and check multiple checkboxes script. The important part of the project is the notes that are included in the repository for the project.
+
+                </p>
+
+                <span class="card__link-row">
+                  <a class="card__link" href="https://github.com/wilsonj806/js30-project10" target="_blank">GitHub Repo</a>                
+                  <a class="card__link" href="https://wilsonj806.github.io/js30-project10/" target="_blank">Live Site</a>
+                </span>
+              </div>
     
-    <section class="row project2"> 
-    
-		<div class="col project-txt-card">
-		<h3 class="project-heading d-flex justify-content-center my-3">Personal Portfolio</h3>
-		<p class="hlight-p">The portfolio project is my second serious project as an aspiring web developer and the requirements were provided by Free Code Camp. Note that the requirements have since been updated so these are the legacy requirements. The Free Code Camp legacy requirements for the project were as follows:
-		</P>
-			
-		<ul class="hlight-list ">
-		<li>User can access all of the site’s content by scrolling.</li>
-		<li>User can click different buttons that lead them to various social media sites.</li>
-		<li>User can go to different sections of the site via a navigation bar.</li>
-		<li>User can see thumbnails of the various projects I’ve done.</li>
-		</ul>
-		
-		<p class="hlight-p">
-        For this project, I wanted to get more elaborate with it. I decided to learn and explore the options I had in terms of the design of the layout and color palette.
-		</p>
-		<a class="btn butn" href="https://medium.com/@wilsonjiang/portfolio-mk1-write-up-b7b304ef39f3"  target="_blank"><i class="fab fa-medium"></i> Write Up </a> 
-		<a class="btn butn" href="https://github.com/wilsonj806/portfolio-mk1"  target="_blank"><i class="fab fa-github"></i> Live Repo</a>
-		</div>
-        
-		<div class="col pjtxtra-card">
-			<img class="hlight-img" src="./img/portfolio-thumb.png" alt="Portfolio thumbnail"></img>
-            <div class="hlight-xtra hlight-xtra2">
-                <h4 class="d-flex justify-content-center hlightxtra-head">Color Palette</h4>
-                <div class="card-column d-flex justify-content-center">
-                    <div class="card" style="background-color: #B99A7C"></div>
-                    <div class="card" style="background-color: #7E2C2E"></div>
-                    <div class="card" style="background-color: #FFFAE7"></div>
-                    <div class="card" style="background-color: #F1EACF"></div>
-                    <div class="card" style="background-color: #1E1D1B"></div>
-                    <div class="card" style="background-color: #585350"></div>
-                    <div class="card" style="background-color: #A30004"></div>
-                    <div class="card" style="background-color: #928E82"></div>
-                    <div class="card" style="background-color: #FFFFFF"></div>
-                    
+            </div>
+
+            <div class="works__ctr">
+                <h3 class="card__heading">Blackbox Landing</h3>
+      
+                <div class="card">
+                  <img class="card__img" src="img/projects/blackbox.png" alt="project image">
+
+                  <span class="stack-row">
+                    <img src="img/badges/html5.png" alt="HTML5" class="stack__img">
+                    <img src="img/badges/css.png" alt="CSS3" class="stack__img">
+                    <img src="img/badges/bootstrap.png" alt="Bootstrap" class="stack__img">
+                  </span>
+
+                  <p class="card__p">
+                    The Blackbox Landing page is another Free Code Camp project. The project features several flexbox elements and the use of more semantic CSS class names.
+                  </p>
+                  
+                  <span class="card__link-row">
+                    <a class="card__link" href="https://github.com/wilsonj806/blackbox-landing" target="_blank">GitHub Repo</a>                
+                    <a class="card__link" href="https://www.figma.com/file/bpdAsf1BWEJCEeWwtMr6PPxh/Product-Page-Mock?node-id=0%3A1" target="_blank">Figma Mock-up</a>
+                    <a class="card__link" href="https://wilsonj806.github.io/blackbox-landing/" target="_blank">Live Site</a>
+                  </span>
                 </div>
-            </div>
-		</div>
-	</section>
-</article>
+      
+              </div>
 
-<!-- Contact info section-->
-
-</main>
-
-<footer class= "contact" id="contact-me">
-<h2 class="contact-title d-flex  justify-content-center py-2 mx-auto">Contact Me</h2>
-
-    
-	<div class="social-row d-flex justify-content-center">
-		<a class="github btn my-auto" href="https://github.com/wilsonj806" target="_blank"><i class="fab fa-github fa-fw"></i></a>
-		<a class="freecodecamp btn my-auto" href="https://www.freecodecamp.org/portfolio/wilsonj806" target="_blank"><i class="fab fa-free-code-camp fa-fw"></i></a>
-		<a class="medium btn my-auto" href="https://medium.com/@wilsonjiang" target="_blank"><i class="fab fa-medium fa-fw"></i></a>
-		<a class="email btn my-auto" href="mailto:wilsonj806@gmail.com" target="_blank"><i class="fas fa-envelope fa-fw"></i></a>
-        <a class="500px btn my-auto" href="https://500px.com/wilsonj806/galleries/a-short-collection" target="_blank"><i class="fab fa-500px fa-fw"></i></a>
-	</div>
-</footer>
+      </div>
+      
 
 
+    </div>
 
-</body>
+    </section>
+
+
+    <section class="contact" id="contact">
+      <h2 class="contact__heading">Contact Me</h2>
+
+      <p class="contact__p">
+        Feel free to contact me if you have ideas for projects or just want to collaborate using the below form! 
+      </p>
+
+      <form class="contact__form" action="https://formspree.io/wilsonj806@gmail.com"
+      method="POST">
+        <label for="name" class="contact__label">Name:</label>
+        <input type="text" name="name" placeholder="Name" class="contact__input">
+
+        <label for="_replyto" class="contact__label">Email:</label>
+        <input type="email" name="_replyto" placeholder="Email" class="contact__input">
+
+        <label for="message" class="contact__label">Your Message:</label>
+        <textarea name="message" placeholder="Your message here" class="contact__textbox"></textarea>
+
+        <input type="submit" value="Send" class="contact__button">
+      </form>
+
+    </section>
+  </main>
+
+  <script src=""></script>
+  </body>
 </html>

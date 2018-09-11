@@ -1,0 +1,33 @@
+// SCSS for text mixins
+
+// Importing Lato
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+// Text colors
+
+// Text formatting
+
+    // mixin is going to take in any value, figure out how to filter for the right values 
+
+@mixin headingText($txtSize, $align){
+    @include centerSides;
+    font: {
+        family:"Lato", sans-serif;
+        size:$txtSize;
+        weight:400;
+    }
+    text-align:$align;
+    
+}
+
+@mixin stdParagraph{
+    @include centerSides;
+    @include stdWidth;
+    text-indent:20px;
+}
+
+// Phase this out for dynamic stuff
+@mixin stdWidth{
+    width: 90%;
+}
+
