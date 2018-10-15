@@ -1,0 +1,142 @@
+// SCSS for nav bar components
+
+
+// .nav is a flex container to hold `.nav__list` and the eventual logo
+.nav{
+  @include zeroAll;
+  display:flex;
+  justify-content: center;
+
+  background-color: $stdGreen;
+  position:fixed;    
+  top:0;
+  font-size:1.1rem;
+  box-shadow: 0rem 0.25rem .30rem .15rem rgba(0,0,0,.25);
+
+  // Laptop Screen Layout
+  @include breakpoint-min($bp-lg){
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    height:100vh;
+  }
+}
+
+
+// .nav__list is also a flex  container
+// nav bar width is set here
+.menu--nav{
+  @include zeroAll;
+  list-style: none;
+  width:100vw;
+  height:4rem;
+
+  display:flex;
+  justify-content: center;
+  @include breakpoint-min($bp-lg){
+    height:auto;
+    width:22vw;
+    flex-flow:column nowrap;
+  }
+}
+
+.nav__header{
+  display:none;
+  @include breakpoint-min($bp-lg){
+    //display:flex;
+    max-width:50%;
+    justify-content: center;
+    align-self: center;
+  }
+}
+
+
+.menu__item{
+  background-color: $stdGreen;
+  display: inline-block;    
+  width:calc((100% - 6px)/ 4);
+
+  // Laptop Screen Layout
+  @include breakpoint-min($bp-lg){
+    width:100%;
+  }
+  &:hover:not(.menu--disabled){
+    @include shadowIn;
+    background-color:$liteGreen;
+  }
+
+
+}
+.menu__link{    
+  display:flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+
+  color:white;
+  text-decoration: none;
+  height:100%;
+  &:hover{
+    color:rgba(227,227,227,.85);
+  }
+
+  // Laptop Screen Settings
+  @include breakpoint-min($bp-lg){
+    @include centerSides;
+    @include samePaddingY(1.25rem);
+    width:60%;
+  }
+
+}
+
+.menu__icon{
+  height:25px;
+  font-size: 25px;
+  text-align:center;
+  padding: 2px 0;
+
+  // Laptop Screen Settings
+  @include breakpoint-min($bp-lg){
+    height:2.25rem;
+    font-size: 2.25rem;
+  }
+}
+
+.social-row{
+  display:none;
+
+  @include breakpoint-min($bp-lg){
+    @include spanRow("icon"); 
+  }
+} 
+
+.social-row__icon{
+  font-size:1.25rem;
+  color:rgba(255,255,255,.8);
+  &:hover{
+    color: rgba(190, 190, 190, 0.65);
+  }
+  @include breakpoint-min($bp-lg){
+    padding-right:7.5px;
+    padding-left: 7.5px;
+  }
+}
+
+.menu__text{
+  text-align: center;
+
+}
+
+.menu__link--border{
+  border-right:1px solid rgba(255,255,255,.75);
+
+// Laptop Screen Settings
+@include breakpoint-min($bp-lg){
+    border-right:0;
+    border-bottom:1.2px solid rgba(255,255,255,.75);
+  }
+
+}
+
+.menu--disabled{
+  color:rgba(200,200,200,.75);
+}

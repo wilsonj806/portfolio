@@ -1,16 +1,18 @@
 /* Portfolio CSS */
 // Mixin imports
 
-@import '_mixins/_box.scss';
-@import '_mixins/_text.scss';
+@import 'utils/_box.scss';
+@import 'utils/_text.scss';
+@import 'utils/_breakpoints.scss';
 // Module imports
 
-@import '_modules/_colors.scss';
-@import '_modules/_buttons.scss';
+@import 'modules/_templates.scss';
+@import 'modules/_colors.scss';
+@import 'modules/_buttons.scss';
 // Partials import
 
-@import '_partials/_base.scss';
-@import '_partials/_nav.scss';
-@import '_partials/_intro.scss';
-@import '_partials/_works.scss';
-@import '_partials/_contact.scss';
+@import 'layouts/_base.scss';
+@import 'layouts/_nav.scss';
+@import 'layouts/_intro.scss';
+@import 'layouts/_works.scss';
+@import 'layouts/_contact.scss';

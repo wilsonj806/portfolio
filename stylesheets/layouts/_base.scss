@@ -1,0 +1,30 @@
+// SCSS for base components
+
+// Base elements Styling
+
+:root{
+  background-color: $stdGrey;
+  font-family: "Helvetica", sans-serif;
+}
+
+body{
+  @include zeroAll;
+
+}
+
+main{
+  padding-top: 4rem;
+
+  @include breakpoint-min($bp-lg){
+    width:78vw;
+    float:right;
+  } 
+}
+
+a{
+  color:$liteGreen;
+  text-decoration: none;
+  &:hover{
+    color:$medDarkGreen;
+  }
+}

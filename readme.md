@@ -1,6 +1,6 @@
 # Portfolio Read Me
-#### Version 2.0.0
-#### Date Last Updated: 09-11-18
+#### Version 2.0.1
+#### Date Last Updated: 10-15-18
 #### [Live Site](https://wilsonj806.github.io/portfolio/)
 #### [Patch Notes](portfolio-v2-patch-notes.md)
 
@@ -10,7 +10,7 @@ Versioning is done using [Semantic Versioning](https://semver.org/)
 
 ## Current Status
 
-Site is live
+Live, on version 2.0.0
 
 ## File Structure
 
@@ -27,13 +27,15 @@ portfolio-mk2
   │   └─ maze-doc.png
   │
   ├─ stylesheets
-  │   ├─ _mixins
+  │   ├─ utils
   │   │     ├─ _box.scss
+  │   │     ├─ _breakpoints.scss
   │   │     └─ _text.scss
-  │   ├─ _modules
+  │   ├─ modules
   │   │     ├─ _buttons.scss
-  │   │     └─ _colors.scss
-  │   ├─ _partials
+  │   │     ├─ _colors.scss
+  │   │     └─ _templates.scss
+  │   ├─ layouts
   │   │     ├─ _base.scss
   │   │     ├─ _contact.scss
   │   │     ├─ _intro.scss

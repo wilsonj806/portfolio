@@ -71,6 +71,7 @@ This will needs subsections at some point
   @mixin stdParagraph
   @mixin headingText($txtSize, $align)
   @mixin stdContentSection($width)
+  @mixin spanRow($type)
 ```
 ### Basic mixins
 
