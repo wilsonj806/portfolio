@@ -2,7 +2,7 @@
 #### Version 2.0.1
 #### Date Last Updated: 10-15-18
 #### [Live Site](https://wilsonj806.github.io/portfolio/)
-#### [Patch Notes](portfolio-v2-patch-notes.md)
+#### [Patch Notes](portfolio-v2.0.1-patch-notes.md)
 
 ## Versioning
 
@@ -10,7 +10,7 @@ Versioning is done using [Semantic Versioning](https://semver.org/)
 
 ## Current Status
 
-Live, on version 2.0.0
+Live, on version 2.0.1
 
 ## File Structure
 
