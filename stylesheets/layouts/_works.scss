@@ -8,7 +8,7 @@
   @include breakpoint-min-max($bp-lg,$bp-xl){
     width:80%;
   }
-  @media #{$desktop}{
+  @include breakpoint-min($bp-xl){
     width:75%;
   }
 }
@@ -17,7 +17,7 @@
   @include centerSides;
 
   // Laptop Screen Layout
-  @include breakpoint-min-max($bp-lg,$bp-xl){
+  @include breakpoint-min($bp-lg){
     width:100%;
     display:flex;
     flex-flow:row nowrap;
@@ -35,7 +35,7 @@
   @include breakpoint-min-max($bp-sm,$bp-lg){
     max-width:65%;
   }
-  @include breakpoint-min-max($bp-lg,$bp-xl){
+  @include breakpoint-min($bp-lg){
     max-width:40%;
   }
 }

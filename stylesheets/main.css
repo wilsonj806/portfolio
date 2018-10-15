@@ -191,7 +191,7 @@ a:hover {
   color: rgba(190, 190, 190, 0.65);
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
+@media (min-width: 1280px) {
   .social-row__icon {
     padding-right: 7.5px;
     padding-left: 7.5px;
@@ -328,7 +328,7 @@ a:hover {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media (min-width: 1440px) {
   .works {
     width: 75%;
   }
@@ -339,7 +339,7 @@ a:hover {
   margin-right: auto;
 }
 
-@media (min-width: 1280px) and (max-width: 1439px) {
+@media (min-width: 1280px) {
   .works__flex-ctr {
     width: 100%;
     display: -webkit-box;
@@ -376,7 +376,7 @@ a:hover {
   }
 }
 
-@media (min-width: 1280px) and (max-width: 1439px) {
+@media (min-width: 1280px) {
   .works__ctr {
     max-width: 40%;
   }
