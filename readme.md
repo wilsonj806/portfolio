@@ -1,16 +1,10 @@
 # Portfolio Read Me
-#### Version 2.0.1
-#### Date Last Updated: 10-15-18
-#### [Live Site](https://wilsonj806.github.io/portfolio/)
-#### [Patch Notes](portfolio-v2.0.1-patch-notes.md)
 
-## Versioning
+## Status
 
-Versioning is done using [Semantic Versioning](https://semver.org/)
+[**Live Site**](https://wilsonj806.github.io/portfolio/)
 
-## Current Status
-
-Live, on version 2.0.1
+[![Git latest release](https://img.shields.io/github/tag/wilsonj806/portfolio.svg)](https://github.com/wilsonj806/portfolio)
 
 ## File Structure
 
@@ -23,7 +17,7 @@ portfolio-mk2
   │   │     └─ sass.png
   │   │
   │   ├─ blackbox.png
-  │   : 
+  │   :
   │   └─ maze-doc.png
   │
   ├─ stylesheets
@@ -50,6 +44,12 @@ portfolio-mk2
   └─ readme.md
 ```
 
+## To Do
+
+- Do layout for an external Workflow/ Current Projects page
+- Either make or outsource a logo
+- Refactor SCSS
+
 ## Image Attribution
 
 Several images used on this site are not mine or are modified from other sources, so this section serves to give credit to the original creators of said images.
@@ -65,3 +65,7 @@ Several images used on this site are not mine or are modified from other sources
 There isn't many external APIs used on this page (for now). The external API(s) used are as follows:
 
   - [Formspree.io to handle the contact form](https://formspree.io/)
+
+## Versioning
+
+Versioning is done using [Semantic Versioning](https://semver.org/)
