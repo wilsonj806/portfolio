@@ -52,7 +52,7 @@
 .nav__heading{
   @include headingText(2.75rem, center);
   color: white;
-  border: 2px 2px groove white;
+  border: 2px groove white;
   box-shadow: 2px 2px solid rgba(120,120,120,0.6);
 }
 
