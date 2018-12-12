@@ -16,7 +16,7 @@
   // Laptop Screen Layout
   @include breakpoint-min($bp-lg){
     flex-flow:column nowrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height:100vh;
   }
 }
@@ -55,6 +55,7 @@
   border: 2px groove white;
   box-shadow: 2px 2px solid rgba(120,120,120,0.6);
 }
+
 
 
 .menu__item{
