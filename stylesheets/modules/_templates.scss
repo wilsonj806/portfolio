@@ -18,8 +18,8 @@
     max-width:85%;
     display:flex;
     align-self: center;
-    justify-content: space-around;   
-    width:50%; 
+    justify-content: space-around;
+    width:50%;
   }
   @if $type=="img"{
     @include centerSides;

@@ -30,6 +30,25 @@ a:hover {
   color: #3A6A5E;
 }
 
+.heading--lg {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Lato", sans-serif;
+  font-size: 2.75rem;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px rgba(122, 122, 122, 0.59);
+  border: 2px white groove;
+  -webkit-box-shadow: 2px 2px rgba(122, 122, 122, 0.59);
+          box-shadow: 2px 2px rgba(122, 122, 122, 0.59);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 10px 5px;
+}
+
 .nav {
   margin: 0;
   padding: 0;
@@ -53,8 +72,9 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     height: 100vh;
   }
 }

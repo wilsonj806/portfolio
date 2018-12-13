@@ -6,49 +6,21 @@
 
 [![Git latest release](https://img.shields.io/github/tag/wilsonj806/portfolio.svg)](https://github.com/wilsonj806/portfolio)
 
-## File Structure
+## Roadmap
 
-```
-portfolio-mk2
-  ├─ img
-  │   ├─ badges
-  │   │     ├─ html.png
-  │   │     :
-  │   │     └─ sass.png
-  │   │
-  │   ├─ blackbox.png
-  │   :
-  │   └─ maze-doc.png
-  │
-  ├─ stylesheets
-  │   ├─ utils
-  │   │     ├─ _box.scss
-  │   │     ├─ _breakpoints.scss
-  │   │     └─ _text.scss
-  │   ├─ modules
-  │   │     ├─ _buttons.scss
-  │   │     ├─ _colors.scss
-  │   │     └─ _templates.scss
-  │   ├─ layouts
-  │   │     ├─ _base.scss
-  │   │     ├─ _contact.scss
-  │   │     ├─ _intro.scss
-  │   │     ├─ _nav.scss
-  │   │     └─ _works.scss
-  │   │
-  │   ├─ main.scss
-  │   ├─ main.css
-  │   └─ readme.md
-  │
-  ├─ index.html
-  └─ readme.md
-```
+### Version 2.5.0
 
-## To Do
+- Update content to reflect current projects
+- Start layout for the second page attached to the portfolio
+- Rethink stylesheet structure to account for the incoming new page
+- Determine whether or not its worthwhile to use some kind of templating(e.g Pug.js)
 
-- Do layout for an external Workflow/ Current Projects page
+### Version 3.0.0
+
 - Either make or outsource a logo
-- Refactor SCSS
+- Finish external Workflow/ Current Projects page
+- Add background art somehow to fill the white space
+
 
 ## Image Attribution
 
