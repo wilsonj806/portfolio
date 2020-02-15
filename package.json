@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "2.0.0",
+  "description": "Wilson's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'test'",
+    "develop": "gridsome develop",
+    "build": "gridsome build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilsonj806/portfolio.git"
+  },
+  "author": "Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilsonj806/portfolio/issues"
+  },
+  "homepage": "https://github.com/wilsonj806/portfolio#readme",
+  "dependencies": {
+    "@gridsome/vue-remark": "^0.1.9",
+    "gridsome": "^0.7.12"
+  }
+}
