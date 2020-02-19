@@ -1,9 +1,31 @@
 body {
   margin: 0;
-  padding: 0;
+  background: rgb(255, 252, 238)
 }
 
 #app {
   width: 100vw;
   min-height: 100vh;
+}
+
+.section {
+  margin-top: 40px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  #app {
+    width: 70vw;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #app {
+    width: 60vw;
+  }
 }

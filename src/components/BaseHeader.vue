@@ -21,5 +21,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+header {
+  width: 100%;
+}
 </style>
