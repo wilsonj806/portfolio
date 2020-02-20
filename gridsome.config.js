@@ -23,6 +23,22 @@ module.exports = {
         // Vue template location
         template: './src/templates/Blog.vue'
       }
-    }
+    },
+    {
+      // again similar to Webpack loader configs
+      use: '@gridsome/vue-remark',
+      options: {
+        // GraphQL type name
+        typeName: 'Project',
+        // where to find your MD files
+        baseDir: './projects',
+
+        // URL to navigate to
+        pathPrefix: '/project',
+
+        // Vue template location
+        template: './src/templates/Project.vue'
+      }
+    },
   ]
 }

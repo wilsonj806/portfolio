@@ -1,6 +1,7 @@
 <template>
-  <li class="list-item-blog">
-    <g-link :to="blogNode.path" class="link-blog">
+  <li class="list-item">
+    <g-link :to="blogNode.path" class="link">
+      <slot/>
       <span style="flex: 3;">{{ blogNode.title }}</span>
       <span class="is-new" v-if="isNew">New</span>
     </g-link>
@@ -9,7 +10,7 @@
 
 <script>
 export default {
-  name: 'BlogItem',
+  name: 'SingleMdItem',
   props: {
     blogNode: {
       type: Object,
@@ -28,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-.list-item-blog {
+.list-item {
   display: flex;
   align-items: center;
   width: 100%;
@@ -37,7 +38,7 @@ export default {
   font-size: 2rem;
 }
 
-.link-blog {
+.link {
   padding: 0.5rem;
   border-radius: 0.25rem;
   width: 100%;
@@ -46,23 +47,23 @@ export default {
   justify-content: flex-start;
   text-decoration: none;
 }
-.link-blog:link {
+.link:link {
   color: black;
 }
 
-.link-blog:visited {
+.link:visited {
   color: black;
 }
 
-.link-blog:focus {
+.link:focus {
   background: rgb(230, 230, 230);
 }
 
-.link-blog:hover {
+.link:hover {
   background: rgb(230, 230, 230);
 }
 
-.link-blog:active {
+.link:active {
   background: rgb(230, 230, 230);
 }
 
