@@ -51,6 +51,7 @@ export default {
 .mobile-header {
   width: 100%;
   display: flex;
+  visibility: visible;
   justify-content: space-between;
   align-items: center;
 }
@@ -68,16 +69,17 @@ export default {
 
 .primary-nav-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-flow: column nowrap;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
+  height: 100vh;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .wrap-close-btn {
@@ -97,5 +99,10 @@ export default {
   font-size: 3rem;
 }
 
-
+@media only screen and (min-width: 1024px) {
+  .mobile-header {
+    display: none;
+    visibility: hidden;
+  }
+}
 </style>

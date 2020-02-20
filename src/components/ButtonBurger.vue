@@ -26,7 +26,7 @@ export default {
   align-items: center;
   position: relative;
   width: 2.625rem;
-  height: 2.5rem;
+  height: 39px;
   margin: 0.325rem;
 }
 
@@ -43,15 +43,15 @@ span {
 }
 
 .nav-menu-btn span:nth-child(1) {
-  top: 0px;
+  top: 3px;
 }
 
 .nav-menu-btn span:nth-child(2) {
-  top: 0.8rem;
+  top: 16px;
 }
 
 .nav-menu-btn span:nth-child(3) {
-  top: 1.6rem;
+  top: 29px;
 }
 
 </style>

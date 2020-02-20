@@ -1,7 +1,7 @@
 <template>
   <header>
-    <NavDesktop v-if="isMobile === false"/>
-    <NavMobile v-else/>
+    <NavDesktop/>
+    <NavMobile/>
   </header>
 </template>
 
@@ -12,11 +12,6 @@ export default {
   components: {
     NavDesktop,
     NavMobile
-  },
-  data() {
-    return {
-      isMobile: window.innerWidth <= 768 || screen.width <= 768
-    }
   }
 }
 </script>
