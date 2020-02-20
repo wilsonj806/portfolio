@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <Layout>
     <!-- Figure out how to make this a component instead -->
     <VueRemarkContent/>
-  </div>
+  </Layout>
 </template>
 
 <page-query>

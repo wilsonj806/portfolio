@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <Layout>
     <!-- Figure out how to make this a component instead -->
     <div class="project" v-html="$page.project.content"/>
     <g-image :src="$page.project.image"/>
-  </div>
+  </Layout>
 </template>
 <script>
 export default {
