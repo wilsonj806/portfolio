@@ -1,8 +1,8 @@
 <template>
   <li class="list-item">
     <g-link :to="blogNode.path" class="link">
-      <slot/>
       <span style="flex: 3;">{{ blogNode.title }}</span>
+      <span style="flex: 3;" v-if="blogNode.description">{{ blogNode.description }}</span>
       <span class="is-new" v-if="isNew">New</span>
     </g-link>
   </li>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'SingleMdItem',
+  name: 'SingleBlogItem',
   props: {
     blogNode: {
       type: Object,
@@ -35,7 +35,7 @@ export default {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .link {

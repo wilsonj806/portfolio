@@ -2,17 +2,23 @@
   <Layout>
     <section class="section sect-intro">
       <h1>Hi, I'm Wilson!</h1>
-      <p>
-        I'm a front end developer building interfaces with modern web technologies such as React.js or Vue.js! I can design, build, and deploy web apps from the ground up.
-      </p>
+      <div class="wrap-intro-txt">
+        <p>
+          I'm a front end developer building interfaces with modern web technologies such as React.js or Vue.js!
+        </p>
+        <p>
+          I can design, build, and deploy web apps from the ground up and have no qualms about picking up new technlogies or concepts.
+        </p>
+        <p>
+          Check out my <a href="https://github.com/wilsonj806">Github</a> for sample works!
+        </p>
+      </div>
     </section>
     <section class="section">
       <h2>Latest Projects</h2>
       <div class="wrap-latest-list">
-        <ul class="list-latest">
-          <SingleMdItem v-for="project in $page.allProject.edges" :key="project.node.id" :blogNode="project.node">
-            <g-image :src="project.node.image.src" alt="logo"/>
-          </SingleMdItem>
+        <ul class="list-latest latest-project">
+          <SingleProjectItem v-for="project in $page.allProject.edges" :key="project.node.id" :projectNode="project.node"/>
         </ul>
       </div>
     </section>
@@ -20,8 +26,7 @@
       <h2>Latest Blog Articles</h2>
       <div class="wrap-latest-list">
         <ul class="list-latest">
-          <SingleMdItem v-for="blog in $page.allBlog.edges" :key="blog.node.id" :blogNode="blog.node">
-          </SingleMdItem>
+          <SingleBlogItem v-for="blog in $page.allBlog.edges" :key="blog.node.id" :blogNode="blog.node"/>
         </ul>
       </div>
     </section>
@@ -46,8 +51,11 @@ query {
         id
         title
         path
-        image (width: 60, quality: 90)
+        image (width: 42, quality: 90)
         created_at
+        description
+        live_link
+        repo_link
       }
     }
   }
@@ -55,12 +63,14 @@ query {
 </page-query>
 
 <script>
-import SingleMdItem from '../components/SingleMdItem'
+import SingleBlogItem from '../components/SingleBlogItem'
+import SingleProjectItem from '../components/SingleProjectItem'
 
 export default {
   name: 'IndexPage',
   components: {
-    SingleMdItem
+    SingleBlogItem,
+    SingleProjectItem
   }
 }
 </script>
@@ -68,6 +78,14 @@ export default {
 <style scoped>
 .sect-intro {
   height: 45vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.latest-project .list-item:not(:last-child) {
+  border-bottom: 1px solid darkgrey;
 }
 
 .list-latest {
@@ -79,6 +97,10 @@ export default {
 @media only screen and (min-width: 1024px) {
   .sect-intro {
     height: 35vh;
+  }
+
+  .wrap-intro-txt {
+    width: 60%;
   }
 }
 </style>
