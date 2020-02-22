@@ -31,7 +31,7 @@ module.exports = {
         // GraphQL type name
         typeName: 'Project',
         // where to find your MD files
-        baseDir: './projects',
+        baseDir: './project',
 
         // URL to navigate to
         pathPrefix: '/project',
