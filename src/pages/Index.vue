@@ -42,6 +42,7 @@
       <div class="wrap-latest-list">
         <ul class="list-latest latest-project">
           <SingleProjectItem v-for="project in $page.allProject.edges" :key="project.node.id" :projectNode="project.node"/>
+          <li v-if="$page.allProject.edges.length === 0">No projects yet, check back soon!</li>
         </ul>
       </div>
     </section>
@@ -50,6 +51,7 @@
       <div class="wrap-latest-list">
         <ul class="list-latest">
           <SingleBlogItem v-for="blog in $page.allBlog.edges" :key="blog.node.id" :blogNode="blog.node"/>
+          <li v-if="$page.allBlog.edges.length === 0">No blogs yet, check back soon!</li>
         </ul>
       </div>
     </section>
