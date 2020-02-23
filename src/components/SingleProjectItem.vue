@@ -1,37 +1,34 @@
-<!-- FIXME Fix header responsiveness -->
 <template>
   <li class="list-item" :style="toggleHeight">
-    <!-- <g-link :to="projectNode.path" class="link"> -->
-      <div class="wrap-title">
-        <g-image :src="imgSrc" alt="logo" v-if="imgSrc"/>
-        <p
-          class="title"
-          :style="addPad"
-        >
-          {{ projectNode.title }}
-        </p>
-      </div>
+    <div class="wrap-title">
+      <g-image :src="imgSrc" alt="logo" v-if="imgSrc"/>
+      <p
+        class="title"
+        :style="addPad"
+      >
+        {{ projectNode.title }}
+      </p>
+    </div>
 
-      <div class="wrap-excerpt">
-        <ul class="wrap-links">
-          <li>
-            <g-link class="link-project" :to="projectNode.live_link" target="_blank">
-              Live site
-            </g-link>
-          </li>
-          <li>
-            <g-link class="link-project" :to="projectNode.repo_link" target="_blank">
-            Repository
-            </g-link>
-          </li>
-        </ul>
-        <button class="btn-expand" @click="toggleExpand" type="button" v-html="toggleBtnTxt">
-        </button>
-      </div>
-      <div class="expanded" :style="toggleDisplay">
-        <small v-if="projectNode.description">{{ projectNode.description }}</small>
-      </div>
-    <!-- </g-link> -->
+    <div class="wrap-excerpt">
+      <ul class="wrap-links">
+        <li>
+          <g-link class="link-project" :to="projectNode.live_link" target="_blank">
+            Live site
+          </g-link>
+        </li>
+        <li>
+          <g-link class="link-project" :to="projectNode.repo_link" target="_blank">
+          Repository
+          </g-link>
+        </li>
+      </ul>
+      <button class="btn-expand" @click="toggleExpand" type="button" v-html="toggleBtnTxt">
+      </button>
+    </div>
+    <div class="expanded" :style="toggleDisplay">
+      <small v-if="projectNode.description">{{ projectNode.description }}</small>
+    </div>
   </li>
 </template>
 

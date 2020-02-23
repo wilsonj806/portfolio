@@ -134,15 +134,12 @@ export default {
 }
 
 .link {
+  margin-left: 0.5rem;
   max-width: 6.25rem;
   text-decoration: none;
   padding: 0.5rem 0.5rem;
   border-radius: 0.25rem;
   color: rgb(245, 245, 245);
-}
-
-.link:not(:first-of-type) {
-  margin: 0 0.5rem;
 }
 
 .link:link {
