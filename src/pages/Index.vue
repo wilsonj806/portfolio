@@ -77,6 +77,7 @@ query {
         title
         path
         created_at
+        image (width: 40, quality:90)
         description
         live_link
         repo_link
