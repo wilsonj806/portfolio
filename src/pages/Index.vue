@@ -10,8 +10,31 @@
           I can design, build, and deploy web apps from the ground up and have no qualms about picking up new technlogies or concepts.
         </p>
         <p>
-          Check out my <a href="https://github.com/wilsonj806">Github</a> for sample works!
+          Check out my socials!
         </p>
+        <div>
+          <a
+            target="_blank"
+            class="link-github link"
+            href="https://github.com/wilsonj806"
+          >
+            <font-awesome-icon :icon="['fab', 'github']" size="1x" />  Github
+          </a>
+          <a
+            target="_blank"
+            class="link-linkedin link"
+            href="https://linkedin.com/in/wilsonj806"
+          >
+            <font-awesome-icon :icon="['fab', 'linkedin']" size="1x" />  LinkedIn
+          </a>
+          <a
+            target="_blank"
+            class="link-angellist link"
+            href="https://angel.co/wilson-jiang"
+          >
+            <font-awesome-icon :icon="['fab', 'angellist']" size="1x" />  AngelList
+          </a>
+        </div>
       </div>
     </section>
     <section class="section">
@@ -94,6 +117,39 @@ export default {
   padding-left: 0;
 }
 
+.link-github {
+  background: #221e1b;
+}
+.link-linkedin {
+  background: #3371b7;
+}
+.link-angellist {
+  background: black;
+}
+
+.link-linkedin:hover {
+  background: #2962a3;
+}
+
+.link {
+  max-width: 6.25rem;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.25rem;
+  color: rgb(245, 245, 245);
+}
+
+.link:not(:first-of-type) {
+  margin: 0 0.5rem;
+}
+
+.link:link {
+  color: rgb(245, 245, 245);
+}
+
+.link:visited {
+  color: rgb(245, 245, 245);
+}
 @media only screen and (min-width: 1024px) {
   .sect-intro {
     height: 35vh;

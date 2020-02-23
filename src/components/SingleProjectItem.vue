@@ -1,3 +1,4 @@
+<!-- FIXME Fix header responsiveness -->
 <template>
   <li class="list-item" :style="toggleHeight">
     <!-- <g-link :to="projectNode.path" class="link"> -->

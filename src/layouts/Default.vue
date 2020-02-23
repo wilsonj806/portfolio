@@ -1,6 +1,6 @@
 <template>
   <div class="layout-default">
-    <BaseHeader/>
+    <!-- <BaseHeader/> -->
     <slot/>
   </div>
 </template>
