@@ -1,5 +1,5 @@
 <template>
-  <li class="list-item" :style="extendHeight">
+  <li class="list-item" :style="toggleHeight">
     <!-- <g-link :to="projectNode.path" class="link"> -->
       <div class="wrap-title">
         <g-image :src="imgSrc" alt="logo" v-if="imgSrc"/>
@@ -24,9 +24,10 @@
             </g-link>
           </li>
         </ul>
-        <button @click="toggleExpand" type="button">&#8964;</button>
+        <button class="btn-expand" @click="toggleExpand" type="button" v-html="toggleBtnTxt">
+        </button>
       </div>
-      <div class="expanded" :style="displayExpanded">
+      <div class="expanded" :style="toggleDisplay">
         <small v-if="projectNode.description">{{ projectNode.description }}</small>
       </div>
     <!-- </g-link> -->
@@ -56,12 +57,15 @@ export default {
     addPad() {
       return this.projectNode.image ? "" : "padding-left: 42px";
     },
-    displayExpanded() {
-      return this.clicked ? "display: block; visibility: visible" : "display: none; visibility: hidden;" ;
+    toggleDisplay() {
+      return this.clicked ? "height: 2rem; visibility: visible; color: black; padding: 0.5rem 3.5rem" : "height: 0rem; visibility: hidden; color: transparent;" ;
     },
-    extendHeight() {
-      return this.clicked ? "height: 6rem;" : "" ;
-    }
+    toggleHeight() {
+      return this.clicked ? "max-height: 7rem;" : "" ;
+    },
+    toggleBtnTxt() {
+      return this.clicked ? "&#8722;" : "&#43;" ;
+    },
   },
   data() {
     return {

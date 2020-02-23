@@ -6,11 +6,11 @@ li {
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  height: 4rem;
+  max-height: 4.25rem;
   width: 100%;
   padding: 0;
   font-size: 1.5rem;
-  transition: height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .link {
@@ -80,10 +80,25 @@ small {
   display: block;
 }
 
+.btn-expand {
+  box-sizing: border-box;
+  width: 2rem;
+  height: 2rem;
+  /* padding: 0.5rem 1rem; */
+  border: 1px solid darkgrey;
+  border-radius: 0.5rem;
+  background-color: transparent;
+}
+
+.btn-expand:hover {
+background-color: rgba(209, 209, 209, 0.6);
+}
+
 .expanded {
   font-size: 1rem;
   padding-left: 3.5rem;
   overflow-y: auto;
+  transition: all 0.2s ease-in-out;
 }
 
 @media only screen and (min-width: 1024px) {
