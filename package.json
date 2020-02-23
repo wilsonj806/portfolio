@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "3.0.0",
+  "description": "Wilson's portfolio",
+  "scripts": {
+    "test": "echo 'test'",
+    "develop": "gridsome develop",
+    "build": "gridsome build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilsonj806/portfolio.git"
+  },
+  "author": "Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilsonj806/portfolio/issues"
+  },
+  "homepage": "https://github.com/wilsonj806/portfolio#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@gridsome/vue-remark": "^0.1.9",
+    "gridsome": "^0.7.12"
+  }
+}
