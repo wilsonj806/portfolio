@@ -76,7 +76,6 @@ query {
         id
         title
         path
-        image (width: 42, quality: 90)
         created_at
         description
         live_link

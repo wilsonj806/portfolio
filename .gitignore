@@ -1,3 +1,5 @@
+# Gridsome build
+dist/
 # Gridsome cache
 .cache
 .temp

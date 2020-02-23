@@ -17,7 +17,6 @@ query Project($id: ID!) {
     id
     path
     content
-    image (width: 360, quality: 90)
   }
 }
 </page-query>
