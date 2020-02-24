@@ -1,9 +1,9 @@
 <template>
   <div class="mobile-header">
-    <div>
+    <nav>
       <g-link class="name">Wilson Jiang</g-link>
-    </div>
-    <ButtonBurger
+    </nav>
+    <!-- <ButtonBurger
       @burger-clicked="toggleClicked"
     />
     <transition name="fade-in">
@@ -23,7 +23,7 @@
         <g-link to="/blog">Blog</g-link>
         <g-link to="/contact">Contact</g-link>
       </nav>
-    </transition>
+    </transition> -->
   </div>
 </template>
 
@@ -48,6 +48,30 @@ export default {
 </script>
 
 <style scoped>
+/* FIXME TEMPORARY */
+nav {
+  margin: 1rem 0;
+}
+.name {
+  font-size: 1.75rem;
+  text-decoration: none;
+}
+
+.name:link {
+  color: black;
+}
+
+.name:visited {
+  color: black;
+}
+
+.name:hover {
+  text-decoration: underline;
+}
+
+.name:focus {
+  text-decoration: underline;
+}
 .mobile-header {
   width: 100%;
   display: flex;

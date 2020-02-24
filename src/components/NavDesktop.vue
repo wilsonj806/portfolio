@@ -3,12 +3,12 @@
     <div>
       <g-link class="name" to="/">Wilson Jiang</g-link>
     </div>
-    <div class="primary-nav-links">
+    <!-- <div class="primary-nav-links">
       <g-link to="/about">About</g-link>
       <g-link to="/projects">Projects</g-link>
       <g-link to="/blogs">Blogs</g-link>
       <g-link to="/contact">Contact</g-link>
-    </div>
+    </div> -->
   </nav>
 </template>
 
@@ -19,6 +19,25 @@ export default {
 </script>
 
 <style scoped>
+.name {
+  text-decoration: none;
+}
+
+.name:link {
+  color: black;
+}
+
+.name:visited {
+  color: black;
+}
+
+.name:hover {
+  text-decoration: underline;
+}
+
+.name:focus {
+  text-decoration: underline;
+}
 .nav-desktop {
   display: none;
   visibility: hidden;
@@ -27,7 +46,7 @@ export default {
   .nav-desktop {
     width: 100%;
     display: flex;
-    margin: 1rem;
+    margin: 1rem 0;
     padding: 0.25rem 0;
     visibility: visible;
     align-items: baseline;

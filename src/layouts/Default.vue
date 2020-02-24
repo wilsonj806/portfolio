@@ -1,6 +1,6 @@
 <template>
   <div class="layout-default">
-    <!-- <BaseHeader/> -->
+    <BaseHeader/>
     <slot/>
     <BaseFooter/>
   </div>
@@ -26,4 +26,5 @@ export default {
   justify-content: flex-start;
   align-items: center;
 }
+
 </style>
