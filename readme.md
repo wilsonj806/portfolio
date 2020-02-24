@@ -1,8 +1,8 @@
 # Portfolio
 ## Status
-[**Live Site**](https://wilsonj806.github.io/portfolio/)
-
 [![Git latest release](https://img.shields.io/github/tag/wilsonj806/portfolio.svg)](https://github.com/wilsonj806/portfolio)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9c82f15a-d7f8-4fc0-9292-ec3e2737a34a/deploy-status)](https://app.netlify.com/sites/wilsonjiang/deploys)
+
 ## Overview
 This is my personal web development portfolio. It'll showcase projects, any blog articles I happen to write, and some other stuff.
 
