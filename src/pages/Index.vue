@@ -134,7 +134,7 @@ export default {
 }
 
 .link {
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
   max-width: 6.25rem;
   text-decoration: none;
   padding: 0.5rem 0.5rem;
@@ -156,6 +156,10 @@ export default {
 
   .wrap-intro-txt {
     width: 60%;
+  }
+
+  .link {
+      margin-left: 0.5rem;
   }
 }
 </style>

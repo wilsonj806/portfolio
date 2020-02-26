@@ -3,7 +3,7 @@
   <h1>404 Page not found!</h1>
   <h2>Perhaps you meant:</h2>
   <ul>
-    <li v-for="(page, index) in $page.allPage" :key="index">
+    <li v-for="(page, index) in pages" :key="index">
       <g-link :to="page.path">{{ page.path }}</g-link>
     </li>
   </ul>
@@ -20,7 +20,12 @@ query {
 
 <script>
 export default {
-  name: '404'
+  name: 'Base404Page',
+  computed: {
+    pages() {
+      return this.$page.allPage.filter(page => page.path !== '/404/');
+    }
+  }
 }
 </script>
 
