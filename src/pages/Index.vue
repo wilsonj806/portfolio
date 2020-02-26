@@ -38,13 +38,9 @@
       </div>
     </section>
     <section class="section">
-      <!-- TODO update this to Featured Projects -->
-      <h2>Latest Projects</h2>
+      <h2>Featured Projects</h2>
       <div class="wrap-cards">
-        <!-- <ul class="list-latest latest-project"> -->
           <ProjectCard v-for="project in $page.allProject.edges" :key="project.node.id" :projectNode="project.node"/>
-          <!-- <li v-if="$page.allProject.edges.length === 0">No projects yet, check back soon!</li> -->
-        <!-- </ul> -->
       </div>
     </section>
     <section class="section">
@@ -159,6 +155,10 @@ export default {
   flex-flow: column wrap;
 }
 @media only screen and (min-width: 1024px) {
+  h1, h2 {
+    padding-bottom: 2rem;
+  }
+
   .sect-intro {
     height: 35vh;
   }

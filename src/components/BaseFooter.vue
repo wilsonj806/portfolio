@@ -2,7 +2,7 @@
   <footer>
     <div class="section">
       <p>
-        Built with <a class="link" href="https://gridsome.org/"><img src="../../img/gridsome-logo.svg" alt="gridsome logo"/> Gridsome</a>
+        Built with <a class="link" href="https://gridsome.org/"><img src="../../img/gridsome-logo.svg" alt="gridsome logo"/> Gridsome</a> and <a class="link" href="https://vuejs.org/">Vue.JS</a>
       </p>
       <p>
         {{ `&#169; Wilson Jiang ${year}`}}
