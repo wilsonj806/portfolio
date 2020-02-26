@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-desktop">
-    <div>
+    <div style="position: relative;">
       <g-link class="name" to="/">WJ</g-link>
     </div>
     <div class="primary-nav-links--desktop">

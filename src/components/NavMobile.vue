@@ -1,6 +1,6 @@
 <template>
   <div class="mobile-header">
-    <div>
+    <div style="position: relative;">
       <g-link class="name">WJ</g-link>
     </div>
     <ButtonBurger

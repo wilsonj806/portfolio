@@ -21,10 +21,41 @@ header {
   color: black;
 }
 
-.name:hover {
-  /* background-color: rgba(223, 200, 158, 0.9); */
-  margin: 0.25rem calc(0.25rem - 1px);
-  border: 1px solid rgba(233, 233, 233, 0.8)
+.name:hover::after, .name:focus::after {
+  width: 40px;
+  right: auto;
+  left: 0;
+}
+.name:hover::before, .name:focus::before {
+  width: 40px;
+  right: 0;
+  left: auto;
+}
+
+.name:after {
+  content: "";
+  background: rgb(190, 154, 236);
+  height: 40px;
+  opacity: 0.8;
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  transition: all 0.15s;
+  width: 0;
+  z-index: -2;
+}
+
+.name:before {
+  content: "";
+  background: rgb(105, 170, 79);
+  height: 40px;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.15s;
+  width: 0;
+  z-index: -1;
 }
 
 .name:focus {
