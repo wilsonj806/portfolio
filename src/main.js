@@ -11,6 +11,8 @@ import {
   faGithub,
   faAngellist
 } from '@fortawesome/free-brands-svg-icons'
+import { faTerminal } from '@fortawesome/free-solid-svg-icons'
+
 
 import '~/styles/main.css'
 import DefaultLayout from '~/layouts/Default.vue'
@@ -20,7 +22,8 @@ library.add(
   faTwitter,
   faLinkedin,
   faGithub,
-  faAngellist
+  faAngellist,
+  faTerminal
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

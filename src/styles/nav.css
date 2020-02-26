@@ -8,8 +8,8 @@ header {
   font-size: 1.75rem;
   padding: 0.5rem;
   margin: 0.25rem;
-  border-radius: 0.5rem;
-  background-color: rgba(223, 210, 185, 0.658);
+  /* border-radius: 0.5rem; */
+  /* background-color: rgba(223, 210, 185, 0.65); */
   text-decoration: none;
 }
 
@@ -22,7 +22,9 @@ header {
 }
 
 .name:hover {
-  background-color: rgba(223, 200, 158, 0.9);
+  /* background-color: rgba(223, 200, 158, 0.9); */
+  margin: 0.25rem calc(0.25rem - 1px);
+  border: 1px solid rgba(233, 233, 233, 0.8)
 }
 
 .name:focus {
@@ -140,7 +142,7 @@ header {
   }
   .nav-link--desktop {
     margin: 0 0.5rem;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     position: relative;
     text-decoration: none;
   }
@@ -152,7 +154,7 @@ header {
     color: black;
   }
 
-  .nav-link--desktop:hover::after {
+  .nav-link--desktop:hover::after, .nav-link--desktop:focus::after {
     width: 100%;
     right: auto;
     left: 0;
@@ -161,7 +163,8 @@ header {
   .nav-link--desktop::after {
     content: "";
     background: rgb(194, 184, 255);
-    height: 1rem;
+    border-bottom: 1px solid rgb(90, 90, 90);
+    height: 0.75rem;
     opacity: 1;
     position: absolute;
     right: 0;
