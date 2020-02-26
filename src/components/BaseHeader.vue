@@ -16,8 +16,4 @@ export default {
 }
 </script>
 
-<style scoped>
-header {
-  width: 100%;
-}
-</style>
+<style scoped src="../styles/nav.css"></style>
