@@ -38,12 +38,9 @@
       </div>
     </section>
     <section class="section">
-      <h2>Latest Projects</h2>
-      <div class="wrap-latest-list">
-        <ul class="list-latest latest-project">
-          <SingleProjectItem v-for="project in $page.allProject.edges" :key="project.node.id" :projectNode="project.node"/>
-          <li v-if="$page.allProject.edges.length === 0">No projects yet, check back soon!</li>
-        </ul>
+      <h2>Featured Projects</h2>
+      <div class="wrap-cards">
+          <ProjectCard v-for="project in $page.allProject.edges" :key="project.node.id" :projectNode="project.node"/>
       </div>
     </section>
     <section class="section">
@@ -70,14 +67,14 @@ query {
       }
     }
   }
-  allProject(sortBy: "created_at", order: DESC, limit: 5) {
+  allProject(sortBy: "created_at", order: DESC, limit: 3) {
     edges {
       node {
         id
         title
         path
         created_at
-        image (width: 40, quality:90)
+        image (width: 180, quality:90)
         description
         live_link
         repo_link
@@ -90,12 +87,13 @@ query {
 <script>
 import SingleBlogItem from '../components/SingleBlogItem'
 import SingleProjectItem from '../components/SingleProjectItem'
+import ProjectCard from '../components/ProjectCard'
 
 export default {
   name: 'IndexPage',
   components: {
     SingleBlogItem,
-    SingleProjectItem
+    ProjectCard
   }
 }
 </script>
@@ -134,15 +132,12 @@ export default {
 }
 
 .link {
+  margin-left: 0.25rem;
   max-width: 6.25rem;
   text-decoration: none;
   padding: 0.5rem 0.5rem;
   border-radius: 0.25rem;
   color: rgb(245, 245, 245);
-}
-
-.link:not(:first-of-type) {
-  margin: 0 0.5rem;
 }
 
 .link:link {
@@ -152,7 +147,18 @@ export default {
 .link:visited {
   color: rgb(245, 245, 245);
 }
+
+.wrap-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+}
 @media only screen and (min-width: 1024px) {
+  h1, h2 {
+    padding-bottom: 2rem;
+  }
+
   .sect-intro {
     height: 35vh;
   }
@@ -160,5 +166,13 @@ export default {
   .wrap-intro-txt {
     width: 60%;
   }
+
+  .link {
+      margin-left: 0.5rem;
+  }
+
+  .wrap-cards {
+  flex-flow: row nowrap;
+}
 }
 </style>

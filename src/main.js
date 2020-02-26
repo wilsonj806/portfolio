@@ -5,22 +5,25 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import {
-  faFontAwesome,
+  faGithub,
   faTwitter,
   faLinkedin,
-  faGithub,
-  faAngellist
+  faAngellist,
+  faFontAwesome,
 } from '@fortawesome/free-brands-svg-icons'
+import { faTerminal } from '@fortawesome/free-solid-svg-icons'
+
 
 import '~/styles/main.css'
 import DefaultLayout from '~/layouts/Default.vue'
 
 library.add(
-  faFontAwesome,
-  faTwitter,
-  faLinkedin,
   faGithub,
-  faAngellist
+  faTwitter,
+  faTerminal,
+  faLinkedin,
+  faAngellist,
+  faFontAwesome,
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

@@ -1,16 +1,19 @@
 <template>
   <div class="layout-default">
-    <!-- <BaseHeader/> -->
+    <BaseHeader/>
     <slot/>
+    <BaseFooter/>
   </div>
 </template>
 
 <script>
 import BaseHeader from '../components/BaseHeader'
+import BaseFooter from '../components/BaseFooter'
 
 export default {
   components: {
-    BaseHeader
+    BaseHeader,
+    BaseFooter
   },
 
 }
@@ -23,4 +26,5 @@ export default {
   justify-content: flex-start;
   align-items: center;
 }
+
 </style>
