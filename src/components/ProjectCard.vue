@@ -7,7 +7,7 @@
         {{ projectNode.title }}
       </h2>
     </div>
-    <div>
+    <div class="wrapper-img">
       <g-image :src="imgSrc" alt="img" v-if="imgSrc"/>
       <font-awesome-icon class="icon" :icon="['fas', 'terminal']" v-else/>
     </div>
@@ -47,6 +47,7 @@ export default {
 }
 </script>
 
+<style scoped src="../styles/img.css"></style>
 <style scoped>
 article {
   color: rgb(22, 77, 45);
