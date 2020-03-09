@@ -1,9 +1,11 @@
 <!-- TODO tile the content so that the links are on the bottom and the excerpt is to the right of the project name -->
 <template>
-  <li class="list-item" :style="toggleHeight">
+  <li class="list-item">
     <div class="wrap-title">
-      <g-image :src="imgSrc" alt="logo" v-if="imgSrc"/>
-      <font-awesome-icon class="icon" :icon="['fas', 'terminal']" v-else/>
+      <div class="wrapper-img">
+        <g-image :src="imgSrc" alt="logo" v-if="imgSrc"/>
+        <font-awesome-icon class="icon" :icon="['fas', 'terminal']" v-else/>
+      </div>
       <p
         class="title"
       >
