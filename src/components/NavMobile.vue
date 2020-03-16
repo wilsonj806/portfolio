@@ -20,7 +20,7 @@
         </div>
         <g-link class="nav-link" to="/about">About</g-link>
         <g-link class="nav-link" to="/projects">Projects</g-link>
-        <!-- <g-link to="/blog">Blog</g-link> -->
+        <g-link class="nav-link" to="/blog">Blog</g-link>
         <!-- <g-link to="/contact">Contact</g-link> -->
       </nav>
     </transition>
