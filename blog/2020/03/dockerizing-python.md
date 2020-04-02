@@ -1,7 +1,7 @@
 ---
 title: Dockerizing A Python App
 author: Wilson Jiang
-created_at: 2020-02-24 17:47:10
+created_at: 2020-03-30 17:47:10
 estimated_read_time: '8 min'
 year: 2020
 ---
