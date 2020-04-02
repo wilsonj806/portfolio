@@ -1,5 +1,5 @@
 ---
-title: How I Upgraded My Portfolio
+title: Dockerizing A Python App
 author: Wilson Jiang
 created_at: 2020-02-24 17:47:10
 estimated_read_time: '8 min'
