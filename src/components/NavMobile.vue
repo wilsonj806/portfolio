@@ -21,6 +21,7 @@
         <g-link class="nav-link" to="/about">About</g-link>
         <g-link class="nav-link" to="/projects">Projects</g-link>
         <g-link class="nav-link" to="/blog">Blog</g-link>
+              <a class="nav-link" href="https://www.dropbox.com/s/soxnd60u5du2x66/Wilson-Jiang-Resume.pdf?&raw=1" target="_blank">Resume</a>
         <!-- <g-link to="/contact">Contact</g-link> -->
       </nav>
     </transition>
