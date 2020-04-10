@@ -10,17 +10,14 @@
     <div class="row-btn">
       <!-- TODO Make this programmatically generate the number of things -->
       <button
+        v-for="(wip, wipIndex) in $static.allWip.edges"
         type="button"
+        :key="wipIndex"
         class="btn-toggler"
-        @click="toggleSelection(0)"
-        :style="index === 0 ? activeColor : ''"
+        :data-index="wipIndex"
+        @click="toggleSelection(wipIndex)"
+        :style="index === wipIndex ? activeColor : ''"
         />
-      <button
-        type="button"
-        class="btn-toggler"
-        @click="toggleSelection(1)"
-        :style="index === 1 ? activeColor : ''"
-      />
     </div>
   </section>
 </template>
@@ -52,13 +49,13 @@ export default {
   methods: {
     toggleSelection(val) {
       if (this.index === parseInt(val)) return
-      this.index = val
+      this.index = parseInt(val)
     },
   },
   data() {
     return {
       index: 0,
-      activeColor: 'background: rgba(255, 255, 255, 0.85);'
+      activeColor: 'background: rgba(190, 245, 197, 0.85);border: 1px solid rgb(29, 29, 29);'
     }
   },
 }
@@ -66,28 +63,33 @@ export default {
 
 <style scoped>
 .card-wip {
-  right: 10%;
-  top: 50%;
+  right: -10%;
+  top: 25%;
   position: absolute;
-  width: 12rem;
-  height: 16rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.125rem;
+  width: 288px;
+  height: 336px;
+  padding: 18px;
+  border-radius: 6px;
   display: flex;
   flex-flow: column nowrap;
-  place-items: center flex-start;
-  background: rgba(48, 45, 228, 0.65);
-  color: rgb(235, 235, 235);
+  place-items: flex-start flex-start;
+  border: 1px solid rgb(86, 52, 167);
+  box-shadow: 4px 4px 3px rgba(65, 65, 65, 0.226);
+  color: rgb(73, 25, 117);
+  background: rgb(250, 250, 250);
   overflow: hidden;
 }
 
 .card-header-text {
-  margin: 0.125rem;
-  font-size: 1.125rem;
+  margin: 2px;
+  width: 100%;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .card-body {
-  height: 14.75rem;
+  height: 236px;
   overflow-y: auto;
   display: flex;
   flex-flow: column nowrap;
@@ -98,23 +100,25 @@ export default {
   display: block;
 }
 
-.card-text {
-  font-size: 0.825rem;
-}
 
 .row-btn {
-  padding: 0.5rem 0;
+  padding: 8px 0;
   display: flex;
+  align-self: center;
   place-items: center;
 }
 
 .btn-toggler {
-  width: 1rem;
-  height: 1rem;
-  margin: 0 0.5rem;
-  background: rgba(255, 255, 255, 0.5);
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
   border-radius: 50%;
-  border: 1px solid rgb(85, 85, 85);
+  border: 1px solid rgba(85, 85, 85, 0.562);
+}
+
+.btn-toggler:hover {
+  border: 1px solid rgb(29, 29, 29);
+  background: rgba(190, 245, 197, 0.85);
 }
 
 </style>

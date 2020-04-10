@@ -1,8 +1,8 @@
 <template>
   <div class="card-body">
     <h3>{{wipData.title}}</h3>
-    <span>{{`Type: ${ wipData.type }`}}</span>
-    <span>{{`Description: ${ wipData.description }`}}</span>
+    <p>Type: <span class="wip-data">{{wipData.type}}</span></p>
+    <p>Description: <span class="wip-data">{{wipData.description}}</span></p>
   </div>
 </template>
 
@@ -20,11 +20,19 @@ export default {
 </script>
 
 <style scoped>
-span {
+p {
   text-overflow:ellipsis;
+  font-weight: 600;
+  /* color: rgb(29, 94, 32); */
 }
 
+
+
 h3 {
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
+}
+
+.wip-data {
+  font-weight: 500;
 }
 </style>
