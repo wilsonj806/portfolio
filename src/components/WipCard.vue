@@ -73,10 +73,11 @@ export default {
   display: flex;
   flex-flow: column nowrap;
   place-items: flex-start flex-start;
-  border: 1px solid rgb(86, 52, 167);
+  border: 1px solid rgb(108, 63, 212);
   box-shadow: 4px 4px 3px rgba(65, 65, 65, 0.226);
-  color: rgb(73, 25, 117);
-  background: rgb(250, 250, 250);
+  /* color: rgb(138, 59, 211); */
+  color: rgb(19, 19, 19);
+  background: rgb(237, 226, 255);
   overflow: hidden;
 }
 
