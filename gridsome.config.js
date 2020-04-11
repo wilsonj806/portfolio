@@ -13,6 +13,16 @@ module.exports = {
       use: '@gridsome/vue-remark',
       options: {
         // GraphQL type name
+        typeName: 'Wip',
+        // where to find your MD files
+        baseDir: './wip',
+      }
+    },
+    {
+      // again similar to Webpack loader configs
+      use: '@gridsome/vue-remark',
+      options: {
+        // GraphQL type name
         typeName: 'Blog',
         // where to find your MD files
         baseDir: './blog',

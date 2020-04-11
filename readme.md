@@ -22,9 +22,14 @@ This handles adding content, and the downloadable portion of the requirements. F
 Contact form might be funky, but since it's 2020, I can run a Firebase function to handle emails and probably email sanitation. Alternatively we can use Netlify to handle it, as we're probably deploying to it anyways.
 
 ### Timeline
-Timeline looks like this:
+So far the below have been implemented in some way:
+- Layout Design
+- Projects Implementation
+- App Deployment
+
+Next up is:
 ```
-  Setup Gridsome => Design Layout => Implement Projects => Implement Blog(low priority) => Deploy To Netlify
+  Add more content(projects, blogs) => PWA Support => Blogs listing => Projects Write Up Setup
 ```
 
-After that anything goes, and shouldn't require massive amounts of maintenance asides from new Gridsome/ Vue releases.
+Then, looking forwards, I'll have to checkout Vue 3.x and how the portfolio will have to be ported to that.
