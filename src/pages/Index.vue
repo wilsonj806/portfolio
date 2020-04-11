@@ -3,6 +3,7 @@
     <section class="section sect-intro">
       <h1>Hi, I'm Wilson!</h1>
       <div class="wrap-intro-txt">
+        <WipCard/>
         <p>
           I'm a front end developer building interfaces with modern web technologies such as React.js or Vue.js!
         </p>
@@ -88,12 +89,14 @@ query {
 import SingleBlogItem from '../components/SingleBlogItem'
 import SingleProjectItem from '../components/SingleProjectItem'
 import ProjectCard from '../components/ProjectCard'
+import WipCard from '../components/WipCard'
 
 export default {
   name: 'IndexPage',
   components: {
     SingleBlogItem,
-    ProjectCard
+    ProjectCard,
+    WipCard
   }
 }
 </script>
@@ -105,6 +108,7 @@ export default {
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: flex-start;
+  position: relative;
 }
 
 .latest-project .list-item:not(:last-child) {
