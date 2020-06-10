@@ -1,41 +1,35 @@
 <template>
   <Layout>
-    <section class="section sect-intro">
-      <h1>Hi, I'm Wilson!</h1>
-      <div class="wrap-intro-txt">
-        <WipCard/>
-        <p>
-          I'm a front end developer building interfaces with modern web technologies such as React.js or Vue.js!
-        </p>
-        <p>
-          I can design, build, and deploy web apps from the ground up and have no qualms about picking up new technlogies or concepts.
-        </p>
-        <p>
-          Check out my socials!
-        </p>
-        <div>
-          <a
-            target="_blank"
-            class="link-github link"
-            href="https://github.com/wilsonj806"
-          >
-            <font-awesome-icon :icon="['fab', 'github']" size="1x" />  Github
-          </a>
-          <a
-            target="_blank"
-            class="link-linkedin link"
-            href="https://linkedin.com/in/wilsonj806"
-          >
-            <font-awesome-icon :icon="['fab', 'linkedin']" size="1x" />  LinkedIn
-          </a>
-          <a
-            target="_blank"
-            class="link-angellist link"
-            href="https://angel.co/wilson-jiang"
-          >
-            <font-awesome-icon :icon="['fab', 'angellist']" size="1x" />  AngelList
-          </a>
-        </div>
+    <section class='intro'>
+    <div class='intro-links'>
+      <a
+        target="_blank"
+        aria-label='Github Profile Link'
+        rel='noopener noreferrer'
+        class="link-github link"
+        href="https://github.com/wilsonj806"
+      >
+        <font-awesome-icon :icon="['fab', 'github']" size="1x" />
+      </a>
+      <a
+        target="_blank"
+        rel='noopener noreferrer'
+        aria-label='LinkedIn Profile Link'
+        class="link"
+        href="https://linkedin.com/in/wilsonj806"
+      >
+        <font-awesome-icon :icon="['fab', 'linkedin-in']" size="1x" />
+      </a>
+      <a
+        target="_blank"
+        aria-label='AngelList Profile Link'
+        class="link"
+        rel='noopener noreferrer'
+        href="https://angel.co/wilson-jiang"
+      >
+        <font-awesome-icon :icon="['fab', 'angellist']" size="1x" />
+      </a>
+    </div>
       </div>
     </section>
     <section class="section">
