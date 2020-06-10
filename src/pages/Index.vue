@@ -30,8 +30,13 @@
         <font-awesome-icon :icon="['fab', 'angellist']" size="1x" />
       </a>
     </div>
-      </div>
-    </section>
+    <div class='intro-text'>
+      <p>Hello!</p>
+      <p class='serif-bold'>I’m Wilson and I build neat things</p>
+      <p>I can build apps or sites with a variety of tools from front-end to back-end!</p>
+      <button class='btn btn-primary'>Contact me!</button>
+    </div>
+  </section>
     <section class="section">
       <h2>Featured Projects</h2>
       <div class="wrap-cards">
@@ -95,39 +100,7 @@ export default {
 }
 </script>
 
-<style scoped>
-.sect-intro {
-  height: 45vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  position: relative;
-}
-
-.latest-project .list-item:not(:last-child) {
-  border-bottom: 1px solid darkgrey;
-}
-
-.list-latest {
-  list-style: none;
-  width: 100%;
-  padding-left: 0;
-}
-
-.link-github {
-  background: #221e1b;
-}
-.link-linkedin {
-  background: #3371b7;
-}
-.link-angellist {
-  background: black;
-}
-
-.link-linkedin:hover {
-  background: #2962a3;
-}
+<style scoped src='../styles/landing.css'>
 
 .link {
   margin-left: 0.25rem;
