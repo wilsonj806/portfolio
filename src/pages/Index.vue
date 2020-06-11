@@ -34,7 +34,7 @@
       <p>Hello!</p>
       <p class='serif-bold'>I’m Wilson and I build neat things</p>
       <p>I can build apps or sites with a variety of tools from front-end to back-end!</p>
-      <button class='btn btn-primary'>Contact me!</button>
+      <!-- <button class='btn btn-primary'>Contact me!</button> -->
     </div>
   </section>
   <!-- <section class='recent'>
