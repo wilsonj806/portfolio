@@ -1,12 +1,38 @@
 <template>
-  <footer>
-    <div class="section">
-      <p>
-        Built with <a class="link" href="https://gridsome.org/"><img src="../../img/gridsome-logo.svg" alt="gridsome logo"/> Gridsome</a> and <a class="link" href="https://vuejs.org/">Vue.JS</a>
-      </p>
-      <p>
-        {{ `&#169; Wilson Jiang ${year}`}}
-      </p>
+<footer>
+    <div class='socials'>
+      <p class='social-text'>Socials: </p>
+      <a
+        target="_blank"
+        aria-label='Github Profile Link'
+        rel='noopener noreferrer'
+        class="link-github link"
+        href="https://github.com/wilsonj806"
+      >
+        <font-awesome-icon :icon="['fab', 'github']" size="1x" /> Github
+      </a>
+      <a
+        target="_blank"
+        rel='noopener noreferrer'
+        aria-label='LinkedIn Profile Link'
+        class="link"
+        href="https://linkedin.com/in/wilsonj806"
+      >
+        <font-awesome-icon :icon="['fab', 'linkedin-in']" size="1x" /> LinkedIn
+      </a>
+      <a
+        target="_blank"
+        aria-label='AngelList Profile Link'
+        class="link"
+        rel='noopener noreferrer'
+        href="https://angel.co/wilson-jiang"
+      >
+        <font-awesome-icon :icon="['fab', 'angellist']" size="1x" /> AngelList
+      </a>
+    </div>
+    <div class='copyright'>
+      <p class='cr-text'>{{ `&#169; Wilson Jiang ${year}` }}</p>
+      <p class='cr-text'>Built with Vue and Gridsome!</p>
     </div>
   </footer>
 </template>
@@ -24,53 +50,69 @@ export default {
 
 <style scoped>
 footer {
-  margin-top: 2rem;
-  width: 100vw;
-  /* background-color: rgb(126, 126, 126); */
-  color: black;
+  height: 140px;
+  width: 100%;
+  border-top: 1px solid lightgrey;
+  padding-top: 32px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 div {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
+  margin: 0 32px;
 }
 
-img {
-  width: 1rem;
-  align-self: center;
-  margin-right: 0.125rem;
+.socials {
+  position: relative;
 }
 
-p {
-  margin: 0 0;
-  font-size: 0.825rem;
-}
 
-.link {
-  display: inline-flex;
-  align-items: baseline;
-}
-
-.link:link {
+.link:link, .link:visited {
+  color: rgb(1, 80, 18);
   text-decoration: none;
-  color: black;
-}
-
-.link:visited {
-  color: black;
+  padding: 8px;
 }
 
 .link:hover {
   text-decoration: underline;
 }
-
-@media only screen and (min-width: 1024px) {
-  div {
-    width: 70%;
-  }
+/*
+.link:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
 }
+
+.link::after{
+  content: '';
+  background: rgba(153, 0, 153, 0.85);
+  height: 50px;
+  opacity: 0.8;
+  position: absolute;
+  right: 50%;
+  top: 0;
+  transition: all 0.15s;
+  width: 0;
+  z-index: -2;
+} */
+
+.copyright {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cr-text {
+  margin: 8px;
+}
+
+.social-text {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
 </style>

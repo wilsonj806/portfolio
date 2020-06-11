@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
   faGithub,
   faTwitter,
-  faLinkedin,
+  faLinkedinIn,
   faAngellist,
   faFontAwesome,
 } from '@fortawesome/free-brands-svg-icons'
@@ -21,7 +21,7 @@ library.add(
   faGithub,
   faTwitter,
   faTerminal,
-  faLinkedin,
+  faLinkedinIn,
   faAngellist,
   faFontAwesome,
 )

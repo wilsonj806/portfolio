@@ -1,34 +1,28 @@
 <template>
-  <article>
-    <div>
-      <h2
-        class="title"
-      >
-        {{ projectNode.title }}
-      </h2>
+<div class='card'>
+  <div class='card-content'>
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+    <p>You can find the project repo on <a :href='repoLink' target='_blank' rel='noopener  noreferer'>Github</a>!</p>
+    <a
+      :href='liveLink'
+      target='_blank'
+      rel='noopener norefferer'
+      class='link-btn'
+    >
+      Demo
+    </a>
+    <h4>Tools</h4>
+    <div :data-tools='tools'/>
+    <div class='tools'>
+      <p class='tools-text'>{{ tools }}</p>
     </div>
-    <div class="wrapper-img">
-      <g-image :src="imgSrc" alt="img" v-if="imgSrc"/>
-      <font-awesome-icon class="icon" :icon="['fas', 'terminal']" v-else/>
-    </div>
-    <div style="margin-top: 0.75rem;">
-      <span v-if="projectNode.description">{{ projectNode.description }}</span>
-    </div>
-    <div>
-      <ul class="wrap-links">
-        <li>
-          <g-link class="link-project" :to="projectNode.live_link" target="_blank">
-            Live site
-          </g-link>
-        </li>
-        <li>
-          <g-link class="link-project" :to="projectNode.repo_link" target="_blank">
-          Repository
-          </g-link>
-        </li>
-      </ul>
-    </div>
-  </article>
+  </div>
+  <div class='card-img'>
+    <!-- TODO: Add a zoom button -->
+    <img :src='imgSrc' :alt='title'/>
+  </div>
+</div>
 </template>
 
 <script>
@@ -36,95 +30,149 @@ export default {
   name: 'BaseProjectCard',
   props: {
     projectNode: {
-      type: Object
+      type: Object,
+      image: {
+        type: Object,
+        src: String
+      },
+      description: String,
+      live_link: String,
+      repo_link: String,
+      title: String,
     }
   },
   computed: {
-    imgSrc() {
-      return this.projectNode.image ? this.projectNode.image.src : ''
+    title() {
+      return this.projectNode ? this.projectNode.title : 'Project Title Here'
     },
+    imgSrc() {
+      return this.projectNode ? this.projectNode.image.src : ''
+    },
+    description() {
+      return this.projectNode ? this.projectNode.description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus magna non leo gravida, nec viverra tortor rutrum.'
+    },
+    repoLink() {
+      return this.projectNode ? this.projectNode.repo_link : ''
+    },
+    liveLink() {
+      return this.projectNode ? this.projectNode.live_link : ''
+    },
+    tools() {
+      return this.projectNode && this.projectNode.tools.length > 0 ? this.projectNode.tools.reduce((acc, tool, i) => {
+          if (acc == '') {
+            return tool
+          } else if (i < 5) {
+            return `${acc}, ${tool}`
+          } else {
+            return acc;
+          }
+        }, '') : 'React, Redux, Flask'
+    }
   }
 }
 </script>
 
 <style scoped src="../styles/img.css"></style>
 <style scoped>
-article {
-  color: rgb(22, 77, 45);
-  background: rgba(233, 232, 232, 0.7);
-  box-sizing:content-box;
-  width: 250px;
-  height: 360px;
-  display: flex;
-  padding: 1rem;
-  margin: 1rem 0;
-  /* border-radius: 1rem; */
-  border: 1px solid rgba(231, 231, 231, 0.8);
-  align-items: center;
-  justify-content: space-between;
-  flex-flow: column nowrap;
-}
-
-article:hover {
-  box-shadow: 2px 2px 3px rgba(184, 184, 184, 0.35);
-}
-
-.title {
+.card {
+  margin: 0 auto 50px auto;
   width: 100%;
-  margin: 0;
-  font-size: 1.25rem;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: flex-start;
+  max-height: 326px;
 }
 
-div {
-  width: 100%;
+.card-content {
+  width: 35%;
+  padding: 24px 32px 0 32px;
+  margin-bottom: 24px;
+  overflow-y: auto;
+}
+
+.card-content > h3,
+.card-content > h4 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.tools-text {
+  margin: 4px 0px;
+  font-size: 14px;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-img {
   display: flex;
-  flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
+  background: #fbdcad;
+  width: 65%;
+  min-height: 100%;
+  padding: 24px;
 }
 
-.icon {
-  color: rgb(202, 201, 201);
-  width: 100%;
-  font-size: 150px;
+.card-img > img {
+  max-width: 100%;
+  height: auto;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
+.link-btn {
+border-radius: 8px;
+padding: 8px;
+display: block;
+width: 80px;
+margin: 8px 0;
+background: transparent;
+border: 2px solid #83e772;
+text-align: center;
 }
 
-.link-project {
-  position: relative;
+.link-btn:link{
+  text-decoration: none;
+  color: black;
+
+}
+
+.link-btn:visited {
+  color: black;
   text-decoration: none;
 }
 
-.link-project:link, .link-project:visited {
-  color: rgb(79, 167, 118);
+.link-btn:hover {
+  background: #35b81e;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 8px;
 }
 
-.link-project:hover::after, .link-project:focus::after {
-  width: 100%;
-  right: auto;
-  left: 0;
+.tools {
+  list-style: none;
+}
+.tools > li {
+  display: inline-block;
+  margin: 0 8px;
 }
 
-.link-project::after {
-  content: "";
-  background: rgb(190, 154, 236);
-  border-bottom: 1px solid rgb(31, 31, 31);
-  height: 0.5rem;
-  opacity: 1;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transition: all 0.15s;
-  width: 0;
-  z-index: -1;
-}
-
-@media only screen and (min-width: 1024px) {
-  article {
-    margin: 0 2rem;
+@media screen and (min-width: 1440px ){
+  .card {
+  max-height: 326px;
   }
+  .card-content {
+    width: 40%;
+  }
+  .card-img {
+    width: 65%;
+  }
+
+  .card-content > h3,
+  .card-content > h4 {
+  margin: 8px 0 8px 0;
+  font-size: 24px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 }
 </style>

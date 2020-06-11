@@ -1,19 +1,19 @@
 <template>
   <div class="layout-default">
-    <BaseHeader/>
+    <BaseNav/>
     <slot/>
     <BaseFooter/>
   </div>
 </template>
 
 <script>
-import BaseHeader from '../components/BaseHeader'
 import BaseFooter from '../components/BaseFooter'
+import BaseNav from '../components/BaseNav'
 
 export default {
   components: {
-    BaseHeader,
-    BaseFooter
+    BaseFooter,
+    BaseNav
   },
 
 }
