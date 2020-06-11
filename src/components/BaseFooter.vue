@@ -1,7 +1,7 @@
 <template>
 <footer>
     <div class='socials'>
-      <p class='social-text'>Social Media: </p>
+      <p class='social-text'>Socials: </p>
       <a
         target="_blank"
         aria-label='Github Profile Link'
@@ -9,7 +9,7 @@
         class="link-github link"
         href="https://github.com/wilsonj806"
       >
-        <font-awesome-icon :icon="['fab', 'github']" size="1x" /> Github Profile
+        <font-awesome-icon :icon="['fab', 'github']" size="1x" /> Github
       </a>
       <a
         target="_blank"
@@ -18,7 +18,7 @@
         class="link"
         href="https://linkedin.com/in/wilsonj806"
       >
-        <font-awesome-icon :icon="['fab', 'linkedin-in']" size="1x" /> LinkedIn Profile
+        <font-awesome-icon :icon="['fab', 'linkedin-in']" size="1x" /> LinkedIn
       </a>
       <a
         target="_blank"
@@ -31,7 +31,7 @@
       </a>
     </div>
     <div class='copyright'>
-      <p class='cr-text'>{{ `&#169; Wilson Jiang ${year} - Designed and developed by me` }}</p>
+      <p class='cr-text'>{{ `&#169; Wilson Jiang ${year}` }}</p>
       <p class='cr-text'>Built with Vue and Gridsome!</p>
     </div>
   </footer>
@@ -50,12 +50,15 @@ export default {
 
 <style scoped>
 footer {
-  height: 120px;
-  width: 100vw;
-  background: #9fd292;
+  height: 140px;
+  width: 100%;
+  border-top: 1px solid lightgrey;
+  padding-top: 32px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 div {
@@ -66,13 +69,9 @@ div {
   position: relative;
 }
 
-p {
-  color: rgb(50, 50, 50);
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 .link:link, .link:visited {
-  color: rgb(50, 50, 50);
+  color: rgb(1, 80, 18);
   text-decoration: none;
   padding: 8px;
 }
