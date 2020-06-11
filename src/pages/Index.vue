@@ -52,7 +52,6 @@
   <section class='highlight'>
     <h2 class='sec-heading'>Selected Works</h2>
     <ProjectCard v-for="project in $page.allProject.edges" :key="project.id" :projectNode="project.node"/>
-    <ProjectCard />
   </section>
   </Layout>
 </template>
@@ -76,7 +75,7 @@ query {
         title
         path
         created_at
-        image (width: 180, quality:90)
+        image (width: 1000, quality: 100)
         description
         live_link
         repo_link
