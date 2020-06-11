@@ -62,22 +62,43 @@ div {
   margin: 0 32px;
 }
 
+.socials {
+  position: relative;
+}
+
 p {
-  color: white;
+  color: rgb(50, 50, 50);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a:link, a:visited {
-  color: white;
-  text-decoration: white;
+.link:link, .link:visited {
+  color: rgb(50, 50, 50);
+  text-decoration: none;
   padding: 8px;
 }
 
-a:hover {
-  border: 1px solid white;
-  border-radius: 8px;
-  padding: 7px;
+.link:hover {
+  text-decoration: underline;
 }
+/*
+.link:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.link::after{
+  content: '';
+  background: rgba(153, 0, 153, 0.85);
+  height: 50px;
+  opacity: 0.8;
+  position: absolute;
+  right: 50%;
+  top: 0;
+  transition: all 0.15s;
+  width: 0;
+  z-index: -2;
+} */
 
 .copyright {
   display: flex;
