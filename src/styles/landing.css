@@ -82,9 +82,37 @@
 
 
 .recent {
+  min-height: 300px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 32px;
+}
+
+.recent-heading {
+  width: 100%;
+}
+
+.recent-card-wrap {
+  width: 50%;
+}
+
+.card-rec {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.recent-logo {
+  /* max-height: 120px; */
+  width: 120px;
+  /* background: grey; */
+  margin-right: 16px;
+}
+
+.recent-content {
+  width: calc(100% - 120px);
 }
 
 

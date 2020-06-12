@@ -37,18 +37,27 @@
       <!-- <button class='btn btn-primary'>Contact me!</button> -->
     </div>
   </section>
-  <!-- <section class='recent'>
-    <div class='card-rec'>
-      <h2>Recent Project</h2>
-      <h3>My Project</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus magna non leo gravida, nec viverra tortor rutrum.</p>
+  <section class='recent'>
+    <div class='recent-card-wrap'>
+      <h2 class='recent-heading'>Recent Project</h2>
+      <div class='card-rec'>
+        <img class='recent-logo' :src='$page.recentProject.edges[0].node.logo.src || ""' alt='recent project logo'>
+        <div class='recent-content'>
+          <h3>{{ $page.recentProject.edges[0].node.title }}</h3>
+          <p>{{ $page.recentProject.edges[0].node.description }}</p>
+        </div>
+      </div>
     </div>
-    <div class='card-rec'>
+    <!-- <div class='recent-card-wrap rec-blog'>
       <h2>Recent Blog</h2>
-      <h3>My Blog</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus magna non leo gravida, nec viverra tortor rutrum.</p>
+      <div class='card-rec'>
+        <div>
+          <h3>My Blog</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus magna non leo gravida, nec viverra tortor rutrum.</p>
+        </div>
     </div>
-  </section> -->
+  </div> -->
+  </section>
   <section class='highlight'>
     <h2 class='sec-heading'>Selected Works</h2>
     <ProjectCard v-for="project in $page.allProject.edges" :key="project.id" :projectNode="project.node"/>
@@ -58,7 +67,17 @@
 
 <page-query>
 query {
-  allBlog(sortBy: "created_at", order: DESC, limit: 5) {
+  recentProject: allProject(order: ASC, limit: 1) {
+    edges {
+      node {
+        id
+        title
+        description
+        logo (width: 200, quality: 60)
+      }
+    }
+  }
+  recentBlog: allBlog(order: ASC, limit: 1) {
     edges {
       node {
         id
@@ -68,7 +87,7 @@ query {
       }
     }
   }
-  allProject(sortBy: "created_at", order: DESC, limit: 3) {
+  allProject(sortBy: "created_at", order: DESC, filter: { title: { regex: "Todolet|TS Contributors|NYC Arbor Logger"}}) {
     edges {
       node {
         id
