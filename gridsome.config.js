@@ -21,7 +21,7 @@ module.exports = {
         pathPrefix: '/blog',
 
         // Vue template location
-        template: './src/templates/Blog.vue'
+        // template: './src/templates/Blog.vue'
       }
     },
     {
@@ -37,7 +37,7 @@ module.exports = {
         pathPrefix: '/project',
 
         // Vue template location
-        template: './src/templates/Project.vue'
+        // template: './src/templates/Project.vue'
       }
     },
   ]
