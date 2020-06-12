@@ -66,7 +66,8 @@ a.nav-link:hover::after {
 
 .nav-link::after{
   content: '';
-  background: rgba(153, 0, 153, 0.5);
+  background: rgba(201, 35, 201, 0.5);
+  border-bottom: 1px solid rgb(141, 0, 141);
   height: 12px;
   opacity: 0.8;
   position: absolute;
