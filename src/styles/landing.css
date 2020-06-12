@@ -86,28 +86,25 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 32px;
 }
 
-.recent-heading {
+/* .recent-heading {
   width: 100%;
-}
-
+  margin-bottom: 0;
+} */
+/*
 .recent-card-wrap {
   width: 50%;
-}
-
-.card-rec {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-}
+} */
 
 .highlight {
   padding-bottom: 50px;
 }
 
 .sec-heading {
-  margin-bottom: 36px;
+  font-size: 36px;
+  width: 100%;
+  margin-bottom: 24px;
 }

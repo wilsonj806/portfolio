@@ -37,18 +37,12 @@
       <!-- <button class='btn btn-primary'>Contact me!</button> -->
     </div>
   </section>
-  <section class='recent'>
+  <!-- <section class='recent'>
     <div class='recent-card-wrap'>
-      <h2 class='recent-heading'>Recent Project</h2>
-      <div class='card-rec'>
-        <img class='recent-logo' :src='$page.recentProject.edges[0].node.logo.src || ""' alt='recent project logo'>
-        <div class='recent-content'>
-          <h3>{{ $page.recentProject.edges[0].node.title }}</h3>
-          <p>{{ $page.recentProject.edges[0].node.description }}</p>
-        </div>
-      </div>
+      <h2 class='sec-heading'>Recent Project</h2>
+      <RecentProjectCard v-for='recentProjects in $page.recentProject.edges' :key='recentProjects.title' :recentProjectNode='recentProjects.node'/>
     </div>
-    <!-- <div class='recent-card-wrap rec-blog'>
+    <div class='recent-card-wrap rec-blog'>
       <h2>Recent Blog</h2>
       <div class='card-rec'>
         <div>
@@ -56,8 +50,8 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus magna non leo gravida, nec viverra tortor rutrum.</p>
         </div>
     </div>
-  </div> -->
-  </section>
+  </div>
+  </section> -->
   <section class='highlight'>
     <h2 class='sec-heading'>Selected Works</h2>
     <ProjectCard v-for="project in $page.allProject.edges" :key="project.id" :projectNode="project.node"/>
@@ -67,7 +61,7 @@
 
 <page-query>
 query {
-  recentProject: allProject(order: ASC, limit: 1) {
+  recentProject: allProject(order: ASC, limit: 2) {
     edges {
       node {
         id
@@ -109,12 +103,14 @@ query {
 import SingleBlogItem from '../components/SingleBlogItem'
 import SingleProjectItem from '../components/SingleProjectItem'
 import ProjectCard from '../components/ProjectCard'
+// import RecentProjectCard from '../components/RecentProject'
 
 export default {
   name: 'IndexPage',
   components: {
     SingleBlogItem,
     ProjectCard,
+    // RecentProjectCard
   }
 }
 </script>
