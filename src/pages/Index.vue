@@ -37,6 +37,7 @@
       <!-- <button class='btn btn-primary'>Contact me!</button> -->
     </div>
   </section>
+  <!-- TODO render this in when the blog is fixed -->
   <!-- <section class='recent'>
     <div class='recent-card-wrap'>
       <h2 class='sec-heading'>Recent Project</h2>
