@@ -104,18 +104,6 @@
   justify-content: flex-start;
 }
 
-.recent-logo {
-  /* max-height: 120px; */
-  width: 120px;
-  /* background: grey; */
-  margin-right: 16px;
-}
-
-.recent-content {
-  width: calc(100% - 120px);
-}
-
-
 .highlight {
   padding-bottom: 50px;
 }
