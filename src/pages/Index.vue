@@ -37,17 +37,21 @@
       <!-- <button class='btn btn-primary'>Contact me!</button> -->
     </div>
   </section>
+  <!-- TODO render this in when the blog is fixed -->
   <!-- <section class='recent'>
-    <div class='card-rec'>
-      <h2>Recent Project</h2>
-      <h3>My Project</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus magna non leo gravida, nec viverra tortor rutrum.</p>
+    <div class='recent-card-wrap'>
+      <h2 class='sec-heading'>Recent Project</h2>
+      <RecentProjectCard v-for='recentProjects in $page.recentProject.edges' :key='recentProjects.title' :recentProjectNode='recentProjects.node'/>
     </div>
-    <div class='card-rec'>
+    <div class='recent-card-wrap rec-blog'>
       <h2>Recent Blog</h2>
-      <h3>My Blog</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus magna non leo gravida, nec viverra tortor rutrum.</p>
+      <div class='card-rec'>
+        <div>
+          <h3>My Blog</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus magna non leo gravida, nec viverra tortor rutrum.</p>
+        </div>
     </div>
+  </div>
   </section> -->
   <section class='highlight'>
     <h2 class='sec-heading'>Selected Works</h2>
@@ -58,7 +62,17 @@
 
 <page-query>
 query {
-  allBlog(sortBy: "created_at", order: DESC, limit: 5) {
+  recentProject: allProject(order: ASC, limit: 2) {
+    edges {
+      node {
+        id
+        title
+        description
+        logo (width: 200, quality: 60)
+      }
+    }
+  }
+  recentBlog: allBlog(order: ASC, limit: 1) {
     edges {
       node {
         id
@@ -68,7 +82,7 @@ query {
       }
     }
   }
-  allProject(sortBy: "created_at", order: DESC, limit: 3) {
+  allProject(sortBy: "created_at", order: DESC, filter: { title: { regex: "Todolet|TS Contributors|NYC Arbor Logger"}}) {
     edges {
       node {
         id
@@ -90,12 +104,14 @@ query {
 import SingleBlogItem from '../components/SingleBlogItem'
 import SingleProjectItem from '../components/SingleProjectItem'
 import ProjectCard from '../components/ProjectCard'
+// import RecentProjectCard from '../components/RecentProject'
 
 export default {
   name: 'IndexPage',
   components: {
     SingleBlogItem,
     ProjectCard,
+    // RecentProjectCard
   }
 }
 </script>

@@ -82,16 +82,29 @@
 
 
 .recent {
+  min-height: 300px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
 }
 
+/* .recent-heading {
+  width: 100%;
+  margin-bottom: 0;
+} */
+/*
+.recent-card-wrap {
+  width: 50%;
+} */
 
 .highlight {
   padding-bottom: 50px;
 }
 
 .sec-heading {
-  margin-bottom: 36px;
+  font-size: 36px;
+  width: 100%;
+  margin-bottom: 24px;
 }
