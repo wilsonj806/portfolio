@@ -4,13 +4,21 @@
   <div class='recent-content'>
     <h3>{{ recentProjectNode.title }}</h3>
     <p>{{ recentProjectNode.description }}</p>
+    <a
+      :href='liveLink'
+      target='_blank'
+      rel='noopener norefferer'
+      class='link-btn'
+    >
+      Demo
+    </a>
   </div>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'Recent Project Card',
+  name: 'RecentProjectCard',
   props: {
     recentProjectNode: {
       type: Object,
@@ -27,7 +35,7 @@ export default {
 <style scoped>
 
 .card-rec {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -47,4 +55,34 @@ export default {
 h3 {
   margin: 8px 0;
 }
+
+.link-btn {
+border-radius: 8px;
+padding: 8px;
+display: block;
+width: 80px;
+margin: 8px 0;
+background: transparent;
+border: 2px solid #83e772;
+text-align: center;
+}
+
+.link-btn:link{
+  text-decoration: none;
+  color: black;
+
+}
+
+.link-btn:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.link-btn:hover {
+  background: #35b81e;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
 </style>
