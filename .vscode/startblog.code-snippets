@@ -25,7 +25,6 @@
 			"year: ",
 			"---",
 			"import BlogBanner from '../../../src/components/BlogBanner.vue'",
-			"import BlogBanner from '../../../src/components/BlogCodeBlock.vue'",
 			"# {{ $frontmatter.title }}"
 		],
 		"description": "start blog up"
