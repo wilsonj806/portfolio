@@ -1,6 +1,8 @@
 <template>
 <div class='card-rec'>
+  <div class='image-wrap'>
   <img class='recent-logo' :src='recentProjectNode.logo.src || ""' alt='recent project logo'>
+  </div>
   <div class='recent-content'>
     <h3>{{ recentProjectNode.title }}</h3>
     <p>{{ recentProjectNode.description }}</p>
@@ -49,11 +51,16 @@ export default {
   height: 185px;
 }
 
-.recent-logo {
+.image-wrap {
   /* max-height: 120px; */
-  width: 90px;
+  max-width: 90px;
   /* background: grey; */
   margin-right: 16px;
+}
+
+.recent-logo {
+  width: 100%;
+  height: auto;
 }
 
 .recent-content {

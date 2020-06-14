@@ -74,6 +74,7 @@ query {
         title
         path
         created_at
+        description
       }
     }
   }
