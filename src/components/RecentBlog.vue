@@ -1,7 +1,8 @@
 <template>
   <div class='card-rec'>
+    <!-- TODO Make it static height-->
     <h3>{{ recentBlogNode.title}}</h3>
-    <p>{{ recentBlogNode.description || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus magna non leo gravida, nec viverra tortor rutrum.'}}</p>
+    <p>{{ recentBlogNode.description || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus magna non leo gravida.'}}</p>
     <g-link class='link-btn' :to='recentBlogNode.path'>Read More</g-link>
   </div>
 </template>
@@ -21,9 +22,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .card-rec {
   width: 100%;
+  height: 185px;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -37,6 +39,15 @@ margin: 8px 0;
 background: transparent;
 border: 2px solid #83e772;
 text-align: center;
+}
+
+
+p {
+  height: 70px;
+}
+
+h3 {
+  margin: 8px 0;
 }
 
 .link-btn:link{
@@ -56,9 +67,4 @@ text-align: center;
   border: 2px solid transparent;
   border-radius: 8px;
 }
-
-h3 {
-  margin: 8px 0;
-}
-
 </style>

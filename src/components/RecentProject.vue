@@ -26,8 +26,15 @@ export default {
       description: String,
       logo: {
         src: String
-      }
-    }
+      },
+      default: () => ({
+        title: 'My Project',
+        description: 'My project description',
+        logo: {
+          src: ''
+        }
+      })
+    },
   }
 }
 </script>
@@ -39,6 +46,7 @@ export default {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
+  height: 185px;
 }
 
 .recent-logo {
@@ -53,9 +61,12 @@ export default {
 }
 
 h3 {
-  margin: 8px 0;
+  margin: 8px 0 25px 0;
 }
 
+p {
+  height: 70px;
+}
 .link-btn {
 border-radius: 8px;
 padding: 8px;
