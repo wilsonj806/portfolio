@@ -98,7 +98,6 @@ query {
 
 <script>
 import SingleBlogItem from '../components/SingleBlogItem'
-import SingleProjectItem from '../components/SingleProjectItem'
 import ProjectCard from '../components/ProjectCard'
 import RecentProjectCard from '../components/RecentProject'
 import RecentBlogCard from '../components/RecentBlog'
