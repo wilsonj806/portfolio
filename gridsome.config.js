@@ -21,7 +21,7 @@ module.exports = {
         pathPrefix: '/blog',
 
         // Vue template location
-        // template: './src/templates/Blog.vue'
+        template: './src/templates/Blog.vue'
       }
     },
     {

@@ -39,27 +39,29 @@ nav {
 
 .nav-list {
   list-style-type: none;
-  position: relative;
   padding-left: 0;
 }
 
 .nav-list-item {
-  margin-right: 8px;
+  margin-right: 16px;
+  display: inline-block;
+  position: relative;
+
 }
 
-a.nav-link:link {
+.nav-link:link {
   color: black;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a.nav-link:visited {
+.nav-link:visited {
   color: black;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a.nav-link:hover::after {
+.nav-link:hover::after {
   width: 100%;
   /* right: 0; */
 }
@@ -76,4 +78,17 @@ a.nav-link:hover::after {
   transition: width 0.15s;
   width: 0;
   z-index: -2;
+}
+
+.home-link:link, .home-link:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-header:hover {
+  background:#41d16a;
+}
+
+.nav-header:hover::before {
+  background: #842df3;
 }

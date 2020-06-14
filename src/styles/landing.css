@@ -49,11 +49,11 @@
 }
 
 .intro-text {
-  width: 40rem;
+  width: 550px;
 }
 
 .intro-text > p:not(.serif-bold) {
-  font-size: 24px;
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .intro-text > p:not(:last-of-type) {
@@ -94,10 +94,10 @@
   width: 100%;
   margin-bottom: 0;
 } */
-/*
+
 .recent-card-wrap {
   width: 50%;
-} */
+}
 
 .highlight {
   padding-bottom: 50px;
@@ -107,4 +107,5 @@
   font-size: 36px;
   width: 100%;
   margin-bottom: 24px;
+  margin-top: 30px;
 }

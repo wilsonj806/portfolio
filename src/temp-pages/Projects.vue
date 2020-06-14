@@ -6,7 +6,7 @@
       <p>Below you'll find more projects that I've worked on, whether it's self-guided projects, open source software, or work-related things that might be interesting(and aren't under NDA).</p>
       <div class="wrap-latest-list">
         <ul class="list-latest latest-project">
-          <SingleProjectItem v-for="project in $page.allProject.edges" :key="project.node.id" :projectNode="project.node"/>
+          <!-- <SingleProjectItem v-for="project in $page.allProject.edges" :key="project.node.id" :projectNode="project.node"/> -->
           <li v-if="$page.allProject.edges.length === 0">No projects yet, check back soon!</li>
         </ul>
       </div>
@@ -34,12 +34,12 @@ query {
 </page-query>
 
 <script>
-import SingleProjectItem from '../components/SingleProjectItem'
+// import SingleProjectItem from '../components/SingleProjectItem'
 
 export default {
   name: 'Projects',
   components: {
-    SingleProjectItem
+    // SingleProjectItem
   }
 }
 </script>

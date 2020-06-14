@@ -33,26 +33,21 @@
     <div class='intro-text'>
       <p>Hello!</p>
       <p class='serif-bold'>I’m Wilson and I build neat things</p>
-      <p>I can build apps or sites with a variety of tools from front-end to back-end!</p>
+      <p>I can build apps or sites with from front-end to back-end! React, TypeScript, and Express are my go to tools, but I can pick up just about anything.</p>
       <!-- <button class='btn btn-primary'>Contact me!</button> -->
     </div>
   </section>
-  <!-- TODO render this in when the blog is fixed -->
-  <!-- <section class='recent'>
+  <section class='recent'>
     <div class='recent-card-wrap'>
       <h2 class='sec-heading'>Recent Project</h2>
       <RecentProjectCard v-for='recentProjects in $page.recentProject.edges' :key='recentProjects.title' :recentProjectNode='recentProjects.node'/>
     </div>
     <div class='recent-card-wrap rec-blog'>
-      <h2>Recent Blog</h2>
-      <div class='card-rec'>
-        <div>
-          <h3>My Blog</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus magna non leo gravida, nec viverra tortor rutrum.</p>
-        </div>
+      <h2 class='sec-heading'>Recent Blog</h2>
+      <RecentBlogCard v-for='recentBlog in $page.recentBlog.edges' :key='recentBlog.title' :recentBlogNode='recentBlog.node'/>
     </div>
-  </div>
-  </section> -->
+
+  </section>
   <section class='highlight'>
     <h2 class='sec-heading'>Selected Works</h2>
     <ProjectCard v-for="project in $page.allProject.edges" :key="project.id" :projectNode="project.node"/>
@@ -62,7 +57,7 @@
 
 <page-query>
 query {
-  recentProject: allProject(order: ASC, limit: 2) {
+  recentProject: allProject(sortBy: "created_at",order: DESC, limit: 1) {
     edges {
       node {
         id
@@ -72,7 +67,7 @@ query {
       }
     }
   }
-  recentBlog: allBlog(order: ASC, limit: 1) {
+  recentBlog: allBlog(sortBy: "created_at", order: DESC, limit: 1) {
     edges {
       node {
         id
@@ -102,16 +97,17 @@ query {
 
 <script>
 import SingleBlogItem from '../components/SingleBlogItem'
-import SingleProjectItem from '../components/SingleProjectItem'
 import ProjectCard from '../components/ProjectCard'
-// import RecentProjectCard from '../components/RecentProject'
+import RecentProjectCard from '../components/RecentProject'
+import RecentBlogCard from '../components/RecentBlog'
 
 export default {
   name: 'IndexPage',
   components: {
     SingleBlogItem,
     ProjectCard,
-    // RecentProjectCard
+    RecentProjectCard,
+    RecentBlogCard
   }
 }
 </script>
