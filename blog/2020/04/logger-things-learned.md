@@ -19,9 +19,10 @@ This seems kind of obvious, but while writing Cypress tests and using TravisCI t
 
 And just as a quick illustration, I've added a small graphic overviewing both workflows:
 ```
-Open Pull Request => Validate/ merge changes => Manually pull changes locally => Manually run deploy script => Repeat
-
-Configure CI/ Troubleshoot CI config => Open Pull Request => Validate/ merge Changes => CI handles deploy => Repeat
+Manual: Open Pull Request => Validate/ merge changes => Manually pull changes locally => Manually run deploy script => Repeat
+```
+```
+CI based deploy: Configure CI/ Troubleshoot CI config => Open Pull Request => Validate/ merge Changes => CI handles deploy => Repeat
 ```
 
 ## 2) Cypress and Jest would go great together if I made tests for both
