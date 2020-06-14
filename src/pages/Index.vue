@@ -57,7 +57,7 @@
 
 <page-query>
 query {
-  recentProject: allProject(order: DESC, limit: 1) {
+  recentProject: allProject(sortBy: "created_at",order: DESC, limit: 1) {
     edges {
       node {
         id
@@ -67,7 +67,7 @@ query {
       }
     }
   }
-  recentBlog: allBlog(order: DESC, limit: 1) {
+  recentBlog: allBlog(sortBy: "created_at", order: DESC, limit: 1) {
     edges {
       node {
         id
