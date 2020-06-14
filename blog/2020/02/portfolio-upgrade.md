@@ -4,7 +4,9 @@ author: Wilson Jiang
 created_at: 2020-02-24 17:47:10
 year: 2020
 ---
-# How I Upgraded My Portfolio
+import BlogBanner from '../../../src/components/BlogBanner.vue'
+
+# {{ $frontmatter.title }}
 Hey, so if you're reading this, that means my new portfolio is up in some way shape or form. It's light on content for now, but this is wildly preferable to what I had before. This article is a short run down on the upgrade process.
 
 ## What Was v2.0.0?

@@ -1,12 +1,13 @@
 ---
-title: Five Things I Learned From Making NYC Arbor Logger
+title: 5 Lessons From Arbor Logger
 author: Wilson Jiang
 created_at: 2020-04-29
 estimated_read_time: '4.5 min'
+description: A rundown of five lessons I learned from building the NYC Arbor Logger project.
 year: 2020
 ---
 
-# Five Things I Learned From Making NYC Arbor Logger
+# {{ $frontmatter.title}}
 I recently finished a simple full stack project and learned a good amount from it! I decided to share a couple of things that I think might help you on your developer journey.
 
 For some background on this project, I wanted to build a full stack project with a Flask backend, all while using open source data to make data visualizations on a React frontend. The scope of this project wasn't super large and since I didn't have to do any data analysis, processing the data is straight forwards.

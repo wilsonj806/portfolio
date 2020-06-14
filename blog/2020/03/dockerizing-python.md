@@ -5,8 +5,11 @@ created_at: 2020-03-30 17:47:10
 estimated_read_time: '8 min'
 year: 2020
 ---
-# Dockerizing a Python app
-![relevant xkcd](https://imgs.xkcd.com/comics/python_environment_2x.png)
+import BlogBanner from '../../../src/components/BlogBanner.vue'
+
+# {{ $frontmatter.title }}
+
+<BlogBanner imgSrc='https://imgs.xkcd.com/comics/python_environment_2x.png'/>
 
 Python's one of the more popular programming languages with a wide variety of applications, from building backends to creating a neural network. However, keeping your Python environment consistent between projects can be a pain as seen from the above.
 
@@ -30,14 +33,14 @@ Second is Docker containers. A Docker container is the instance of the app that 
 If you don't have it already, you'll need to install [Docker Desktop](https://www.docker.com/products/docker-desktop). If you already have it and know how to go through it, then you can skip to the [next section]().
 
 I'll also briefly go over some of the commands you can run with the Docker CLI.
-```
+`
   docker image ls
-```
+`
 `docker image ls` lists all of the images currently available on your computer.
 
-```
+`
   docker container ls
-```
+`
 `docker container ls` lists all currently started/ active containers.
 
 ```
@@ -46,7 +49,7 @@ I'll also briefly go over some of the commands you can run with the Docker CLI.
 `docker container ls -a` lists all containers whether they've been started or if they're active. The `-a` flag is short for `--all`
 
 ```
-  docker container rm <first 3 symbols of the container ID or container name> [...other containers you want to remove]
+  docker container rm <CONTAINER-IDS-OR-CONTAINER-NAMES>
 ```
 `docker container rm` removes the listed containers. Note that you need either the first 3 symbols of the contaienr ID/ the container name AND the container can't be running before you remove a container.
 
