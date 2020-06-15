@@ -30,7 +30,7 @@ query Blog($id: ID!) {
 .blog >>> pre {
   background: rgba(144, 238, 144, 0.5);
   padding: 24px;
-  white-space: normal;
+  white-space: pre-wrap;
   width: 80%;
   margin: auto;
   color: rgb(26, 26, 26);
