@@ -13,7 +13,7 @@
         </li>
         <li class='nav-list-item'>
           <!-- Fix the darkness on the hover state -->
-          <a class='nav-link' href='https://www.dropbox.com/s/soxnd60u5du2x66/Wilson-Jiang-Resume.pdf?dl=07&raw=1'>Resume</a>
+          <a class='nav-link' href='https://www.dropbox.com/s/kol2kp0do40ggza/Wilson%20Jiang%20-%20Resume.pdf?dl=0'>Resume</a>
         </li>
       </ul>
     </div>
