@@ -7,7 +7,7 @@
     <h3>{{ recentProjectNode.title }}</h3>
     <p>{{ recentProjectNode.description }}</p>
     <a
-      :href='liveLink'
+      :href='recentProjectNode.live_link'
       target='_blank'
       rel='noopener norefferer'
       class='link-btn'

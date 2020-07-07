@@ -63,6 +63,7 @@ query {
         id
         title
         description
+        live_link
         logo (width: 200, quality: 60)
       }
     }
